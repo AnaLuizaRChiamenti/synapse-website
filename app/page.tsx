@@ -97,9 +97,8 @@ export default function HomePage() {
   <div
     className="absolute inset-0 bg-cover bg-no-repeat opacity-25"
     style={{
-      backgroundImage:
-        "url('https://sdmntprwestus.oaiusercontent.com/files/00000000-2b90-6230-b156-0bcc199626a0/raw?se=2025-10-14T00%3A09%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=ce816145-2de3-5a05-b768-e2ad9ca73232&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-10-13T09%3A06%3A33Z&ske=2025-10-14T09%3A06%3A33Z&sks=b&skv=2024-08-04&sig=Jwks%2B/xyaYPVesPphj3uasGAiOEmdXIdkU3nRII%2BMm4%3D')",
-      backgroundPosition: "50% center", // 👉 move o cérebro mais pra direita
+      backgroundImage: "url('/688b3849-9449-4c97-8be2-0a28c28ef3f0.png')",
+      backgroundPosition: "50% center",
     }}
   />
 
