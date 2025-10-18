@@ -1,6 +1,7 @@
 "use client"
 
 import { Navigation } from "@/components/navigation"
+import { NavigationController } from "@/components/NavigationController"
 import { Brain, Activity, Scale, Target, Footprints, Play } from "lucide-react"
 import { useState } from "react"
 import type React from "react"
@@ -87,7 +88,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <Navigation />
+      <NavigationController />
 
 <section
   id="home"
