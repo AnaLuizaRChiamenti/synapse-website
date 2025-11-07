@@ -1,8 +1,6 @@
 "use client"
-
-import { Navigation } from "@/components/navigation"
 import { NavigationController } from "@/components/NavigationController"
-import { Brain, Activity, Scale, Target, Footprints, Play } from "lucide-react"
+import { Brain, Activity, Scale, Target, Footprints, Play, Heart, Baby, Bone } from "lucide-react"
 import { useState } from "react"
 import type React from "react"
 
@@ -90,137 +88,215 @@ export default function HomePage() {
     <div className="min-h-screen">
       <NavigationController />
 
-<section
-  id="home"
-  className="relative min-h-screen flex items-center bg-[#E3F0E2] overflow-hidden"
->
-  {/* Fundo do cérebro ocupando toda a tela */}
-  <div
-    className="absolute inset-0 bg-cover bg-no-repeat opacity-25"
-    style={{
-      backgroundImage: "url('/688b3849-9449-4c97-8be2-0a28c28ef3f0.png')",
-      backgroundPosition: "50% center",
-    }}
-  />
+      <section id="home" className="relative min-h-screen flex items-center bg-[#E3F0E2] overflow-hidden">
+        {/* Fundo do cérebro ocupando toda a tela */}
+        <div
+          className="absolute inset-0 bg-cover bg-no-repeat opacity-25"
+          style={{
+            backgroundImage: "url('/688b3849-9449-4c97-8be2-0a28c28ef3f0.png')",
+            backgroundPosition: "50% center",
+          }}
+        />
 
-  {/* Gradiente leve pro contraste do texto */}
-  <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/40 to-transparent" />
+        {/* Gradiente leve pro contraste do texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/40 to-transparent" />
 
-  {/* Conteúdo à esquerda */}
-  <div className="relative z-10 w-full py-32 pl-8 pr-8 md:pl-16 lg:pl-24">
-    <div className="max-w-xl text-left">
-      <h1
-        className="text-5xl md:text-6xl font-bold text-[#1f2923]"
-        style={{ fontFamily: "var(--font-playfair)" }}
+        {/* Conteúdo à esquerda */}
+        <div className="relative z-10 w-full py-32 pl-8 pr-8 md:pl-16 lg:pl-24">
+          <div className="max-w-xl text-left">
+            <h1
+              className="text-5xl md:text-6xl font-bold text-[#1f2923]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Neurofuncional
+            </h1>
+
+            <p className="text-2xl text-[#445345] font-medium mt-2" style={{ fontFamily: "var(--font-poppins)" }}>
+              Avaliação simplificada e eficaz
+            </p>
+
+            <p
+              className="text-lg text-[#445345]/90 leading-relaxed max-w-md mt-6"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              Cuidamos do movimento e da função com base na neurociência. Nossa abordagem alia precisão técnica, empatia
+              e resultados reais.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 mt-10">
+              <a
+                href="#contato"
+                className="px-8 py-4 bg-[#6B8E23] text-white rounded-lg font-semibold hover:brightness-110 transition-all duration-300 shadow-md text-center"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Agendar Avaliação
+              </a>
+              <a
+                href="#sobre"
+                className="px-8 py-4 border border-[#6B8E23] text-[#6B8E23] rounded-lg font-semibold hover:bg-[#6B8E23]/10 transition-all duration-300 text-center"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Conhecer a equipe
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="sobre"
+        className="min-h-screen flex items-center bg-[#E8F4E7] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-12 sm:py-16 md:py-20"
       >
-        Neurofuncional
-      </h1>
-
-      <p
-        className="text-2xl text-[#445345] font-medium mt-2"
-        style={{ fontFamily: "var(--font-poppins)" }}
-      >
-        Avaliação simplificada e eficaz
-      </p>
-
-      <p
-        className="text-lg text-[#445345]/90 leading-relaxed max-w-md mt-6"
-        style={{ fontFamily: "var(--font-poppins)" }}
-      >
-        Cuidamos do movimento e da função com base na neurociência. Nossa abordagem alia precisão
-        técnica, empatia e resultados reais.
-      </p>
-
-      <div className="flex flex-col sm:flex-row gap-4 mt-10">
-        <a
-          href="#contato"
-          className="px-8 py-4 bg-[#6B8E23] text-white rounded-lg font-semibold hover:brightness-110 transition-all duration-300 shadow-md text-center"
-          style={{ fontFamily: "var(--font-poppins)" }}
-        >
-          Agendar Avaliação
-        </a>
-        <a
-          href="#sobre"
-          className="px-8 py-4 border border-[#6B8E23] text-[#6B8E23] rounded-lg font-semibold hover:bg-[#6B8E23]/10 transition-all duration-300 text-center"
-          style={{ fontFamily: "var(--font-poppins)" }}
-        >
-          Conhecer a equipe
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-      <section id="sobre" className="min-h-screen flex items-center bg-white px-6 lg:px-20 xl:px-40 py-20">
         <div className="max-w-7xl mx-auto w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
-            <div className="w-full h-full">
+          {/* Centered heading with description */}
+          <div className="flex flex-col items-center text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#212529]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Nossa Equipe
+            </h2>
+            <p
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-[#6C757D] mt-3 sm:mt-4 max-w-3xl px-4"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              Somos três acadêmicas do 10º período do curso de Fisioterapia, conectadas pelo compromisso com o cuidado
+              humanizado e pela busca constante de aprimoramento profissional.
+            </p>
+          </div>
+
+          {/* Image section with better styling */}
+          <div className="flex justify-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+            <div className="w-full max-w-4xl">
               <div
-                className="w-full bg-center bg-no-repeat bg-cover aspect-[4/5] rounded-lg"
+                className="w-full bg-center bg-no-repeat bg-cover aspect-[16/9] rounded-2xl shadow-2xl"
                 style={{
-                  backgroundImage:
-                    "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/screen-OcWEMXn2uEH9dYN3Eu2d00RPv2mlqW.png')",
+                  backgroundImage: "url('/sobre_nos.jpg')",
                 }}
               />
             </div>
+          </div>
 
-            <div className="flex flex-col justify-center">
-              <h2
-                className="text-4xl lg:text-5xl font-bold tracking-tight leading-tight pb-4 text-[#333333]"
+          {/* Individual cards for each team member with icons */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="flex flex-col bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#6B8E23]/10 rounded-full mb-4 sm:mb-6">
+                <Baby className="w-7 h-7 sm:w-8 sm:h-8 text-[#6B8E23]" strokeWidth={1.5} />
+              </div>
+              <h3
+                className="text-xl sm:text-2xl font-bold text-[#212529] mb-2"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
-                Nossa Equipe
-              </h2>
+                Ana Karla Barros
+              </h3>
               <p
-                className="text-[#555555] text-base lg:text-lg font-normal leading-relaxed"
+                className="text-sm sm:text-base text-[#D4AF37] font-semibold mb-3 sm:mb-4"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Somos uma equipe multidisciplinar de fisioterapeutas dedicadas à reabilitação funcional. A Synapse
-                nasceu para integrar ciência, movimento e empatia em cada atendimento.
+                22 anos | Neurofuncional
+              </p>
+              <p
+                className="text-sm sm:text-base text-[#6C757D] leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Dedica-se à área Neurofuncional, com foco na fisioterapia pediátrica, voltada ao desenvolvimento motor e
+                à reabilitação infantil.
+              </p>
+            </div>
+
+            <div className="flex flex-col bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#6B8E23]/10 rounded-full mb-4 sm:mb-6">
+                <Bone className="w-7 h-7 sm:w-8 sm:h-8 text-[#6B8E23]" strokeWidth={1.5} />
+              </div>
+              <h3
+                className="text-xl sm:text-2xl font-bold text-[#212529] mb-2"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Brenda Muniky
+              </h3>
+              <p
+                className="text-sm sm:text-base text-[#D4AF37] font-semibold mb-3 sm:mb-4"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                25 anos | Ortopedia
+              </p>
+              <p
+                className="text-sm sm:text-base text-[#6C757D] leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Tem afinidade com a Ortopedia, buscando aprimorar suas práticas em prevenção e recuperação de disfunções
+                musculoesqueléticas.
+              </p>
+            </div>
+
+            <div className="flex flex-col bg-white rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#6B8E23]/10 rounded-full mb-4 sm:mb-6">
+                <Heart className="w-7 h-7 sm:w-8 sm:h-8 text-[#6B8E23]" strokeWidth={1.5} />
+              </div>
+              <h3
+                className="text-xl sm:text-2xl font-bold text-[#212529] mb-2"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Caroline Pessoa
+              </h3>
+              <p
+                className="text-sm sm:text-base text-[#D4AF37] font-semibold mb-3 sm:mb-4"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                23 anos | Cardiorrespiratória
+              </p>
+              <p
+                className="text-sm sm:text-base text-[#6C757D] leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                É apaixonada pela área Cardiorrespiratória, com ênfase na saúde do idoso, priorizando a qualidade de
+                vida e a funcionalidade na terceira idade.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="testes" className="min-h-screen flex items-center bg-[#F8F9FA] px-6 lg:px-20 xl:px-40 py-20">
+      <section
+        id="testes"
+        className="min-h-screen flex items-center bg-[#F8F9FA] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-12 sm:py-16 md:py-20"
+      >
         <div className="max-w-7xl mx-auto w-full">
-          <div className="flex flex-col items-center text-center mb-12 lg:mb-16">
+          <div className="flex flex-col items-center text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
             <h2
-              className="text-4xl md:text-5xl font-bold leading-tight text-[#212529]"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#212529]"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Avaliações e Testes
             </h2>
             <p
-              className="text-base md:text-lg text-[#6C757D] mt-4 max-w-2xl"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-[#6C757D] mt-3 sm:mt-4 max-w-2xl px-4"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
               Conheça os principais testes aplicados na fisioterapia clínica.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
             {testes.map((teste, index) => {
               const Icon = teste.icon
               return (
                 <div
                   key={index}
-                  className="flex flex-col text-center items-center gap-4 rounded-lg bg-white p-6 shadow-sm hover:shadow-lg transition-shadow duration-300"
+                  className="flex flex-col text-center items-center gap-3 sm:gap-4 rounded-lg bg-white p-4 sm:p-5 md:p-6 shadow-sm hover:shadow-lg transition-shadow duration-300"
                 >
-                  <Icon className="w-9 h-9 text-[#D4AF37]" strokeWidth={1.5} />
+                  <Icon className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-[#D4AF37]" strokeWidth={1.5} />
                   <div className="flex flex-col gap-2">
                     <h3
-                      className="text-xl font-bold leading-tight text-[#212529]"
+                      className="text-lg sm:text-xl md:text-xl font-bold leading-tight text-[#212529]"
                       style={{ fontFamily: "var(--font-playfair)" }}
                     >
                       {teste.title}
                     </h3>
-                    <p className="text-sm leading-normal text-[#6C757D]" style={{ fontFamily: "var(--font-poppins)" }}>
+                    <p
+                      className="text-xs sm:text-sm leading-normal text-[#6C757D]"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
                       {teste.description}
                     </p>
                   </div>
@@ -231,16 +307,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="videos" className="min-h-screen flex items-center bg-[#D3D3AF] px-6 lg:px-20 xl:px-40 py-20">
-        <div className="max-w-6xl mx-auto w-full">
+      <section
+        id="videos"
+        className="min-h-screen flex items-center bg-[#D3D3AF] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-12 sm:py-16 md:py-20"
+      >
+        <div className="max-w-7xl mx-auto w-full">
           <h2
-            className="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-center mb-12 text-[#333333]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-center mb-8 sm:mb-10 md:mb-12 text-[#333333]"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Conheça Nossos Tratamentos
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {videos.map((video, index) => (
               <div key={index} className="flex flex-col items-center group">
                 <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg cursor-pointer">
@@ -254,11 +333,14 @@ export default function HomePage() {
                       aria-label={`Play video ${video.title}`}
                       className="text-white transition-transform duration-300 group-hover:scale-110"
                     >
-                      <Play className="w-16 h-16" fill="white" />
+                      <Play className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16" fill="white" />
                     </button>
                   </div>
                 </div>
-                <h3 className="text-xl mt-4 text-[#333333]" style={{ fontFamily: "var(--font-playfair)" }}>
+                <h3
+                  className="text-base sm:text-lg md:text-xl mt-3 sm:mt-4 text-[#333333] font-semibold"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
                   {video.title}
                 </h3>
               </div>
@@ -267,25 +349,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="contato" className="min-h-screen flex items-center bg-[#556B2F] px-6 lg:px-20 xl:px-40 py-20">
-        <div className="max-w-[960px] mx-auto w-full">
-          <div className="flex flex-col items-center text-center p-4">
+      <section
+        id="contato"
+        className="min-h-screen flex items-center bg-[#556B2F] px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 2xl:px-40 py-12 sm:py-16 md:py-20"
+      >
+        <div className="max-w-5xl mx-auto w-full">
+          <div className="flex flex-col items-center text-center px-4">
             <h2
-              className="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Entre em Contato
             </h2>
-            <p className="mt-4 text-lg md:text-xl font-normal text-white" style={{ fontFamily: "var(--font-poppins)" }}>
+            <p
+              className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl font-normal text-white max-w-2xl"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
               Fale conosco ou envie sua mensagem.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="mt-10 md:mt-16 space-y-8 px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <form onSubmit={handleSubmit} className="mt-8 sm:mt-10 md:mt-12 lg:mt-16 space-y-6 sm:space-y-8 px-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <label className="flex flex-col">
                 <p
-                  className="text-base font-medium leading-normal pb-2 text-white"
+                  className="text-sm sm:text-base font-medium leading-normal pb-2 text-white"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
                   Seu e-mail
@@ -296,7 +384,7 @@ export default function HomePage() {
                   value={formData.seuEmail}
                   onChange={handleChange}
                   required
-                  className="w-full h-14 px-4 bg-transparent border border-white/30 rounded-lg text-white placeholder:text-white/70 focus:border-[#D4AF37] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+                  className="w-full h-12 sm:h-14 px-3 sm:px-4 bg-transparent border border-white/30 rounded-lg text-white placeholder:text-white/70 focus:border-[#D4AF37] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-sm sm:text-base"
                   placeholder="seuemail@exemplo.com"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 />
@@ -304,7 +392,7 @@ export default function HomePage() {
 
               <label className="flex flex-col">
                 <p
-                  className="text-base font-medium leading-normal pb-2 text-white"
+                  className="text-sm sm:text-base font-medium leading-normal pb-2 text-white"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
                   E-mail da responsável
@@ -315,7 +403,7 @@ export default function HomePage() {
                   value={formData.emailResponsavel}
                   onChange={handleChange}
                   required
-                  className="w-full h-14 px-4 bg-transparent border border-white/30 rounded-lg text-white placeholder:text-white/70 focus:border-[#D4AF37] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+                  className="w-full h-12 sm:h-14 px-3 sm:px-4 bg-transparent border border-white/30 rounded-lg text-white placeholder:text-white/70 focus:border-[#D4AF37] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-sm sm:text-base"
                   placeholder="responsavel@exemplo.com"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 />
@@ -324,7 +412,7 @@ export default function HomePage() {
 
             <label className="flex flex-col">
               <p
-                className="text-base font-medium leading-normal pb-2 text-white"
+                className="text-sm sm:text-base font-medium leading-normal pb-2 text-white"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
                 Mensagem
@@ -335,16 +423,16 @@ export default function HomePage() {
                 onChange={handleChange}
                 required
                 rows={6}
-                className="w-full px-4 py-4 bg-transparent border border-white/30 rounded-lg text-white placeholder:text-white/70 focus:border-[#D4AF37] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] resize-none"
+                className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-transparent border border-white/30 rounded-lg text-white placeholder:text-white/70 focus:border-[#D4AF37] focus:outline-none focus:ring-2 focus:ring-[#D4AF37] resize-none text-sm sm:text-base"
                 placeholder="Digite sua mensagem aqui..."
                 style={{ fontFamily: "var(--font-poppins)" }}
               />
             </label>
 
-            <div className="flex justify-center px-4 py-3">
+            <div className="flex justify-center pt-2 sm:pt-3">
               <button
                 type="submit"
-                className="w-full max-w-[480px] h-14 px-8 bg-[#D4AF37] text-[#231d0f] rounded-lg text-lg font-bold leading-normal tracking-wide hover:brightness-110 transition-all duration-300"
+                className="w-full sm:max-w-md md:max-w-lg h-12 sm:h-14 px-6 sm:px-8 bg-[#D4AF37] text-[#231d0f] rounded-lg text-base sm:text-lg font-bold leading-normal tracking-wide hover:brightness-110 transition-all duration-300 shadow-lg"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
                 Enviar mensagem
