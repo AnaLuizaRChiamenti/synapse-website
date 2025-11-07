@@ -23,11 +23,11 @@ export function NavigationCompact() {
 
   return (
     <nav className="bg-white/95 backdrop-blur-md shadow-md transition-all duration-700 ease-out">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between b">
         <a
           href="#home"
           onClick={() => handleClick("#home")}
-          className="font-bold text-[#1f2923] hover:text-[#6B8E23] transition-all duration-700"
+          className="font-bold text-[#1f2923] hover:text-[#6B8E23] transition-all duration-700 mb-2"
           style={{
             fontFamily: "var(--font-playfair)",
             fontSize: "3rem",
