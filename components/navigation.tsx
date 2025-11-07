@@ -112,10 +112,9 @@ export function Navigation() {
                   key={item.href}
                   href={item.href}
                   onClick={() => handleClick(item.href)}
-                  className="relative font-medium group transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B8E23]/60 rounded"
+                  className="text-[#1f2923] relative font-medium group transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#6B8E23]/60 rounded"
                   style={{
                     fontFamily: "var(--font-poppins)",
-                    color: scrollProgress > 0.5 ? "#000000" : "#ffffff",
                     fontSize: "clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem)",
                   }}
                 >

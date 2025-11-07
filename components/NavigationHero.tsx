@@ -38,7 +38,7 @@ export function NavigationHero() {
         <a
           href="#home"
           onClick={() => handleClick("#home")}
-          className="font-bold text-white group-hover:text-[#1f2923] hover:text-[#6B8E23] transition-all ease-[cubic-bezier(0.33,1,0.68,1)] drop-shadow-[0_3px_8px_rgba(0,0,0,0.4)]"
+          className="font-bold text-[#1f2923] group-hover:text-[#1f2923] hover:text-[#6B8E23] transition-all ease-[cubic-bezier(0.33,1,0.68,1)] drop-shadow-[0_3px_8px_rgba(0,0,0,0.4)]"
           style={{
             fontFamily: "var(--font-playfair)",
             fontSize: "6.5rem", // mesmo impacto visual da Swarovski
@@ -60,7 +60,7 @@ export function NavigationHero() {
               href={item.href}
               onClick={() => handleClick(item.href)}
               className="relative font-medium px-2 py-1 transition-all duration-300 
-                         text-white group-hover:text-[#1f2923] hover:text-[#6B8E23] group/item text-[1rem] tracking-wide"
+                         text-[#1f2923] group-hover:text-[#1f2923] hover:text-[#6B8E23] group/item text-[1rem] tracking-wide"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
               {item.label}

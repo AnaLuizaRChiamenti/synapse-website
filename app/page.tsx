@@ -102,7 +102,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/75 via-white/40 to-transparent" />
 
         {/* Conteúdo à esquerda */}
-        <div className="relative z-10 w-full py-32 pl-8 pr-8 md:pl-16 lg:pl-24">
+        <div className="relative z-10 w-full py-32 pl-8 pr-8 md:pl-16 lg:pl-24 mt-40">
           <div className="max-w-xl text-left">
             <h1
               className="text-5xl md:text-6xl font-bold text-[#1f2923]"
@@ -167,7 +167,7 @@ export default function HomePage() {
 
           {/* Image section with better styling */}
           <div className="flex justify-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-            <div className="w-full max-w-4xl">
+            <div className="w-full max-w-3xl">
               <div
                 className="w-full bg-center bg-no-repeat bg-cover aspect-[16/9] rounded-2xl shadow-2xl"
                 style={{
