@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, Poppins } from "next/font/google"
+import { Cinzel, Oswald, Playfair_Display, Poppins, Xanh_Mono } from "next/font/google"
 import "./globals.css"
 
 const playfair = Playfair_Display({
@@ -15,6 +15,12 @@ const poppins = Poppins({
   variable: "--font-poppins",
 })
 
+const cinzel = Oswald({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-cinzel",
+})
+
 export const metadata: Metadata = {
   title: "Synapse",
   description: "Movimente melhor. Recupere confiança. Cuidados de fisioterapia com ciência e empatia.",
@@ -27,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className={`${playfair.variable} ${poppins.variable}`}>
+    <html lang="pt-BR" className={`${playfair.variable} ${poppins.variable} ${cinzel.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   )

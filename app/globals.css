@@ -153,3 +153,39 @@ h6 {
     @apply bg-background text-foreground;
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  z-index: 9999 !important;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown,
+.relative {
+  overflow: visible !important;
+}
+
+.modal,
+.dialog {
+  overflow: visible !important;
+  z-index: 1055 !important; /* acima do backdrop */
+}
+
+.dropdown-toggle:focus + .dropdown-menu,
+.dropdown-menu:hover {
+  display: block !important;
+}

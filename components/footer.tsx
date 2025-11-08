@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-light tracking-wider mb-4">SINAPSE</h3>
+            <h3 className="text-2xl font-light tracking-wider mb-4">SYNAPSE</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Avaliação neurológica e cognitiva de excelência
             </p>
