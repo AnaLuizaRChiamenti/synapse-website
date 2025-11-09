@@ -15,12 +15,13 @@ export function NavigationCompact() {
       label: "Semiologia Neurológica",
       subItems: [
         { href: "/reflexo", label: "Reflexo" },
-        { href: "#equilibrio", label: "Equilíbrio" },
+        { href: "/equilibrio", label: "Equilíbrio" },
         { href: "#coordenacao", label: "Coordenação" },
         { href: "#marcha", label: "Marcha" },
       ],
     },
     { href: "#contato", label: "Contato" },
+    { href: "/review", label: "Review" },
   ]
 
   const handleClick = (href: string) => {
@@ -40,7 +41,8 @@ export function NavigationCompact() {
           style={{
             fontFamily: "var(--font-cinzel)",
             fontSize: "3rem",
-            letterSpacing: "0.10em",
+            letterSpacing: "0.1em",
+            marginTop: "20px",
           }}
         >
           SYNAPSE

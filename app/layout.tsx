@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Cinzel, Oswald, Playfair_Display, Poppins, Xanh_Mono } from "next/font/google"
+import { Cinzel, Gayathri, Oswald, Playfair_Display, Poppins, Xanh_Mono } from "next/font/google"
 import "./globals.css"
 
 const playfair = Playfair_Display({
@@ -15,7 +15,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 })
 
-const cinzel = Oswald({
+const cinzel = Gayathri({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-cinzel",

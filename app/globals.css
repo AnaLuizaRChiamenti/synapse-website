@@ -174,11 +174,6 @@ h6 {
   animation: fadeIn 0.2s ease-out;
 }
 
-.dropdown,
-.relative {
-  overflow: visible !important;
-}
-
 .modal,
 .dialog {
   overflow: visible !important;

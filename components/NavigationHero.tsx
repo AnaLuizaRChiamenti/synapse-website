@@ -18,6 +18,7 @@ export function NavigationHero() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/#sobre", label: "Sobre Nós" },
+    { href: "/review", label: "Review" },
     {
       label: "Semiologia Neurológica",
       subItems: [
