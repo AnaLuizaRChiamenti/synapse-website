@@ -20,8 +20,8 @@ export function NavigationCompact() {
         { href: "#marcha", label: "Marcha" },
       ],
     },
-    { href: "#contato", label: "Contato" },
     { href: "/review", label: "Review" },
+    { href: "#contato", label: "Contato" },
   ]
 
   const handleClick = (href: string) => {

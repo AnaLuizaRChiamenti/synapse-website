@@ -18,7 +18,6 @@ export function NavigationHero() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/#sobre", label: "Sobre Nós" },
-    { href: "/review", label: "Review" },
     {
       label: "Semiologia Neurológica",
       subItems: [
@@ -28,6 +27,7 @@ export function NavigationHero() {
         { href: "/marcha", label: "Marcha" },
       ],
     },
+    { href: "/review", label: "Review" },
     { href: "/#contato", label: "Contato" },
   ]
 

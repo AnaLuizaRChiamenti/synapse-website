@@ -215,73 +215,104 @@ export default function ReflexosPage() {
         </div>
       </section>
 
-      {/* Como avaliar? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F]">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-              <ClipboardCheck className="w-6 h-6 text-white" />
-            </div>
-            <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Como avaliar? (Semiotécnica)
-            </h2>
+     {/* Como avaliar? */}
+    <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F]">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+            <ClipboardCheck className="w-6 h-6 text-white" />
           </div>
+          <h2
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            Como avaliar? (Semiotécnica)
+          </h2>
+        </div>
 
-          <div className="bg-white/10 backdrop-blur-sm p-8 sm:p-10 md:p-12 rounded-2xl border border-white/20">
-            <div className="space-y-6">
-              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
-                  A
-                </div>
-                <div>
-                  <p className="text-white text-base leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-                    Instrumental adequado, ou seja, use um dos vários tipos de martelo de reflexos disponíveis no
-                    mercado (Babinski, Taylor, McGill, Buck), com borracha macia, para não causar dor à percussão.
-                  </p>
+        <div className="bg-white/10 backdrop-blur-sm p-8 sm:p-10 md:p-12 rounded-2xl border border-white/20">
+          <div className="space-y-6">
+
+            {/* Item A */}
+            <div className="flex flex-col sm:flex-row items-start gap-6 bg-white/10 p-6 rounded-xl">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                A
+              </div>
+              <div className="flex-1">
+                <p
+                  className="text-white text-base leading-relaxed mb-4"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Instrumental adequado, ou seja, use um dos vários tipos de martelo de reflexos disponíveis no mercado
+                  (Babinski, Taylor, McGill, Buck), com borracha macia, para não causar dor à percussão.
+                </p>
+
+                {/* Galeria de imagens */}
+                <div className="flex flex-wrap gap-4 justify-evenly">
+                  <img
+                    src="/martelinho_1.jpg"
+                    alt="Martelo de reflexos tipo Babinski"
+                    className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
+                  />
+                  <img
+                    src="/martelinho_2.jpg"
+                    alt="Martelo de reflexos tipo Taylor"
+                    className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
+                  />
+                  <img
+                    src="/martelinho_3.jpg"
+                    alt="Martelo de reflexos tipo Buck"
+                    className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
+                  />
                 </div>
               </div>
+            </div>
 
-              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
-                  B
-                </div>
-                <div>
-                  <p className="text-white text-base leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-                    A região corporal que será examinada deve estar descoberta.
-                  </p>
-                </div>
+            {/* Item B */}
+            <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                B
               </div>
+              <p
+                className="text-white text-base leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                A região corporal que será examinada deve estar descoberta.
+              </p>
+            </div>
 
-              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
-                  C
-                </div>
-                <div>
-                  <p className="text-white text-base leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-                    Observação da melhor posição de pesquisa para cada reflexo. Uma regra geral deve ser lembrada: a de
-                    manter o efetor do R em leve estado de tensão, favorecedor da resposta reflexa.
-                  </p>
-                </div>
+            {/* Item C */}
+            <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                C
               </div>
+              <p
+                className="text-white text-base leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Observação da melhor posição de pesquisa para cada reflexo. Uma regra geral deve ser lembrada: a de
+                manter o efetor do reflexo em leve estado de tensão, favorecedor da resposta reflexa.
+              </p>
+            </div>
 
-              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
-                  D
-                </div>
-                <div>
-                  <p className="text-white text-base leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-                    Relaxamento adequado do paciente, pois a contratura excessiva bloqueia o reflexo. Converse, distraia
-                    ou use situações que ajudem a relaxar.
-                  </p>
-                </div>
+            {/* Item D */}
+            <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                D
               </div>
+              <p
+                className="text-white text-base leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Relaxamento adequado do paciente, pois a contratura excessiva bloqueia o reflexo. Converse, distraia
+                ou use situações que ajudem a relaxar.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
 
       {/* Como o corpo reage? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
