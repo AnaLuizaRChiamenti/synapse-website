@@ -58,7 +58,7 @@ export function NavigationHero() {
           href="/"
           onClick={closeAllMenus}
           className="font-bold text-[#1f2923] hover:text-[#6B8E23] transition-all ease-[cubic-bezier(0.33,1,0.68,1)] drop-shadow-[0_3px_8px_rgba(0,0,0,0.4)]
-          text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:mt-8"
+          text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:mt-8 lg:mt-11"
           style={{
             fontFamily: "var(--font-cinzel)",
             letterSpacing: "0.15em",
