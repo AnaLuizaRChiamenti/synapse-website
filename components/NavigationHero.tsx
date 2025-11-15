@@ -31,7 +31,7 @@ export function NavigationHero() {
       label: "Review",
       subItems: [
         { href: "/atividades", label: "Atividades" },
-        { href: "/escalas", label: "Escalas e Extras" },
+        { href: "/escalas_extras", label: "Escalas e Extras" },
       ],
     },
     { href: "/#contato", label: "Contato" },
