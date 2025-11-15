@@ -6,9 +6,9 @@ import { Menu, X, ChevronDown } from "lucide-react"
 
 export function NavigationHero() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null) // <--- qual dropdown está aberto
   const [logoVisible, setLogoVisible] = useState(false)
-  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null)
+  const [dropdownTimeout, setDropdownTimeout] = useState<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const timer = setTimeout(() => setLogoVisible(true), 200)
@@ -27,13 +27,24 @@ export function NavigationHero() {
         { href: "/marcha", label: "Marcha" },
       ],
     },
-    { href: "/review", label: "Review" },
+    {
+      label: "Review",
+      subItems: [
+        { href: "/atividades", label: "Atividades" },
+        { href: "/escalas_extras", label: "Escalas e Extras" },
+      ],
+    },
     { href: "/#contato", label: "Contato" },
   ]
 
   const closeAllMenus = () => {
     setIsOpen(false)
-    setIsDropdownOpen(false)
+    setOpenDropdown(null)
+  }
+
+  // para mobile: abre/fecha o dropdown daquele label específico
+  const toggleMobileDropdown = (label: string) => {
+    setOpenDropdown((prev) => (prev === label ? null : label))
   }
 
   return (
@@ -70,10 +81,10 @@ export function NavigationHero() {
                 className="relative group/item"
                 onMouseEnter={() => {
                   if (dropdownTimeout) clearTimeout(dropdownTimeout)
-                  setIsDropdownOpen(true)
+                  setOpenDropdown(item.label) // abre APENAS esse
                 }}
                 onMouseLeave={() => {
-                  const timeout = setTimeout(() => setIsDropdownOpen(false), 150)
+                  const timeout = setTimeout(() => setOpenDropdown(null), 150)
                   setDropdownTimeout(timeout)
                 }}
               >
@@ -85,12 +96,12 @@ export function NavigationHero() {
                   <ChevronDown
                     size={16}
                     className={`transition-transform duration-300 ${
-                      isDropdownOpen ? "rotate-180" : ""
+                      openDropdown === item.label ? "rotate-180" : ""
                     }`}
                   />
                 </button>
 
-                {isDropdownOpen && (
+                {openDropdown === item.label && (
                   <div className="absolute left-1/2 -translate-x-1/2 mt-3 w-56 bg-white shadow-xl rounded-lg border border-gray-200 p-3 z-50">
                     {item.subItems.map((sub) => (
                       <Link
@@ -138,7 +149,7 @@ export function NavigationHero() {
               item.subItems ? (
                 <div key={item.label}>
                   <button
-                    onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                    onClick={() => toggleMobileDropdown(item.label)}
                     className="w-full flex justify-center items-center gap-2 text-[#6B8E23] font-medium hover:text-[#4f6c19]"
                     style={{ fontFamily: "var(--font-poppins)" }}
                   >
@@ -146,11 +157,11 @@ export function NavigationHero() {
                     <ChevronDown
                       size={18}
                       className={`transition-transform duration-300 ${
-                        isDropdownOpen ? "rotate-180" : ""
+                        openDropdown === item.label ? "rotate-180" : ""
                       }`}
                     />
                   </button>
-                  {isDropdownOpen && (
+                  {openDropdown === item.label && (
                     <div className="mt-2 space-y-2">
                       {item.subItems.map((sub) => (
                         <Link

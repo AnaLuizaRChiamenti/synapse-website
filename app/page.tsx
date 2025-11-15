@@ -63,7 +63,7 @@ export default function HomePage() {
           </div>
 
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1f2923] mb-6 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1f2923] mb-6 leading-tight"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Avaliação simplificada e eficaz
