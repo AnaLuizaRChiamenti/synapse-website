@@ -1,11 +1,62 @@
 "use client"
 
 import { NavigationController } from "@/components/NavigationController"
-import { Brain, Target, Zap, Activity, ChevronRight, ClipboardCheck } from "lucide-react"
+import { Brain, Target, Zap, Activity, ChevronRight, ClipboardCheck, BookOpen } from 'lucide-react'
 
 export default function ReflexosPage() {
-  const reflexosProfundos = ["Patelar", "Aquileu", "Bicipital", "Tricipital"]
-  const reflexosSuperficiais = ["Cutâneo-abdominal", "Cutâneo-plantar", "Reflexo de Babinski"]
+  const reflexosProfundos = [
+    {
+      nome: "Aquileu",
+      descricao: "É a resposta do pé quando o tendão de Aquiles (tendão calcâneo) é percutido, geralmente com o pé em flexão plantar.",
+      respostaEsperada: "O pé se move bruscamente para cima (dorsiflexão).",
+      avalia: "A saúde das raízes nervosas S1 e S2, e do nervo isquiático."
+    },
+    {
+      nome: "Bicipital",
+      descricao: "O examinador posiciona o antebraço do paciente levemente fletido e, com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital.",
+      respostaEsperada: "A flexão do antebraço e/ou a contração do músculo bíceps.",
+      avalia: "Raízes nervosas C5 e C6, e o nervo musculocutâneo."
+    },
+    {
+      nome: "Patelar",
+      descricao: "É a extensão do joelho ao se bater no tendão patelar (localizado logo abaixo da patela), que estira o músculo quadríceps.",
+      respostaEsperada: "A perna se estende rapidamente.",
+      avalia: "A integridade do nervo femoral e das raízes nervosas de L2, L3 e L4 da medula espinhal."
+    },
+    {
+      nome: "Tricipital",
+      descricao: "O examinador segura o braço do paciente com o cotovelo a 90 graus, deixando-o pendular. Em seguida, percute o tendão do tríceps, que fica na parte posterior do braço, logo acima do cotovelo.",
+      respostaEsperada: "A extensão do antebraço sobre o braço.",
+      avalia: "Raízes nervosas C6, C7 e C8."
+    }
+  ]
+
+  const reflexosSuperficiais = [
+    {
+      nome: "Babinski (Sinal de Babinski)",
+      descricao: "A resposta patológica do teste do reflexo cutâneo plantar.",
+      comoOcorre: "O dedão do pé se estende para cima, enquanto os outros dedos se abrem em leque.",
+      indica: "Lesão no trato piramidal, responsável pelo controle motor voluntário.",
+      observacao: "Em bebês com menos de 2 anos, é normal devido à imaturidade do sistema nervoso e desaparece com o desenvolvimento."
+    },
+    {
+      nome: "Cutâneo-abdominal",
+      descricao: "O examinador estimula levemente a pele do abdômen com um objeto pontiagudo, mas não afiado, como o martelo de reflexos.",
+      estimulo: "O estímulo é feito deslizando a pele em direção à linha média, em diferentes níveis:",
+      niveis: [
+        "Epigástrico: acima do umbigo (correspondendo aproximadamente aos níveis de T6-T8).",
+        "Umbilical: ao redor do umbigo (T8-T10).",
+        "Hipogástrico: abaixo do umbigo (T10-T12)."
+      ],
+      respostaNormal: "A contração dos músculos abdominais do mesmo lado, causando um leve desvio do umbigo em direção ao estímulo."
+    },
+    {
+      nome: "Cutâneo-plantar em flexão",
+      descricao: "Um teste para avaliar o reflexo plantar.",
+      respostaNormal: "Flexão dos dedos do pé (para baixo).",
+      respostaPatologica: "A extensão do dedão do pé e a abertura dos outros dedos em leque, conhecida como sinal de Babinski."
+    }
+  ]
 
   return (
     <div className="min-h-screen bg-white">
@@ -13,7 +64,7 @@ export default function ReflexosPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="max-w-6xl mx-auto  mt-32">
+        <div className="max-w-5xl mx-auto  mt-32">
           <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
             <Activity className="w-5 h-5" />
             <span className="text-sm font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-poppins)" }}>
@@ -22,14 +73,14 @@ export default function ReflexosPage() {
           </div>
 
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1f2923] mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1f2923] mb-6 leading-tight"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Reflexos
           </h1>
 
           <p
-            className="text-lg sm:text-xl text-[#445345] max-w-3xl leading-relaxed"
+            className="text-lg sm:text-xl text-[#445345] max-w-2xl leading-relaxed"
             style={{ fontFamily: "var(--font-poppins)" }}
           >
             Entenda o funcionamento dos reflexos, sua importância clínica e como avaliá-los na prática fisioterapêutica.
@@ -44,13 +95,13 @@ export default function ReflexosPage() {
 
       {/* O que é? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Zap className="w-6 h-6 text-[#6B8E23]" />
             </div>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1f2923]"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               O que é?
@@ -76,13 +127,13 @@ export default function ReflexosPage() {
 
       {/* Como funciona? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Activity className="w-6 h-6 text-[#6B8E23]" />
             </div>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1f2923]"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Como funciona?
@@ -154,15 +205,15 @@ export default function ReflexosPage() {
         </div>
       </section>
 
-      {/* Quais são os reflexos? */}
+      {/* Quais são os reflexos? (Overview) */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Target className="w-6 h-6 text-[#6B8E23]" />
             </div>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1f2923]"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Quais são os reflexos?
@@ -173,7 +224,7 @@ export default function ReflexosPage() {
             {/* Profundos */}
             <div className="bg-gradient-to-br from-[#6B8E23]/5 to-transparent p-8 rounded-2xl border-2 border-[#6B8E23]/20">
               <h3
-                className="text-2xl sm:text-3xl font-bold text-[#6B8E23] mb-6"
+                className="text-1xl sm:text-2xl font-bold text-[#6B8E23] mb-6"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Profundos
@@ -184,7 +235,7 @@ export default function ReflexosPage() {
                   <li key={index} className="flex items-center gap-3 group">
                     <div className="w-2 h-2 rounded-full bg-[#6B8E23] group-hover:scale-125 transition-transform" />
                     <span className="text-[#445345] text-lg font-medium" style={{ fontFamily: "var(--font-poppins)" }}>
-                      {reflexo}
+                      {reflexo.nome}
                     </span>
                   </li>
                 ))}
@@ -194,7 +245,7 @@ export default function ReflexosPage() {
             {/* Superficiais */}
             <div className="bg-gradient-to-br from-[#D4AF37]/5 to-transparent p-8 rounded-2xl border-2 border-[#D4AF37]/20">
               <h3
-                className="text-2xl sm:text-3xl font-bold text-[#D4AF37] mb-6"
+                className="text-1xl sm:text-2xl font-bold text-[#D4AF37] mb-6"
                 style={{ fontFamily: "var(--font-playfair)" }}
               >
                 Superficiais
@@ -205,7 +256,7 @@ export default function ReflexosPage() {
                   <li key={index} className="flex items-center gap-3 group">
                     <div className="w-2 h-2 rounded-full bg-[#D4AF37] group-hover:scale-125 transition-transform" />
                     <span className="text-[#445345] text-lg font-medium" style={{ fontFamily: "var(--font-poppins)" }}>
-                      {reflexo}
+                      {reflexo.nome}
                     </span>
                   </li>
                 ))}
@@ -215,18 +266,263 @@ export default function ReflexosPage() {
         </div>
       </section>
 
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23]/5 to-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
+              <BookOpen className="w-6 h-6 text-[#6B8E23]" />
+            </div>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Reflexos Profundos - Detalhamento
+            </h2>
+          </div>
+
+          <div className="space-y-8">
+            {reflexosProfundos.map((reflexo, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 sm:p-10 rounded-2xl shadow-md border-l-4 border-[#6B8E23] hover:shadow-lg transition-shadow"
+              >
+                <h3
+                  className="text-xl sm:text-2xl font-bold text-[#6B8E23] mb-4"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  {reflexo.nome}
+                </h3>
+
+                <div className="space-y-4">
+                  <div>
+                    <h4
+                      className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      O que é:
+                    </h4>
+                    <p
+                      className="text-[#445345] text-base leading-relaxed"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      {reflexo.descricao}
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4
+                      className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      Resposta esperada:
+                    </h4>
+                    <p
+                      className="text-[#445345] text-base leading-relaxed"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      {reflexo.respostaEsperada}
+                    </p>
+                  </div>
+
+                  <div className="bg-[#6B8E23]/5 p-4 rounded-lg border border-[#6B8E23]/10">
+                    <h4
+                      className="text-sm font-semibold text-[#6B8E23] uppercase tracking-wide mb-2"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      O que avalia:
+                    </h4>
+                    <p
+                      className="text-[#445345] text-base leading-relaxed"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      {reflexo.avalia}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#D4AF37]/5 to-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center">
+              <BookOpen className="w-6 h-6 text-[#D4AF37]" />
+            </div>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Reflexos Superficiais - Detalhamento
+            </h2>
+          </div>
+
+          <div className="space-y-8">
+            {reflexosSuperficiais.map((reflexo, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 sm:p-10 rounded-2xl shadow-md border-l-4 border-[#D4AF37] hover:shadow-lg transition-shadow"
+              >
+                <h3
+                  className="text-xl sm:text-2xl font-bold text-[#D4AF37] mb-4"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  {reflexo.nome}
+                </h3>
+
+                <div className="space-y-4">
+                  <div>
+                    <h4
+                      className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      O que é:
+                    </h4>
+                    <p
+                      className="text-[#445345] text-base leading-relaxed"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      {reflexo.descricao}
+                    </p>
+                  </div>
+
+                  {reflexo.comoOcorre && (
+                    <div>
+                      <h4
+                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        Como ocorre:
+                      </h4>
+                      <p
+                        className="text-[#445345] text-base leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        {reflexo.comoOcorre}
+                      </p>
+                    </div>
+                  )}
+
+                  {reflexo.estimulo && (
+                    <div>
+                      <h4
+                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        Estímulo:
+                      </h4>
+                      <p
+                        className="text-[#445345] text-base leading-relaxed mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        {reflexo.estimulo}
+                      </p>
+                      {reflexo.niveis && (
+                        <ul className="space-y-2 ml-4">
+                          {reflexo.niveis.map((nivel, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <ChevronRight className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                              <span
+                                className="text-[#445345] text-base"
+                                style={{ fontFamily: "var(--font-poppins)" }}
+                              >
+                                {nivel}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  )}
+
+                  {reflexo.indica && (
+                    <div className="bg-[#D4AF37]/5 p-4 rounded-lg border border-[#D4AF37]/10">
+                      <h4
+                        className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        O que indica:
+                      </h4>
+                      <p
+                        className="text-[#445345] text-base leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        {reflexo.indica}
+                      </p>
+                    </div>
+                  )}
+
+                  {reflexo.respostaNormal && (
+                    <div>
+                      <h4
+                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        Resposta normal (adultos):
+                      </h4>
+                      <p
+                        className="text-[#445345] text-base leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        {reflexo.respostaNormal}
+                      </p>
+                    </div>
+                  )}
+
+                  {reflexo.respostaPatologica && (
+                    <div>
+                      <h4
+                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        Resposta patológica (adultos):
+                      </h4>
+                      <p
+                        className="text-[#445345] text-base leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        {reflexo.respostaPatologica}
+                      </p>
+                    </div>
+                  )}
+
+                  {reflexo.observacao && (
+                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                      <h4
+                        className="text-sm font-semibold text-blue-900 uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        ℹ️ Observação importante:
+                      </h4>
+                      <p
+                        className="text-blue-800 text-base leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        {reflexo.observacao}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
      {/* Como avaliar? */}
     <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F]">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="flex items-center gap-3 mb-8">
           <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
             <ClipboardCheck className="w-6 h-6 text-white" />
           </div>
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-white"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Como avaliar? (Semiotécnica)
+            Como avaliar?
           </h2>
         </div>
 
@@ -316,13 +612,13 @@ export default function ReflexosPage() {
 
       {/* Como o corpo reage? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Brain className="w-6 h-6 text-[#6B8E23]" />
             </div>
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1f2923]"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Como o corpo reage?

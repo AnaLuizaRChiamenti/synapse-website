@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { NavigationController } from "@/components/NavigationController"
-import { Brain, Zap, Activity, Target, ClipboardCheck, ChevronRight, Play } from "lucide-react"
+import { Brain, Zap, Activity, Target, ClipboardCheck, ChevronRight, Play, Users } from 'lucide-react'
 
 type TesteEquilibrio = {
   titulo: string
@@ -64,7 +64,7 @@ export default function EquilibrioPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="max-w-6xl mx-auto mt-32">
+        <div className="max-w-5xl mx-auto mt-32">
           <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
             <Activity className="w-5 h-5" />
             <span className="text-sm font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-poppins)" }}>
@@ -73,7 +73,7 @@ export default function EquilibrioPage() {
           </div>
 
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1f2923] mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1f2923] mb-6 leading-tight"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Equilíbrio
@@ -95,21 +95,19 @@ export default function EquilibrioPage() {
 
       {/* O que é? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Zap className="w-6 h-6 text-[#6B8E23]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
               O que é?
             </h2>
           </div>
 
           <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
             <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-              Do ponto de vista mecânico (1ª Lei de Newton), o equilíbrio ocorre quando a resultante das forças e dos
-              momentos sobre um corpo é nula. Em humanos, a manutenção do equilíbrio depende da relação entre o centro
-              de massa, a linha de gravidade e a base de apoio.
+                O equilíbrio, segundo a mecânica (1ª Lei de Newton), ocorre quando as forças e momentos que atuam sobre um objeto são zero. A capacidade de manter o equilíbrio depende da posição do centro de massa e da área da base de apoio. O objeto permanece estável quando sua linha de gravidade se mantém dentro da base de apoio; se sair dessa área, ocorre o desequilíbrio e o objeto tende a cair. 
             </p>
           </div>
         </div>
@@ -117,33 +115,54 @@ export default function EquilibrioPage() {
 
       {/* Estabilidade */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Activity className="w-6 h-6 text-[#6B8E23]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
               Estabilidade
             </h2>
           </div>
+          <div className="bg-gradient-to-br from-[#6B8E23]/5 to-transparent p-8 sm:p-10 md:p-12 rounded-2xl border-2 border-[#6B8E23]/20">
+            <p className="text-[#445345] text-base sm:text-lg leading-relaxed mb-6" style={{ fontFamily: "var(--font-poppins)" }}>
+              A estabilidade de um objeto aumenta quanto maior for o deslocamento da linha de gravidade que ele suporta antes de perder o equilíbrio ou quanto maior a força externa necessária para desequilibrá-lo. Assim, a estabilidade é maior quando a linha de gravidade permanece dentro da base de sustentação, e aumenta com uma base de sustentação maior, um centro de gravidade mais baixo e mais centralizado.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <div className="bg-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm space-y-6">
+      {/* Equilíbrio Humano */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
+              <Users className="w-6 h-6 text-[#6B8E23]" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+              Equilíbrio Humano
+            </h2>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#6B8E23]/5 to-transparent p-8 sm:p-10 md:p-12 rounded-2xl border-2 border-[#6B8E23]/20">
+            <p className="text-[#445345] text-base sm:text-lg leading-relaxed mb-6" style={{ fontFamily: "var(--font-poppins)" }}>
+              Os princípios da mecânica de Newton sobre estabilidade, base de suporte (BoS), linha de gravidade e centro de gravidade (CoG) se aplicam tanto a objetos quanto a seres humanos. No corpo humano em posição ereta, o CoG é alto e a BoS é pequena, tornando a estabilidade mais difícil de manter.
+            </p>
             <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-              A estabilidade aumenta quando a base de apoio é maior, o centro de gravidade é mais baixo/centralizado e a
-              linha de gravidade permanece dentro da base.
+              Em objetos inanimados, quando a linha de gravidade sai da BoS, a gravidade provoca a queda. Já nos humanos, quando isso ocorre, o corpo consegue perceber o risco de desequilíbrio e ativar músculos para compensar a ação da gravidade, evitando a queda. Portanto, o ser humano possui <strong className="text-[#6B8E23]">controle postural</strong>, enquanto objetos não. Esse controle é essencial para manter diferentes posturas e realizar atividades do dia a dia, e está relacionado a três grandes categorias de ações humanas.
             </p>
           </div>
         </div>
       </section>
 
       {/* Testes de Equilíbrio */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+        <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Target className="w-6 h-6 text-[#6B8E23]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
               Testes de equilíbrio
             </h2>
           </div>
@@ -152,9 +171,9 @@ export default function EquilibrioPage() {
             {testesEquilibrio.map((t, i) => (
               <div
                 key={i}
-                className="bg-gradient-to-br from-[#6B8E23]/5 to-transparent p-8 rounded-2xl border-2 border-[#6B8E23]/20"
+                className="bg-white p-8 rounded-2xl border-2 border-[#6B8E23]/20 shadow-sm hover:shadow-md transition-shadow"
               >
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#6B8E23] mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                <h3 className="text-1xl sm:text-2xl font-bold text-[#6B8E23] mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
                   {t.titulo}
                 </h3>
 
@@ -162,27 +181,27 @@ export default function EquilibrioPage() {
                   {t.descricao}
                 </p>
 
-                <div className="flex flex-wrap items-center gap-3 text-sm">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#6B8E23]/30">
+                <div className="flex flex-wrap items-center gap-3 text-sm mb-4">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F8F9FA] border border-[#6B8E23]/30">
                     <ClipboardCheck className="w-4 h-4 text-[#6B8E23]" />
                     <span className="text-[#1f2923]" style={{ fontFamily: "var(--font-poppins)" }}>
-                      Equipamento: {t.equipamento}
+                      {t.equipamento}
                     </span>
                   </span>
 
                   <span className="px-3 py-1 rounded-full bg-[#D4AF37]/10 text-[#5a4b1a] border border-[#D4AF37]/30">
-                    Referência: {t.referencia}
+                    {t.referencia}
                   </span>
-
-                  <button
-                    type="button"
-                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#6B8E23] text-white hover:brightness-110 transition-all"
-                  >
-                    <Play className="w-4 h-4" />
-                    {openIndex === i ? "Fechar vídeo" : "Como avaliar (vídeo)"}
-                  </button>
                 </div>
+
+                <button
+                  type="button"
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8E23] text-white hover:brightness-110 transition-all"
+                >
+                  <Play className="w-4 h-4" />
+                  {openIndex === i ? "Fechar vídeo" : "Como avaliar (vídeo)"}
+                </button>
 
                 {openIndex === i && (
                   <div className="mt-4">
@@ -203,13 +222,118 @@ export default function EquilibrioPage() {
         </div>
       </section>
 
+      {/* Como Avaliar? */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F]">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+              <ClipboardCheck className="w-6 h-6 text-white" />
+            </div>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Como avaliar? 
+            </h2>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm p-8 sm:p-10 md:p-12 rounded-2xl border border-white/20">
+            <div className="space-y-6">
+              {/* Item A */}
+              <div className="flex flex-col sm:flex-row items-start gap-6 bg-white/10 p-6 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                  A
+                </div>
+                <div className="flex-1">
+                  <p
+                    className="text-white text-base leading-relaxed mb-4"
+                    style={{ fontFamily: "var(--font-poppins)" }}
+                  >
+                    Utilize apenas o instrumental básico exigido pelos testes de equilíbrio: cronômetro, cadeira com 
+                    braços e pés fixos, fita adesiva/métrica, espaço plano e seguro para marcha, superfície firme para 
+                    testes estáticos.
+                  </p>
+
+                  {/* Galeria de imagens */}
+                  <div className="flex flex-wrap gap-4 justify-evenly">
+                    <img
+                      src="/cronometro_equilibrio.jpg"
+                      alt="Cronômetro para avaliação de equilíbrio"
+                      className="rounded-lg shadow-md border border-white/20 w-[180px] h-[200px] object-fill"
+                    />
+                    <img
+                      src="/cadeira_equilibrio.jpg"
+                      alt="Cadeira com braços para teste TUG"
+                      className="rounded-lg shadow-md border border-white/20 w-[180px] h-[200px] object-fill"
+                    />
+                    <img
+                      src="/fita_equilibrio.jpg"
+                      alt="Fita métrica para demarcação de testes"
+                      className="rounded-lg shadow-md border border-white/20 w-[180px] h-[200px] object-fill"
+                    />
+                    <img
+                      src="/fita_2_equilibrio.jpg"
+                      alt="Fita métrica para demarcação de testes"
+                      className="rounded-lg shadow-md border border-white/20 w-[180px] h-[200px] object-fill"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Item B */}
+              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                  B
+                </div>
+                <p
+                  className="text-white text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  O indivíduo deve estar com roupa confortável e, preferencialmente, descalço ou com calçado seguro. 
+                  Sempre explicar o teste antes de iniciar, garantindo que ele compreenda a tarefa.
+                </p>
+              </div>
+
+              {/* Item C */}
+              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                  C
+                </div>
+                <p
+                  className="text-white text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Manter-se próximo ao avaliado durante toda a execução, preparado para evitar quedas. Interromper caso 
+                  haja tontura, insegurança, instabilidade ou mal-estar.
+                </p>
+              </div>
+
+              {/* Item D */}
+              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                  D
+                </div>
+                <p
+                  className="text-white text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  O avaliador deve observar sempre oscilações do corpo, deslocamentos inesperados, necessidade de apoio, 
+                  velocidade e qualidade da marcha, atrasos na execução. Esses elementos ajudam a identificar alterações 
+                  no equilíbrio, propriocepção ou controle postural.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl sm:text-4xl font-bold text-[#1f2923] mb-6" style={{ fontFamily: "var(--font-playfair)" }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#1f2923] mb-6" style={{ fontFamily: "var(--font-playfair)" }}>
             Precisa de uma avaliação de equilíbrio?
           </h3>
-          <p className="text-lg text-[#445345] mb-8 max-w-2xl mx-auto" style={{ fontFamily: "var(--font-poppins)" }}>
+          <p className="text-lg text-[#445345] mb-8 max-w-1xl mx-auto" style={{ fontFamily: "var(--font-poppins)" }}>
             Nossa equipe está preparada para realizar uma avaliação completa com protocolos padronizados e seguros.
           </p>
           <a
