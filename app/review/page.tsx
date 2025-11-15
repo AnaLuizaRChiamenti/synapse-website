@@ -53,7 +53,7 @@ export default function ReviewPage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="max-w-6xl mx-auto mt-32">
+        <div className="max-w-6xl mx-auto md:mt-14 lg:mt-32">
           <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
             <Activity className="w-5 h-5" />
             <span
