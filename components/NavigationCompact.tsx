@@ -20,7 +20,13 @@ export function NavigationCompact() {
         { href: "#marcha", label: "Marcha" },
       ],
     },
-    { href: "/review", label: "Review" },
+    {
+      label: "Review",
+      subItems: [
+        { href: "/atividades", label: "Atividades" },
+        { href: "/escalas_extras", label: "Escalas e Extras" },
+      ],
+    },
     { href: "#contato", label: "Contato" },
   ]
 
