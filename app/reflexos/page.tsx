@@ -145,62 +145,16 @@ export default function ReflexosPage() {
               className="text-[#445345] text-base sm:text-lg leading-relaxed"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-              O estímulo é recebido pelo receptor, que pode ser uma terminação sensorial na pele, nas mucosas, no
-              músculo e no tendão. A estimulação do receptor inicia um impulso que segue pela via aferente até o sistema
-              nervoso central (SNC), onde há sinapse em um centro reflexo que ativa o corpo celular do neurônio
-              eferente. O neurônio sensorial fornece o componente aferente e consiste em um corpo celular que se
-              encontra no gânglio da raiz dorsal (GRD) e inerva o músculo ou órgão tendinoso de Golgi associado ao
-              músculo. O neurônio motor fornece o componente eferente e consiste em um motoneurônio alfa localizado no
-              corno anterior da medula espinhal.
+             O reflexo começa quando um receptor sensorial na pele, músculo ou tendão detecta um estímulo. Esse sinal segue pela via aferente até o SNC, onde ocorre uma sinapse que ativa o neurônio eferente.
+
+            O impulso parte do fuso muscular, que percebe o estiramento. As fibras aferentes Ia levam essa informação à medula, ativando diretamente o motoneurônio alfa, que faz as fibras musculares extrafusais contraírem. O neurotransmissor dessa sinapse é o glutamato. Quando o músculo contrai, o fuso reduz sua descarga e o reflexo se encerra.
+
+            Enquanto o músculo agonista contrai, o antagonista é inibido por interneurônios Ia. No reflexo patelar, por exemplo, o quadríceps contrai e os isquiotibiais relaxam. O neurônio gama ajusta a sensibilidade do fuso por meio da acetilcolina.
+
+            A resposta final chega ao efetor (músculo ou tendão). Qualquer alteração em uma das partes do arco reflexo pode diminuir ou abolir o reflexo.
+
             </p>
 
-            <p
-              className="text-[#445345] text-base sm:text-lg leading-relaxed"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              A via inicia no fuso muscular, um órgão proprioceptivo. O fuso muscular compreende fibras intrafusais
-              envoltas por uma cápsula de tecido conjuntivo responsável por detectar o estiramento muscular. O fuso
-              muscular está presente dentro do músculo entre as fibras extrafusais. O mecanismo de elicitação de um
-              reflexo tendinoso profundo em um paciente envolve tendões, músculos e o arco reflexo. A percussão no
-              tendão apropriado causa alongamento passivo do músculo associado. O alongamento da fibra muscular é
-              detectado pelo fuso muscular localizado dentro das fibras musculares.
-            </p>
-
-            <p
-              className="text-[#445345] text-base sm:text-lg leading-relaxed"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              O fuso muscular é um proprioceptor sensorial responsável por identificar o comprimento das fibras
-              musculares, composto por fibras intrafusais que não se contraem. As fibras sensoriais aferentes Ia nos
-              fusos musculares produzem potenciais de ação em resposta ao alongamento. Essas fibras aferentes Ia vão
-              para a medula espinhal na raiz dorsal e estimulam monossinapticamente o neurônio motor alfa que vai para
-              as fibras extrafusais do músculo homônimo. O glutamato é o neurotransmissor na sinapse central. As fibras
-              musculares extrafusais então geram uma contração para resistir a esse alongamento. Quando a contração
-              muscular ocorre, o fuso muscular diminui a frequência de disparo do potencial de ação e o reflexo é
-              extinto.
-            </p>
-
-            <p
-              className="text-[#445345] text-base sm:text-lg leading-relaxed"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              O músculo antagonista é inibido durante o reflexo, enquanto o músculo agonista se contrai. [8] Essa ação
-              ocorre polissinapticamente por meio do interneurônio inibitório Ia, que inibe os neurônios motores alfa
-              para o músculo antagonista. Por exemplo, durante o reflexo patelar, os músculos isquiotibiais são inibidos
-              e relaxados, enquanto os músculos quadríceps são estimulados e se contraem. Dentro do fuso muscular, o
-              neurônio motor gama causa o estreitamento ou relaxamento das fibras musculares intrafusais para regular a
-              sensibilidade do fuso muscular e a resposta do reflexo. Isso é mediado pela acetilcolina.
-            </p>
-
-            <p
-              className="text-[#445345] text-base sm:text-lg leading-relaxed"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              O neurônio eferente transmite o impulso para o efetor: a célula, o músculo, a glândula ou o vaso
-              sanguíneo, que então responde. Um distúrbio na função de uma parte do arco reflexo – receptor, via
-              aferente, centro do reflexo, via eferente ou aparelho efetor – interrompe o arco reflexo, com consequente
-              diminuição ou perda do reflexo.
-            </p>
           </div>
         </div>
       </section>

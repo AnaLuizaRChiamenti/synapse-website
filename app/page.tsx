@@ -54,7 +54,7 @@ export default function HomePage() {
 
       {/* HERO */}
       <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden">
-        <div className="max-w-6xl mx-auto relative mt-5 z-10 sm:mt-5 md:mt-5 lg:mt-60">
+        <div className="max-w-4xl mx-32 relative mt-5 z-10 sm:mt-5 md:mt-5 lg:mt-60">
           <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
             <Sparkles className="w-5 h-5" />
             <span className="text-sm font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-poppins)" }}>
@@ -66,7 +66,8 @@ export default function HomePage() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1f2923] mb-6 leading-tight"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Avaliação simplificada e eficaz
+            Avaliação simplificada<br />
+            <span className="block">e eficaz</span>
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-10">
