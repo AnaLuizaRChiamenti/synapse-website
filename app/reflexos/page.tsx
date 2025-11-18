@@ -142,19 +142,17 @@ export default function ReflexosPage() {
 
           <div className="bg-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm space-y-6">
             <p
-              className="text-[#445345] text-base sm:text-lg leading-relaxed"
+              className="text-[#445345] text-base sm:text-lg leading-relaxed whitespace-pre-line"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-             O reflexo começa quando um receptor sensorial na pele, músculo ou tendão detecta um estímulo. Esse sinal segue pela via aferente até o SNC, onde ocorre uma sinapse que ativa o neurônio eferente.
+              O reflexo começa quando um receptor sensorial na pele, músculo ou tendão detecta um estímulo. Esse sinal segue pela via aferente até o SNC, onde ocorre uma sinapse que ativa o neurônio eferente.
 
-            O impulso parte do fuso muscular, que percebe o estiramento. As fibras aferentes Ia levam essa informação à medula, ativando diretamente o motoneurônio alfa, que faz as fibras musculares extrafusais contraírem. O neurotransmissor dessa sinapse é o glutamato. Quando o músculo contrai, o fuso reduz sua descarga e o reflexo se encerra.
+              O impulso parte do fuso muscular, que percebe o estiramento. As fibras aferentes Ia levam essa informação à medula, ativando diretamente o motoneurônio alfa, que faz as fibras musculares extrafusais contraírem. O neurotransmissor dessa sinapse é o glutamato. Quando o músculo contrai, o fuso reduz sua descarga e o reflexo se encerra.
 
-            Enquanto o músculo agonista contrai, o antagonista é inibido por interneurônios Ia. No reflexo patelar, por exemplo, o quadríceps contrai e os isquiotibiais relaxam. O neurônio gama ajusta a sensibilidade do fuso por meio da acetilcolina.
+              Enquanto o músculo agonista contrai, o antagonista é inibido por interneurônios Ia. No reflexo patelar, por exemplo, o quadríceps contrai e os isquiotibiais relaxam. O neurônio gama ajusta a sensibilidade do fuso por meio da acetilcolina.
 
-            A resposta final chega ao efetor (músculo ou tendão). Qualquer alteração em uma das partes do arco reflexo pode diminuir ou abolir o reflexo.
-
+              A resposta final chega ao efetor (músculo ou tendão). Qualquer alteração em uma das partes do arco reflexo pode diminuir ou abolir o reflexo.
             </p>
-
           </div>
         </div>
       </section>
@@ -220,6 +218,7 @@ export default function ReflexosPage() {
         </div>
       </section>
 
+      {/* Reflexos Profundos - Detalhamento */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23]/5 to-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
@@ -299,6 +298,7 @@ export default function ReflexosPage() {
         </div>
       </section>
 
+      {/* Reflexos Superficiais - Detalhamento */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#D4AF37]/5 to-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
@@ -465,104 +465,181 @@ export default function ReflexosPage() {
         </div>
       </section>
 
-     {/* Como avaliar? */}
-    <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F]">
-      <div className="max-w-5xl mx-auto">
-        <div className="flex items-center gap-3 mb-8">
-          <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
-            <ClipboardCheck className="w-6 h-6 text-white" />
+      {/* Como avaliar? */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F]">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+              <ClipboardCheck className="w-6 h-6 text-white" />
+            </div>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Como avaliar?
+            </h2>
           </div>
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl font-bold text-white"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            Como avaliar?
-          </h2>
-        </div>
 
-        <div className="bg-white/10 backdrop-blur-sm p-8 sm:p-10 md:p-12 rounded-2xl border border-white/20">
-          <div className="space-y-6">
+          <div className="bg-white/10 backdrop-blur-sm p-8 sm:p-10 md:p-12 rounded-2xl border border-white/20">
+            <div className="space-y-6">
+              {/* Item A */}
+              <div className="flex flex-col sm:flex-row items-start gap-6 bg-white/10 p-6 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                  A
+                </div>
+                <div className="flex-1">
+                  <p
+                    className="text-white text-base leading-relaxed mb-4"
+                    style={{ fontFamily: "var(--font-poppins)" }}
+                  >
+                    Instrumental adequado, ou seja, use um dos vários tipos de martelo de reflexos disponíveis no mercado
+                    (Babinski, Taylor, McGill, Buck), com borracha macia, para não causar dor à percussão.
+                  </p>
 
-            {/* Item A */}
-            <div className="flex flex-col sm:flex-row items-start gap-6 bg-white/10 p-6 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
-                A
-              </div>
-              <div className="flex-1">
-                <p
-                  className="text-white text-base leading-relaxed mb-4"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  Instrumental adequado, ou seja, use um dos vários tipos de martelo de reflexos disponíveis no mercado
-                  (Babinski, Taylor, McGill, Buck), com borracha macia, para não causar dor à percussão.
-                </p>
-
-                {/* Galeria de imagens */}
-                <div className="flex flex-wrap gap-4 justify-evenly">
-                  <img
-                    src="/martelinho_1.jpg"
-                    alt="Martelo de reflexos tipo Babinski"
-                    className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
-                  />
-                  <img
-                    src="/martelinho_2.jpg"
-                    alt="Martelo de reflexos tipo Taylor"
-                    className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
-                  />
-                  <img
-                    src="/martelinho_3.jpg"
-                    alt="Martelo de reflexos tipo Buck"
-                    className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
-                  />
+                  {/* Galeria de imagens */}
+                  <div className="flex flex-wrap gap-4 justify-evenly">
+                    <img
+                      src="/martelinho_1.jpg"
+                      alt="Martelo de reflexos tipo Babinski"
+                      className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
+                    />
+                    <img
+                      src="/martelinho_2.jpg"
+                      alt="Martelo de reflexos tipo Taylor"
+                      className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
+                    />
+                    <img
+                      src="/martelinho_3.jpg"
+                      alt="Martelo de reflexos tipo Buck"
+                      className="rounded-lg shadow-md border border-white/20 w-[200px] h-[220px] object-fill"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Item B */}
-            <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
-                B
+              {/* Item B */}
+              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                  B
+                </div>
+                <p
+                  className="text-white text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  A região corporal que será examinada deve estar descoberta.
+                </p>
               </div>
-              <p
-                className="text-white text-base leading-relaxed"
-                style={{ fontFamily: "var(--font-poppins)" }}
-              >
-                A região corporal que será examinada deve estar descoberta.
-              </p>
-            </div>
 
-            {/* Item C */}
-            <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
-                C
+              {/* Item C */}
+              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                  C
+                </div>
+                <p
+                  className="text-white text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Observação da melhor posição de pesquisa para cada reflexo. Uma regra geral deve ser lembrada: a de
+                  manter o efetor do reflexo em leve estado de tensão, favorecedor da resposta reflexa.
+                </p>
               </div>
-              <p
-                className="text-white text-base leading-relaxed"
-                style={{ fontFamily: "var(--font-poppins)" }}
-              >
-                Observação da melhor posição de pesquisa para cada reflexo. Uma regra geral deve ser lembrada: a de
-                manter o efetor do reflexo em leve estado de tensão, favorecedor da resposta reflexa.
-              </p>
-            </div>
 
-            {/* Item D */}
-            <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
-                D
+              {/* Item D */}
+              <div className="flex items-start gap-4 bg-white/10 p-6 rounded-xl">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
+                  D
+                </div>
+                <p
+                  className="text-white text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Relaxamento adequado do paciente, pois a contratura excessiva bloqueia o reflexo. Converse, distraia
+                  ou use situações que ajudem a relaxar.
+                </p>
               </div>
-              <p
-                className="text-white text-base leading-relaxed"
-                style={{ fontFamily: "var(--font-poppins)" }}
-              >
-                Relaxamento adequado do paciente, pois a contratura excessiva bloqueia o reflexo. Converse, distraia
-                ou use situações que ajudem a relaxar.
-              </p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      {/* Como diagnosticar? */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
+              <Activity className="w-6 h-6 text-[#6B8E23]" />
+            </div>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Como diagnosticar?
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Normorreflexia */}
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
+              <span className="inline-flex px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold uppercase tracking-wide mb-3">
+                Normorreflexia
+              </span>
+              <p
+                className="text-[#445345] text-base leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                O sistema nervoso está respondendo aos estímulos de forma adequada e padrão. 
+              </p>
+            </div>
+
+            {/* Hiporreflexia */}
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
+              <span className="inline-flex px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-semibold uppercase tracking-wide mb-3">
+                Hiporreflexia
+              </span>
+              <p
+                className="text-[#445345] text-base leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                A hiporreflexia é a ausência ou diminuição da resposta ao toque. Geralmente indica uma doença que afeta um ou mais componentes do próprio arco reflexo de dois neurônios. A diminuição do reflexo tendinoso profundo geralmente sugere uma lesão do neurônio motor inferior.
+              </p>
+            </div>
+
+            {/* Hiperreflexia */}
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
+              <span className="inline-flex px-3 py-1 rounded-full bg-red-50 text-red-800 text-xs font-semibold uppercase tracking-wide mb-3">
+                Hiperreflexia
+              </span>
+              <p
+                className="text-[#445345] text-base leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                A hiperreflexia refere-se a reflexos hiperativos ou repetitivos (clônicos). Geralmente, indicam uma interrupção das vias corticoespinhais e outras vias descendentes que influenciam o arco reflexo, devido a uma lesão suprassegmentar, ou seja, uma lesão acima do nível das vias reflexas espinais.O aumento do reflexo tendinoso profundo também sugere uma lesão do neurônio motor superior.
+              </p>
+            </div>
+
+            {/* Arreflexia */}
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
+              <span className="inline-flex px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wide mb-3">
+                Arreflexia
+              </span>
+              <div className="space-y-3">
+                <p
+                  className="text-[#445345] text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  A ausência de reflexos tendinosos profundos (RTP) indica uma lesão dentro do arco reflexo. A ausência dos reflexos tendinosos profundos (RTP) indica um comprometimento em alguma parte do arco reflexo. Quando há ausência de reflexo associada à perda sensorial no território correspondente, sugere-se lesão do componente aferente do arco reflexo, como o nervo sensitivo ou o corno dorsal da medula. Já a ausência de reflexo acompanhada de paralisia, fasciculações e atrofia muscular aponta para lesão do componente eferente, envolvendo as células do corno anterior ou do nervo motor.
+                </p>
+                <p
+                  className="text-[#445345] text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  A causa mais frequente de arreflexia é a neuropatia periférica, frequentemente relacionada a condições como diabetes, alcoolismo, uremia, deficiências vitamínicas, amiloidose ou exposição a toxinas. Embora a ausência bilateral do reflexo aquileu seja geralmente sugestiva de neuropatia periférica, também pode ocorrer em casos de síndrome da cauda equina. Além disso, lesões de nervos periféricos específicos podem reduzir ou abolir determinados reflexos, como o bíceps (nervo musculocutâneo), tríceps e braquiorradial (nervo radial), patelar (nervo femoral) e aquileu (nervo tibial).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Como o corpo reage? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
