@@ -158,8 +158,8 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <p className="text-[#445345] max-w-2xl leading-relaxed mb-10" style={{ fontFamily: "var(--font-poppins)" }}>
-            Somos três acadêmicas do 10º período de Fisioterapia, conectadas pelo cuidado humanizado e pela busca de excelência.
+          <p className="text-[#445345] max-w-5xl leading-relaxed mb-10" style={{ fontFamily: "var(--font-poppins)" }}>
+            Somos três acadêmicas do 10º período do curso de Fisioterapia, conectadas pelo compromisso com o cuidado humanizado e pela busca constante de aprimoramento profissional. Nosso propósito é promover saúde, compartilhar conhecimento e valorizar a fisioterapia como ciência e prática transformadora.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
