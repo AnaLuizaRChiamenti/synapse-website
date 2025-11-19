@@ -19,7 +19,7 @@ export default function EquilibrioPage() {
     {
       titulo: "Teste de Romberg",
       descricao:
-        "O avaliado permanece de pé, descalço, com pés juntos e braços cruzados ou ao lado do corpo. Mantém-se com olhos abertos por ~30 s e depois fechados por 30–60 s. Positivo quando há perda de equilíbrio ao fechar os olhos.",
+        "O teste de Romberg deve ser explicado antes da aplicação. O avaliado fica de pé, descalço, em superfície plana, com os pés juntos e os braços cruzados ou ao lado do corpo. Primeiro, mantém os olhos abertos por cerca de 30 segundos e depois os fecha por 30 segundos a 1 minuto, enquanto o avaliador observa possíveis desequilíbrios, permanecendo próximo para garantir segurança. O teste é considerado positivo quando há perda de equilíbrio ao fechar os olhos, com oscilação, movimentação dos pés ou queda, indicando alteração na propriocepção ou no sistema vestibular. Já o negativo ocorre quando o avaliado mantém o equilíbrio, com pouca ou nenhuma oscilação, sugerindo ausência de ataxia e bom funcionamento dos sistemas visual e proprioceptivo.",
       referencia: "SILVEIRA et al., 2024",
       equipamento: "Superfície plana segura; cronômetro opcional; apoio do examinador.",
       video: "/videos/video-teste-de-romberg.mp4",
@@ -27,33 +27,25 @@ export default function EquilibrioPage() {
     {
       titulo: "Teste de Fukuda",
       descricao:
-        "Com olhos fechados e braços estendidos, o paciente marcha no lugar por ~50 passos. Positivo se girar >45° para um lado ou deslocar-se >1 m.",
+        "O teste de Fukuda avalia alterações no equilíbrio e no sistema vestibular. O paciente deve ficar com os olhos fechados e os braços estendidos à frente, marchando no mesmo lugar enquanto o examinador conta até 50. O teste é considerado positivo quando o paciente gira o corpo mais de 45° para um dos lados ou se desloca mais de 1 metro para frente. Caso ele gire a cabeça em direção ao lado afetado, pode apresentar tendência a cair para frente.",
       referencia: "MARTINS et al., 2017",
       equipamento: "Espaço livre e silencioso; marcação no chão opcional; cronômetro.",
       video: "/videos/video-teste-de-fukuda.mp4",
     },
     {
-      titulo: "Teste de Reação de Equilíbrio",
-      descricao:
-        "Observa respostas automáticas a perturbações posturais leves e moderadas, avaliando ajustes de tornozelo, quadril e passos de proteção.",
-      referencia: "SILVEIRA et al., 2024",
-      equipamento: "Ambiente seguro e examinador treinado para provocar perturbações controladas.",
-      video: "/videos/video-teste-de-reacao-de-equilibrio.mp4",
-    },
-    {
       titulo: "Teste de Marcha Tandem",
       descricao:
-        "Caminhar em linha por ~10 m colocando um pé imediatamente à frente do outro, calcanhar-toe. Cronometrar e considerar o melhor de 3 tentativas.",
+        "Como funciona? O teste de Tandem avalia o equilíbrio e a marcha do idoso: Na marcha tandem o idoso anda em linha reta por 10 m colocando um pé à frente do outro; o tempo é cronometrado, o teste é repetido três vezes e usa-se o melhor tempo (dispositivos de auxílio e tipo de calçado devem ser anotados).",
       referencia: "SILVEIRA et al., 2024",
-      equipamento: "Fita para demarcar linha/metros; cronômetro.",
+      equipamento: "É necessário um cronômetro para registrar o tempo que o indivíduo vai necessitar tanto para o teste estático como para a caminhada tandem dentro de espaço com distância delimitada em metros.",
       video: "/videos/video-teste-de-marcha-tandem.mp4",
     },
     {
       titulo: "Teste TUG (Timed Up and Go)",
       descricao:
-        "Levantar de cadeira com braços, caminhar 3 m, virar 180°, retornar e sentar. Cronometrar o tempo total.",
+        "Como funciona? O teste TUG (Timed Up and Go) é usado para avaliar a mobilidade, equilíbrio e risco de quedas. Ele é realizado com o idoso sentado em uma cadeira com apoio de braços, em um local plano. Ao comando do avaliador, o idoso deve levantar-se sem usar os apoios, caminhar 3 metros, virar-se a 180°, retornar até a cadeira e sentar-se novamente. O tempo total gasto nessa sequência é cronometrado e, geralmente, varia entre 20 e 30 segundos. O desempenho permite observar a coordenação, a estabilidade e a segurança do idoso durante o movimento.",
       referencia: "SILVEIRA et al., 2024",
-      equipamento: "Cadeira com braços (sem rodinhas), marcação a 3 m, cronômetro.",
+      equipamento: "Cadeira com braços, de pés fixos ao chão (sem rodinhas), cronômetro; fita adesiva; trena ou barbante ou trena, ou fita com 3m (para demarcação da distância de 3m).",
       video: "/videos/video-teste-de-tug.mp4",
     },
   ]
@@ -93,8 +85,28 @@ export default function EquilibrioPage() {
         </div>
       </section>
 
-      {/* O que é? */}
+      {/* CONCEITO */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
+              <Zap className="w-6 h-6 text-[#6B8E23]" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+              CONCEITO
+            </h2>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+            <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
+              vou ter que fazer de novo!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* O que é? */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -105,7 +117,7 @@ export default function EquilibrioPage() {
             </h2>
           </div>
 
-          <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+          <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
             <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
                 O equilíbrio, segundo a mecânica (1ª Lei de Newton), ocorre quando as forças e momentos que atuam sobre um objeto são zero. A capacidade de manter o equilíbrio depende da posição do centro de massa e da área da base de apoio. O objeto permanece estável quando sua linha de gravidade se mantém dentro da base de apoio; se sair dessa área, ocorre o desequilíbrio e o objeto tende a cair. 
             </p>
@@ -114,7 +126,7 @@ export default function EquilibrioPage() {
       </section>
 
       {/* Estabilidade */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+{/*       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -130,10 +142,10 @@ export default function EquilibrioPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Equilíbrio Humano */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
+{/*       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -144,7 +156,7 @@ export default function EquilibrioPage() {
             </h2>
           </div>
 
-          <div className="bg-gradient-to-br from-[#6B8E23]/5 to-transparent p-8 sm:p-10 md:p-12 rounded-2xl border-2 border-[#6B8E23]/20">
+          <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
             <p className="text-[#445345] text-base sm:text-lg leading-relaxed mb-6" style={{ fontFamily: "var(--font-poppins)" }}>
               Os princípios da mecânica de Newton sobre estabilidade, base de suporte (BoS), linha de gravidade e centro de gravidade (CoG) se aplicam tanto a objetos quanto a seres humanos. No corpo humano em posição ereta, o CoG é alto e a BoS é pequena, tornando a estabilidade mais difícil de manter.
             </p>
@@ -153,10 +165,10 @@ export default function EquilibrioPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testes de Equilíbrio */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -171,7 +183,7 @@ export default function EquilibrioPage() {
             {testesEquilibrio.map((t, i) => (
               <div
                 key={i}
-                className="bg-white p-8 rounded-2xl border-2 border-[#6B8E23]/20 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-[#F8F9FA] p-8 rounded-2xl border-2 border-[#6B8E23]/20 shadow-sm hover:shadow-md transition-shadow"
               >
                 <h3 className="text-1xl sm:text-2xl font-bold text-[#6B8E23] mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
                   {t.titulo}
@@ -182,8 +194,8 @@ export default function EquilibrioPage() {
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 text-sm mb-4">
-                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F8F9FA] border border-[#6B8E23]/30">
-                    <ClipboardCheck className="w-4 h-4 text-[#6B8E23]" />
+                  <span className="inline-flex items-center gap-2 px-5 py-5 rounded-full bg-white border border-[#6B8E23]/30">
+                    <ClipboardCheck className="w-10 h-10 text-[#6B8E23]" />
                     <span className="text-[#1f2923]" style={{ fontFamily: "var(--font-poppins)" }}>
                       {t.equipamento}
                     </span>
@@ -222,6 +234,29 @@ export default function EquilibrioPage() {
         </div>
       </section>
 
+      {/* Reação de Equilíbrio */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
+              <Activity className="w-6 h-6 text-[#6B8E23]" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+              Reação de Equilíbrio
+            </h2>
+          </div>
+
+          <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+            <h3 className="text-xl sm:text-2xl font-semibold text-[#6B8E23] mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+              Quais são os testes?
+            </h3>
+            <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
+              sentado na maca, não sei o nome ksks
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Como Avaliar? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F]">
         <div className="max-w-5xl mx-auto">
@@ -249,8 +284,8 @@ export default function EquilibrioPage() {
                     className="text-white text-base leading-relaxed mb-4"
                     style={{ fontFamily: "var(--font-poppins)" }}
                   >
-                    Utilize apenas o instrumental básico exigido pelos testes de equilíbrio: cronômetro, cadeira com 
-                    braços e pés fixos, fita adesiva/métrica, espaço plano e seguro para marcha, superfície firme para 
+                    Utilize apenas o instrumental básico exigido pelos testes de equilíbrio, como: cronômetro, cadeira com 
+                    braços e pés fixos, fita adesiva/fita métrica, espaço plano e seguro para marcha, superfície firme para 
                     testes estáticos.
                   </p>
 
@@ -328,7 +363,7 @@ export default function EquilibrioPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="text-2xl sm:text-3xl font-bold text-[#1f2923] mb-6" style={{ fontFamily: "var(--font-playfair)" }}>
             Precisa de uma avaliação de equilíbrio?
