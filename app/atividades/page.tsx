@@ -829,11 +829,28 @@ export default function AtividadesPage() {
               </div>
             ))}
           </div>
+          <div className="flex flex-wrap gap-2 mt-7">
+              <button
+                type="button"
+                onClick={() => setMostrarResultado(true)}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8E23] text-white text-sm sm:text-base hover:brightness-110 transition-all"
+              >
+                <CheckCircle2 className="w-4 h-4" />
+                Conferir resultado
+              </button>
+              <button
+                type="button"
+                onClick={handleReiniciar}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-[#6B8E23]/40 text-[#1f2923] text-sm sm:text-base hover:bg-[#6B8E23]/5 transition-all"
+              >
+                Reiniciar quiz
+              </button>
+            </div>
         </div>
       </section>
 
       {/* Gabarito */}
-      <section
+{/*       <section
         id="gabarito"
         className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white"
       >
@@ -896,7 +913,7 @@ export default function AtividadesPage() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

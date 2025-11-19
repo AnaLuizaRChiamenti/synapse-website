@@ -16,8 +16,8 @@ export function NavigationCompact() {
       subItems: [
         { href: "/reflexos", label: "Reflexo" },
         { href: "/equilibrio", label: "Equilíbrio" },
-        { href: "/#coordenacao", label: "Coordenação" },
-        { href: "/#marcha", label: "Marcha" },
+        { href: "/coordenacao", label: "Coordenação" },
+        { href: "/marcha", label: "Marcha" },
       ],
     },
     {
