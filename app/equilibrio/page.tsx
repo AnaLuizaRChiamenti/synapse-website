@@ -48,14 +48,6 @@ export default function EquilibrioPage() {
       equipamento: "Cadeira com braços, de pés fixos ao chão (sem rodinhas), cronômetro; fita adesiva; trena ou barbante ou trena, ou fita com 3m (para demarcação da distância de 3m).",
       video: "https://github.com/AnaLuizaRChiamenti/synapse-website/releases/download/v1.0-videos/video-teste-de-tug.mp4",
     },
-        {
-      titulo: "Teste TUG (Timed Up and Go)",
-      descricao:
-        "Como funciona? O teste TUG (Timed Up and Go) é usado para avaliar a mobilidade, equilíbrio e risco de quedas. Ele é realizado com o idoso sentado em uma cadeira com apoio de braços, em um local plano. Ao comando do avaliador, o idoso deve levantar-se sem usar os apoios, caminhar 3 metros, virar-se a 180°, retornar até a cadeira e sentar-se novamente. O tempo total gasto nessa sequência é cronometrado e, geralmente, varia entre 20 e 30 segundos. O desempenho permite observar a coordenação, a estabilidade e a segurança do idoso durante o movimento.",
-      referencia: "SILVEIRA et al., 2024",
-      equipamento: "Cadeira com braços, de pés fixos ao chão (sem rodinhas), cronômetro; fita adesiva; trena ou barbante ou trena, ou fita com 3m (para demarcação da distância de 3m).",
-      video: "https://www.youtube.com/embed/KZ5r8tsmJ1I",
-    },
   ]
 
   return (
