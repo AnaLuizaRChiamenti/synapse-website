@@ -22,7 +22,7 @@ export default function EquilibrioPage() {
         "O teste de Romberg deve ser explicado antes da aplicação. O avaliado fica de pé, descalço, em superfície plana, com os pés juntos e os braços cruzados ou ao lado do corpo. Primeiro, mantém os olhos abertos por cerca de 30 segundos e depois os fecha por 30 segundos a 1 minuto, enquanto o avaliador observa possíveis desequilíbrios, permanecendo próximo para garantir segurança. O teste é considerado positivo quando há perda de equilíbrio ao fechar os olhos, com oscilação, movimentação dos pés ou queda, indicando alteração na propriocepção ou no sistema vestibular. Já o negativo ocorre quando o avaliado mantém o equilíbrio, com pouca ou nenhuma oscilação, sugerindo ausência de ataxia e bom funcionamento dos sistemas visual e proprioceptivo.",
       referencia: "SILVEIRA et al., 2024",
       equipamento: "Superfície plana segura; cronômetro opcional; apoio do examinador.",
-      video: "/videos/video-teste-de-romberg.mp4",
+      video: "https://github.com/AnaLuizaRChiamenti/synapse-website/releases/download/v1.0-videos/video-teste-de-romberg.mp4",
     },
     {
       titulo: "Teste de Fukuda",
@@ -30,7 +30,7 @@ export default function EquilibrioPage() {
         "O teste de Fukuda avalia alterações no equilíbrio e no sistema vestibular. O paciente deve ficar com os olhos fechados e os braços estendidos à frente, marchando no mesmo lugar enquanto o examinador conta até 50. O teste é considerado positivo quando o paciente gira o corpo mais de 45° para um dos lados ou se desloca mais de 1 metro para frente. Caso ele gire a cabeça em direção ao lado afetado, pode apresentar tendência a cair para frente.",
       referencia: "MARTINS et al., 2017",
       equipamento: "Espaço livre e silencioso; marcação no chão opcional; cronômetro.",
-      video: "/videos/video-teste-de-fukuda.mp4",
+      video: "https://github.com/AnaLuizaRChiamenti/synapse-website/releases/download/v1.0-videos/video-teste-de-fukuda.mp4",
     },
     {
       titulo: "Teste de Marcha Tandem",
@@ -38,7 +38,7 @@ export default function EquilibrioPage() {
         "Como funciona? O teste de Tandem avalia o equilíbrio e a marcha do idoso: Na marcha tandem o idoso anda em linha reta por 10 m colocando um pé à frente do outro; o tempo é cronometrado, o teste é repetido três vezes e usa-se o melhor tempo (dispositivos de auxílio e tipo de calçado devem ser anotados).",
       referencia: "SILVEIRA et al., 2024",
       equipamento: "É necessário um cronômetro para registrar o tempo que o indivíduo vai necessitar tanto para o teste estático como para a caminhada tandem dentro de espaço com distância delimitada em metros.",
-      video: "/videos/video-teste-de-marcha-tandem.mp4",
+      video: "https://github.com/AnaLuizaRChiamenti/synapse-website/releases/download/v1.0-videos/video-teste-de-marcha-tandem.mp4",
     },
     {
       titulo: "Teste TUG (Timed Up and Go)",
@@ -46,7 +46,7 @@ export default function EquilibrioPage() {
         "Como funciona? O teste TUG (Timed Up and Go) é usado para avaliar a mobilidade, equilíbrio e risco de quedas. Ele é realizado com o idoso sentado em uma cadeira com apoio de braços, em um local plano. Ao comando do avaliador, o idoso deve levantar-se sem usar os apoios, caminhar 3 metros, virar-se a 180°, retornar até a cadeira e sentar-se novamente. O tempo total gasto nessa sequência é cronometrado e, geralmente, varia entre 20 e 30 segundos. O desempenho permite observar a coordenação, a estabilidade e a segurança do idoso durante o movimento.",
       referencia: "SILVEIRA et al., 2024",
       equipamento: "Cadeira com braços, de pés fixos ao chão (sem rodinhas), cronômetro; fita adesiva; trena ou barbante ou trena, ou fita com 3m (para demarcação da distância de 3m).",
-      video: "/videos/video-teste-de-tug.mp4",
+      video: "https://github.com/AnaLuizaRChiamenti/synapse-website/releases/download/v1.0-videos/video-teste-de-tug.mp4",
     },
   ]
 
