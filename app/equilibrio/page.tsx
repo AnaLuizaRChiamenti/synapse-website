@@ -297,12 +297,6 @@ export default function EquilibrioPage() {
           </div>
 
           <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <h3
-              className="text-xl sm:text-2xl font-semibold text-[#6B8E23] mb-4"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Quais são os testes?
-            </h3>
 
             <p
               className="text-[#445345] text-base sm:text-lg leading-relaxed mb-6"
