@@ -203,76 +203,6 @@ export default function MarchaFuncionalPage() {
         </div>
       </section>
 
-      {/* Objetivos da Avaliação */}
-{/*       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23]/5 to-transparent">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
-              <Target className="w-6 h-6 text-[#6B8E23]" />
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]">
-              Objetivos da Avaliação Instrumental
-            </h2>
-          </div>
-
-          <div className="bg-white p-8 sm:p-10 rounded-2xl border-2 border-[#6B8E23]/20 shadow-sm">
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Os objetivos da avaliação instrumental da marcha são:
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#6B8E23]/10 flex items-center justify-center flex-shrink-0">
-                  <ChevronRight className="w-5 h-5 text-[#6B8E23]" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Identificar Alterações</h3>
-                  <p className="text-sm text-gray-600">
-                    Detectar compensações e limitações que influenciam a funcionalidade da marcha.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#6B8E23]/10 flex items-center justify-center flex-shrink-0">
-                  <ChevronRight className="w-5 h-5 text-[#6B8E23]" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Compreender Mecanismos</h3>
-                  <p className="text-sm text-gray-600">
-                    Entender os mecanismos subjacentes e a etiologia dos distúrbios da marcha.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#6B8E23]/10 flex items-center justify-center flex-shrink-0">
-                  <ChevronRight className="w-5 h-5 text-[#6B8E23]" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Parâmetros Quantitativos</h3>
-                  <p className="text-sm text-gray-600">
-                    Obter parâmetros quantitativos e qualitativos da marcha para análise precisa.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#6B8E23]/10 flex items-center justify-center flex-shrink-0">
-                  <ChevronRight className="w-5 h-5 text-[#6B8E23]" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-2">Definir Terapêutica</h3>
-                  <p className="text-sm text-gray-600">
-                    Estabelecer métodos terapêuticos adequados e acompanhar a evolução da doença.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* Fragmentação em Fases */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -319,30 +249,141 @@ export default function MarchaFuncionalPage() {
         </div>
       </section>
 
-      {/* Nota Clínica */}
-      {/* <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23]/5 to-transparent">
+      {/* ADIÇÃO: literatura */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-white p-8 rounded-2xl border-2 border-[#6B8E23]/20 shadow-sm">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center flex-shrink-0">
-                <Brain className="w-6 h-6 text-[#6B8E23]" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#1f2923] mb-3">
-                  Importância Clínica
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  A avaliação detalhada de cada fase da marcha permite ao fisioterapeuta 
-                  identificar déficits específicos em amplitude de movimento, força muscular 
-                  e coordenação neuromuscular. Esta fragmentação sistemática facilita o 
-                  planejamento de intervenções terapêuticas direcionadas, otimizando os 
-                  resultados funcionais e a qualidade de vida do paciente.
-                </p>
-              </div>
-            </div>
+          <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+            <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
+              A literatura demonstra de forma consistente que a marcha é sensível a diferentes doenças, apresentando padrões específicos que podem auxiliar no diagnóstico, monitoramento e tratamento. A análise quantitativa da marcha é uma ferramenta valiosa para diferenciar condições clínicas e orientar intervenções personalizadas.
+            </p>
           </div>
         </div>
-      </section> */}
+      </section>
+
+      {/* ADIÇÃO: tabela de doenças/condições */}
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
+              <Target className="w-6 h-6 text-[#6B8E23]" />
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+              Doença/Condição
+            </h2>
+          </div>
+
+          <div className="overflow-x-auto bg-white rounded-2xl shadow-sm border border-gray-100">
+            <table className="min-w-full text-left">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-4 text-sm font-semibold text-gray-700">
+                    Doença/Condição
+                  </th>
+                  <th className="px-6 py-4 text-sm font-semibold text-gray-700">
+                    Alterações Características da Marcha
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr>
+                  <td className="px-6 py-5 text-[#1f2923] font-medium">
+                    Parkinson
+                  </td>
+                  <td className="px-6 py-5 text-[#445345]">
+                    Marcha lenta, passos curtos, arrastados, redução do balanço dos braços, congelando
+                    <div className="mt-2 text-sm text-blue-700 break-all">
+                      <a
+                        href="https://www.mdpi.com/1424-8220/25/2/338"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:opacity-80"
+                      >
+                        https://www.mdpi.com/1424-8220/25/2/338
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="px-6 py-5 text-[#1f2923] font-medium">
+                    Hemiplegia (pós-AVC)
+                  </td>
+                  <td className="px-6 py-5 text-[#445345]">
+                    Assimetria, diminuição da flexão do joelho/tornozelo no lado afetado, apoio prolongado no lado sadio
+                    <div className="mt-2 text-sm text-blue-700 break-all">
+                      <a
+                        href="https://linkinghub.elsevier.com/retrieve/pii/S0003999319307427"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:opacity-80"
+                      >
+                        https://linkinghub.elsevier.com/retrieve/pii/S0003999319307427
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="px-6 py-5 text-[#1f2923] font-medium">
+                    Ataxia cerebelar
+                  </td>
+                  <td className="px-6 py-5 text-[#445345]">
+                    Marchar
+                    <div className="mt-2 text-sm text-blue-700 break-all">
+                      <a
+                        href="https://pn.bmj.com/content/24/1/11"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:opacity-80"
+                      >
+                        https://pn.bmj.com/content/24/1/11
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="px-6 py-5 text-[#1f2923] font-medium">
+                    Doença de Huntington
+                  </td>
+                  <td className="px-6 py-5 text-[#445345]">
+                    Movimentos involuntários, passos ir
+                    <div className="mt-2 text-sm text-blue-700 break-all">
+                      <a
+                        href="https://ieeexplore.ieee.org/document/9376702"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:opacity-80"
+                      >
+                        https://ieeexplore.ieee.org/document/9376702
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="px-6 py-5 text-[#1f2923] font-medium">
+                    Esclerose Múltipla
+                  </td>
+                  <td className="px-6 py-5 text-[#445345]">
+                    Redução da velocidade, aumento do tempo de duplo apoio, assimetria, variabilidade
+                    <div className="mt-2 text-sm text-blue-700 break-all">
+                      <a
+                        href="https://linkinghub.elsevier.com/retrieve/pii/S2211034817300123"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline hover:opacity-80"
+                      >
+                        https://linkinghub.elsevier.com/retrieve/pii/S2211034817300123
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

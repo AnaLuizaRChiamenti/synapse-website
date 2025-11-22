@@ -9,25 +9,33 @@ export default function ReflexosPage() {
       nome: "Aquileu",
       descricao: "É a resposta do pé quando o tendão de Aquiles (tendão calcâneo) é percutido, geralmente com o pé em flexão plantar.",
       respostaEsperada: "O pé se move bruscamente para cima (dorsiflexão).",
-      avalia: "A saúde das raízes nervosas S1 e S2, e do nervo isquiático."
+      avalia: "A saúde das raízes nervosas S1 e S2, e do nervo isquiático.",
+      comoEFeito: "Com o paciente sentado e os pés pendentes, o examinador apoia o pé em posição relaxada, colocando uma das mãos sob a planta do pé do paciente e realizando uma leve dorsiflexão e percuti o tendão de Aquiles logo acima do calcâneo",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
     },
     {
       nome: "Bicipital",
       descricao: "O examinador posiciona o antebraço do paciente levemente fletido e, com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital.",
       respostaEsperada: "A flexão do antebraço e/ou a contração do músculo bíceps.",
-      avalia: "Raízes nervosas C5 e C6, e o nervo musculocutâneo."
+      avalia: "Raízes nervosas C5 e C6, e o nervo musculocutâneo.",
+      comoEFeito: "O examinador posiciona o antebraço do paciente levemente fletido e, o polegar do examinador deve estar firmemente posicionado sobre o tendão do bíceps e com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital, acima do deo do examinador..",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
     },
     {
       nome: "Patelar",
       descricao: "É a extensão do joelho ao se bater no tendão patelar (localizado logo abaixo da patela), que estira o músculo quadríceps.",
       respostaEsperada: "A perna se estende rapidamente.",
-      avalia: "A integridade do nervo femoral e das raízes nervosas de L2, L3 e L4 da medula espinhal."
+      avalia: "A integridade do nervo femoral e das raízes nervosas de L2, L3 e L4 da medula espinhal.",
+      comoEFeito: "Paciente sentado com pernas livres; percutir o tendão patelar com martelo de reflexo",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
     },
     {
       nome: "Tricipital",
       descricao: "O examinador segura o braço do paciente com o cotovelo a 90 graus, deixando-o pendular. Em seguida, percute o tendão do tríceps, que fica na parte posterior do braço, logo acima do cotovelo.",
       respostaEsperada: "A extensão do antebraço sobre o braço.",
-      avalia: "Raízes nervosas C6, C7 e C8."
+      avalia: "Raízes nervosas C6, C7 e C8.",
+      comoEFeito: "O examinador segura o braço do paciente com o cotovelo a 90 graus, deixando-o pendular,  o polegar do examinador deve estar firmemente posicionado sobre o tendão do tríceps. Em seguida,  percute o dedo do examinador que está acima do tendão do tríceps, que fica na parte posterior do braço, logo acima do cotovelo.",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
     }
   ]
 
@@ -37,7 +45,9 @@ export default function ReflexosPage() {
       descricao: "A resposta patológica do teste do reflexo cutâneo plantar.",
       comoOcorre: "O dedão do pé se estende para cima, enquanto os outros dedos se abrem em leque.",
       indica: "Lesão no trato piramidal, responsável pelo controle motor voluntário.",
-      observacao: "Em bebês com menos de 2 anos, é normal devido à imaturidade do sistema nervoso e desaparece com o desenvolvimento."
+      observacao: "Em bebês com menos de 2 anos, é normal devido à imaturidade do sistema nervoso e desaparece com o desenvolvimento.",
+      comoEFeito: "Estimulação com objeto (p. ex., haste do martelo) na borda lateral da planta do pé em direção à base do hálux.",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
     },
     {
       nome: "Cutâneo-abdominal",
@@ -48,13 +58,16 @@ export default function ReflexosPage() {
         "Umbilical: ao redor do umbigo (T8-T10).",
         "Hipogástrico: abaixo do umbigo (T10-T12)."
       ],
-      respostaNormal: "A contração dos músculos abdominais do mesmo lado, causando um leve desvio do umbigo em direção ao estímulo."
+      respostaNormal: "A contração dos músculos abdominais do mesmo lado, causando um leve desvio do umbigo em direção ao estímulo.",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
     },
     {
       nome: "Cutâneo-plantar em flexão",
       descricao: "Um teste para avaliar o reflexo plantar.",
       respostaNormal: "Flexão dos dedos do pé (para baixo).",
-      respostaPatologica: "A extensão do dedão do pé e a abertura dos outros dedos em leque, conhecida como sinal de Babinski."
+      respostaPatologica: "A extensão do dedão do pé e a abertura dos outros dedos em leque, conhecida como sinal de Babinski.",
+      comoEFeito: "Estimulação com objeto (p. ex., haste do martelo) na borda lateral da planta do pé em direção à base do hálux.",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
     }
   ]
 
@@ -69,6 +82,16 @@ export default function ReflexosPage() {
             <Activity className="w-5 h-5" />
             <span className="text-sm font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-poppins)" }}>
               Avaliação Neurofuncional
+            </span>
+          </div>
+
+          {/* ADIÇÃO: Semiologia Neurológica */}
+          <div className="mb-3">
+            <span
+              className="text-sm sm:text-base font-semibold text-[#445345] uppercase tracking-wide"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              Semiologia Neurológica
             </span>
           </div>
 
@@ -152,6 +175,14 @@ export default function ReflexosPage() {
               Enquanto o músculo agonista contrai, o antagonista é inibido por interneurônios Ia. No reflexo patelar, por exemplo, o quadríceps contrai e os isquiotibiais relaxam. O neurônio gama ajusta a sensibilidade do fuso por meio da acetilcolina.
 
               A resposta final chega ao efetor (músculo ou tendão). Qualquer alteração em uma das partes do arco reflexo pode diminuir ou abolir o reflexo.
+            </p>
+
+            {/* ADIÇÃO: referência do "Como funciona?" */}
+            <p
+              className="text-[#6B8E23] text-sm font-medium"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              (RODRÍGUEZ-BEATO; DE JESUS, 2023).
             </p>
           </div>
         </div>
@@ -262,6 +293,24 @@ export default function ReflexosPage() {
                     </p>
                   </div>
 
+                  {/* ADIÇÃO: Como é feito */}
+                  {reflexo.comoEFeito && (
+                    <div>
+                      <h4
+                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        Como é feito:
+                      </h4>
+                      <p
+                        className="text-[#445345] text-base leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        {reflexo.comoEFeito}
+                      </p>
+                    </div>
+                  )}
+
                   <div>
                     <h4
                       className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
@@ -291,6 +340,16 @@ export default function ReflexosPage() {
                       {reflexo.avalia}
                     </p>
                   </div>
+
+                  {/* ADIÇÃO: referência */}
+                  {reflexo.referencia && (
+                    <p
+                      className="text-[#6B8E23] text-sm font-medium"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      {reflexo.referencia}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
@@ -341,6 +400,24 @@ export default function ReflexosPage() {
                       {reflexo.descricao}
                     </p>
                   </div>
+
+                  {/* ADIÇÃO: Como é feito (quando houver) */}
+                  {reflexo.comoEFeito && (
+                    <div>
+                      <h4
+                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        Como é feito:
+                      </h4>
+                      <p
+                        className="text-[#445345] text-base leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
+                        {reflexo.comoEFeito}
+                      </p>
+                    </div>
+                  )}
 
                   {reflexo.comoOcorre && (
                     <div>
@@ -458,6 +535,16 @@ export default function ReflexosPage() {
                       </p>
                     </div>
                   )}
+
+                  {/* ADIÇÃO: referência */}
+                  {reflexo.referencia && (
+                    <p
+                      className="text-[#D4AF37] text-sm font-medium"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
+                      {reflexo.referencia}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
@@ -557,6 +644,14 @@ export default function ReflexosPage() {
                   ou use situações que ajudem a relaxar.
                 </p>
               </div>
+
+              {/* ADIÇÃO: referência da semiotécnica */}
+              <p
+                className="text-white/90 text-sm font-medium pt-2"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                (MARTINS et al., 2017)
+              </p>
             </div>
           </div>
         </div>
@@ -589,6 +684,14 @@ export default function ReflexosPage() {
               >
                 O sistema nervoso está respondendo aos estímulos de forma adequada e padrão. 
               </p>
+
+              {/* ADIÇÃO: referência */}
+              <p
+                className="text-[#6B8E23] text-sm font-medium mt-2"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                (SHAHROKHI; ASSUNÇÃO, 2023).
+              </p>
             </div>
 
             {/* Hiporreflexia */}
@@ -602,6 +705,14 @@ export default function ReflexosPage() {
               >
                 A hiporreflexia é a ausência ou diminuição da resposta ao toque. Geralmente indica uma doença que afeta um ou mais componentes do próprio arco reflexo de dois neurônios. A diminuição do reflexo tendinoso profundo geralmente sugere uma lesão do neurônio motor inferior.
               </p>
+
+              {/* ADIÇÃO: referência */}
+              <p
+                className="text-[#6B8E23] text-sm font-medium mt-2"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                (SHAHROKHI; ASSUNÇÃO, 2023).
+              </p>
             </div>
 
             {/* Hiperreflexia */}
@@ -614,6 +725,14 @@ export default function ReflexosPage() {
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
                 A hiperreflexia refere-se a reflexos hiperativos ou repetitivos (clônicos). Geralmente, indicam uma interrupção das vias corticoespinhais e outras vias descendentes que influenciam o arco reflexo, devido a uma lesão suprassegmentar, ou seja, uma lesão acima do nível das vias reflexas espinais.O aumento do reflexo tendinoso profundo também sugere uma lesão do neurônio motor superior.
+              </p>
+
+              {/* ADIÇÃO: referência */}
+              <p
+                className="text-[#6B8E23] text-sm font-medium mt-2"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                (SHAHROKHI; ASSUNÇÃO, 2023).
               </p>
             </div>
 
@@ -634,6 +753,14 @@ export default function ReflexosPage() {
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
                   A causa mais frequente de arreflexia é a neuropatia periférica, frequentemente relacionada a condições como diabetes, alcoolismo, uremia, deficiências vitamínicas, amiloidose ou exposição a toxinas. Embora a ausência bilateral do reflexo aquileu seja geralmente sugestiva de neuropatia periférica, também pode ocorrer em casos de síndrome da cauda equina. Além disso, lesões de nervos periféricos específicos podem reduzir ou abolir determinados reflexos, como o bíceps (nervo musculocutâneo), tríceps e braquiorradial (nervo radial), patelar (nervo femoral) e aquileu (nervo tibial).
+                </p>
+
+                {/* ADIÇÃO: referência */}
+                <p
+                  className="text-[#6B8E23] text-sm font-medium mt-1"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  (RODRÍGUEZ-BEATO; DE JESUS, 2023).
                 </p>
               </div>
             </div>
