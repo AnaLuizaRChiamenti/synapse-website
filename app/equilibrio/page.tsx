@@ -1,8 +1,15 @@
 "use client"
 
-import { useState } from "react"
 import { NavigationController } from "@/components/NavigationController"
-import { Brain, Zap, Activity, Target, ClipboardCheck, ChevronRight, Play, Users } from 'lucide-react'
+import {
+  Brain,
+  Zap,
+  Activity,
+  Target,
+  ClipboardCheck,
+  ChevronRight,
+  Users,
+} from "lucide-react"
 
 type TesteEquilibrio = {
   titulo: string
@@ -19,10 +26,7 @@ function getYoutubeId(url: string) {
   return match ? match[1] : null
 }
 
-
 export default function EquilibrioPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
   const testesEquilibrio: TesteEquilibrio[] = [
     {
       titulo: "Teste de Romberg",
@@ -45,7 +49,8 @@ export default function EquilibrioPage() {
       descricao:
         "Como funciona? O teste de Tandem avalia o equilíbrio e a marcha do idoso: Na marcha tandem o idoso anda em linha reta por 10 m colocando um pé à frente do outro; o tempo é cronometrado, o teste é repetido três vezes e usa-se o melhor tempo (dispositivos de auxílio e tipo de calçado devem ser anotados).",
       referencia: "SILVEIRA et al., 2024",
-      equipamento: "É necessário um cronômetro para registrar o tempo que o indivíduo vai necessitar tanto para o teste estático como para a caminhada tandem dentro de espaço com distância delimitada em metros.",
+      equipamento:
+        "É necessário um cronômetro para registrar o tempo que o indivíduo vai necessitar tanto para o teste estático como para a caminhada tandem dentro de espaço com distância delimitada em metros.",
       video: "https://www.youtube.com/watch?v=WygoCl874Js",
     },
     {
@@ -53,7 +58,8 @@ export default function EquilibrioPage() {
       descricao:
         "Como funciona? O teste TUG (Timed Up and Go) é usado para avaliar a mobilidade, equilíbrio e risco de quedas. Ele é realizado com o idoso sentado em uma cadeira com apoio de braços, em um local plano. Ao comando do avaliador, o idoso deve levantar-se sem usar os apoios, caminhar 3 metros, virar-se a 180°, retornar até a cadeira e sentar-se novamente. O tempo total gasto nessa sequência é cronometrado e, geralmente, varia entre 20 e 30 segundos. O desempenho permite observar a coordenação, a estabilidade e a segurança do idoso durante o movimento.",
       referencia: "SILVEIRA et al., 2024",
-      equipamento: "Cadeira com braços, de pés fixos ao chão (sem rodinhas), cronômetro; fita adesiva; trena ou barbante ou trena, ou fita com 3m (para demarcação da distância de 3m).",
+      equipamento:
+        "Cadeira com braços, de pés fixos ao chão (sem rodinhas), cronômetro; fita adesiva; trena ou barbante ou trena, ou fita com 3m (para demarcação da distância de 3m).",
       video: "https://www.youtube.com/watch?v=-i_-0biUi9w",
     },
   ]
@@ -67,7 +73,10 @@ export default function EquilibrioPage() {
         <div className="max-w-5xl mx-auto md:mt-14 lg:mt-32">
           <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
             <Activity className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-poppins)" }}>
+            <span
+              className="text-sm font-medium tracking-wide uppercase"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
               Avaliação Neurofuncional
             </span>
           </div>
@@ -171,68 +180,6 @@ export default function EquilibrioPage() {
         </div>
       </section>
 
-      {/* O que é? */}
-      {/* <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
-              <Zap className="w-6 h-6 text-[#6B8E23]" />
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
-              O que é?
-            </h2>
-          </div>
-
-          <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-                O equilíbrio, segundo a mecânica (1ª Lei de Newton), ocorre quando as forças e momentos que atuam sobre um objeto são zero. A capacidade de manter o equilíbrio depende da posição do centro de massa e da área da base de apoio. O objeto permanece estável quando sua linha de gravidade se mantém dentro da base de apoio; se sair dessa área, ocorre o desequilíbrio e o objeto tende a cair. 
-            </p>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Estabilidade */}
-{/*       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
-              <Activity className="w-6 h-6 text-[#6B8E23]" />
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
-              Estabilidade
-            </h2>
-          </div>
-          <div className="bg-gradient-to-br from-[#6B8E23]/5 to-transparent p-8 sm:p-10 md:p-12 rounded-2xl border-2 border-[#6B8E23]/20">
-            <p className="text-[#445345] text-base sm:text-lg leading-relaxed mb-6" style={{ fontFamily: "var(--font-poppins)" }}>
-              A estabilidade de um objeto aumenta quanto maior for o deslocamento da linha de gravidade que ele suporta antes de perder o equilíbrio ou quanto maior a força externa necessária para desequilibrá-lo. Assim, a estabilidade é maior quando a linha de gravidade permanece dentro da base de sustentação, e aumenta com uma base de sustentação maior, um centro de gravidade mais baixo e mais centralizado.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
-      {/* Equilíbrio Humano */}
-{/*       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
-              <Users className="w-6 h-6 text-[#6B8E23]" />
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
-              Equilíbrio Humano
-            </h2>
-          </div>
-
-          <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <p className="text-[#445345] text-base sm:text-lg leading-relaxed mb-6" style={{ fontFamily: "var(--font-poppins)" }}>
-              Os princípios da mecânica de Newton sobre estabilidade, base de suporte (BoS), linha de gravidade e centro de gravidade (CoG) se aplicam tanto a objetos quanto a seres humanos. No corpo humano em posição ereta, o CoG é alto e a BoS é pequena, tornando a estabilidade mais difícil de manter.
-            </p>
-            <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-              Em objetos inanimados, quando a linha de gravidade sai da BoS, a gravidade provoca a queda. Já nos humanos, quando isso ocorre, o corpo consegue perceber o risco de desequilíbrio e ativar músculos para compensar a ação da gravidade, evitando a queda. Portanto, o ser humano possui <strong className="text-[#6B8E23]">controle postural</strong>, enquanto objetos não. Esse controle é essencial para manter diferentes posturas e realizar atividades do dia a dia, e está relacionado a três grandes categorias de ações humanas.
-            </p>
-          </div>
-        </div>
-      </section> */}
-
       {/* Testes de Equilíbrio */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -240,7 +187,10 @@ export default function EquilibrioPage() {
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Target className="w-6 h-6 text-[#6B8E23]" />
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
               Testes de equilíbrio
             </h2>
           </div>
@@ -251,24 +201,34 @@ export default function EquilibrioPage() {
                 key={i}
                 className="bg-[#F8F9FA] p-8 rounded-2xl border-2 border-[#6B8E23]/20 shadow-sm hover:shadow-md transition-shadow"
               >
-                <h3 className="text-1xl sm:text-2xl font-bold text-[#6B8E23] mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+                <h3
+                  className="text-1xl sm:text-2xl font-bold text-[#6B8E23] mb-4"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
                   {t.titulo}
                 </h3>
 
-                <p className="text-[#445345] text-base sm:text-lg leading-relaxed mb-4" style={{ fontFamily: "var(--font-poppins)" }}>
+                <p
+                  className="text-[#445345] text-base sm:text-lg leading-relaxed mb-4"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
                   {t.descricao}
                 </p>
 
-                <div className="flex flex-wrap items-center gap-3 text-sm mb-4">
+                <div className="flex flex-wrap items-center gap-3 text-sm mb-6">
                   <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-[#6B8E23]/30 shadow-sm">
                     <ClipboardCheck className="w-6 h-6 text-[#6B8E23] flex-shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wide text-[#6B8E23] mb-1"
-                        style={{ fontFamily: "var(--font-poppins)" }}>
+                      <p
+                        className="text-xs font-semibold uppercase tracking-wide text-[#6B8E23] mb-1"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
                         Equipamento
                       </p>
-                      <p className="text-[#1f2923] text-sm leading-relaxed"
-                        style={{ fontFamily: "var(--font-poppins)" }}>
+                      <p
+                        className="text-[#1f2923] text-sm leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}
+                      >
                         {t.equipamento}
                       </p>
                     </div>
@@ -279,28 +239,16 @@ export default function EquilibrioPage() {
                   </span>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8E23] text-white hover:brightness-110 transition-all"
-                >
-                  <Play className="w-4 h-4" />
-                  {openIndex === i ? "Fechar vídeo" : "Como avaliar (vídeo)"}
-                </button>
-
-                {openIndex === i && (
-                  <div className="mt-4">
-                    <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#6B8E23]/20">
-                      <iframe
-                        className="absolute inset-0 w-full h-full"
-                        src={`https://www.youtube.com/embed/${getYoutubeId(t.video)}`}
-                        title={t.titulo}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    </div>
-                  </div>
-                )}
+                {/* VÍDEO SEMPRE ABERTO */}
+                <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#6B8E23]/20">
+                  <iframe
+                    className="absolute inset-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${getYoutubeId(t.video)}`}
+                    title={t.titulo}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -337,7 +285,7 @@ export default function EquilibrioPage() {
               sentado na maca, não sei o nome ksks
             </p>
 
-            {/* Vídeo junto ao conteúdo */}
+            {/* VÍDEO SEMPRE ABERTO */}
             <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#6B8E23]/20">
               <iframe
                 className="absolute inset-0 w-full h-full"
@@ -364,7 +312,7 @@ export default function EquilibrioPage() {
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-white"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Como avaliar? 
+              Como avaliar?
             </h2>
           </div>
 
@@ -376,16 +324,12 @@ export default function EquilibrioPage() {
                   A
                 </div>
                 <div className="flex-1">
-                  <p
-                    className="text-white text-base leading-relaxed mb-4"
-                    style={{ fontFamily: "var(--font-poppins)" }}
-                  >
-                    Utilize apenas o instrumental básico exigido pelos testes de equilíbrio, como: cronômetro, cadeira com 
-                    braços e pés fixos, fita adesiva/fita métrica, espaço plano e seguro para marcha, superfície firme para 
+                  <p className="text-white text-base leading-relaxed mb-4">
+                    Utilize apenas o instrumental básico exigido pelos testes de equilíbrio, como: cronômetro, cadeira com
+                    braços e pés fixos, fita adesiva/fita métrica, espaço plano e seguro para marcha, superfície firme para
                     testes estáticos.
                   </p>
 
-                  {/* Galeria de imagens */}
                   <div className="flex flex-wrap gap-4 justify-evenly">
                     <img
                       src="/cronometro_equilibrio.jpg"
@@ -416,11 +360,8 @@ export default function EquilibrioPage() {
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
                   B
                 </div>
-                <p
-                  className="text-white text-base leading-relaxed"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  O indivíduo deve estar com roupa confortável e, preferencialmente, descalço ou com calçado seguro. 
+                <p className="text-white text-base leading-relaxed">
+                  O indivíduo deve estar com roupa confortável e, preferencialmente, descalço ou com calçado seguro.
                   Sempre explicar o teste antes de iniciar, garantindo que ele compreenda a tarefa.
                 </p>
               </div>
@@ -430,11 +371,8 @@ export default function EquilibrioPage() {
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
                   C
                 </div>
-                <p
-                  className="text-white text-base leading-relaxed"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  Manter-se próximo ao avaliado durante toda a execução, preparado para evitar quedas. Interromper caso 
+                <p className="text-white text-base leading-relaxed">
+                  Manter-se próximo ao avaliado durante toda a execução, preparado para evitar quedas. Interromper caso
                   haja tontura, insegurança, instabilidade ou mal-estar.
                 </p>
               </div>
@@ -444,12 +382,9 @@ export default function EquilibrioPage() {
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
                   D
                 </div>
-                <p
-                  className="text-white text-base leading-relaxed"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  O avaliador deve observar sempre oscilações do corpo, deslocamentos inesperados, necessidade de apoio, 
-                  velocidade e qualidade da marcha, atrasos na execução. Esses elementos ajudam a identificar alterações 
+                <p className="text-white text-base leading-relaxed">
+                  O avaliador deve observar sempre oscilações do corpo, deslocamentos inesperados, necessidade de apoio,
+                  velocidade e qualidade da marcha, atrasos na execução. Esses elementos ajudam a identificar alterações
                   no equilíbrio, propriocepção ou controle postural.
                 </p>
               </div>
@@ -461,16 +396,15 @@ export default function EquilibrioPage() {
       {/* CTA */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-[#1f2923] mb-6" style={{ fontFamily: "var(--font-playfair)" }}>
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#1f2923] mb-6">
             Precisa de uma avaliação de equilíbrio?
           </h3>
-          <p className="text-lg text-[#445345] mb-8 max-w-1xl mx-auto" style={{ fontFamily: "var(--font-poppins)" }}>
+          <p className="text-lg text-[#445345] mb-8 max-w-1xl mx-auto">
             Nossa equipe está preparada para realizar uma avaliação completa com protocolos padronizados e seguros.
           </p>
           <a
             href="/#contato"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E23] text-white rounded-lg font-semibold hover:brightness-110 transition-all duration-300 shadow-lg"
-            style={{ fontFamily: "var(--font-poppins)" }}
           >
             Agendar Avaliação
             <ChevronRight className="w-5 h-5" />
