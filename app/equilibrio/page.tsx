@@ -202,12 +202,19 @@ export default function EquilibrioPage() {
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 text-sm mb-4">
-                  <span className="inline-flex items-center gap-2 px-5 py-5 rounded-full bg-white border border-[#6B8E23]/30">
-                    <ClipboardCheck className="w-10 h-10 text-[#6B8E23]" />
-                    <span className="text-[#1f2923]" style={{ fontFamily: "var(--font-poppins)" }}>
-                      {t.equipamento}
-                    </span>
-                  </span>
+                  <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-[#6B8E23]/30 shadow-sm">
+                    <ClipboardCheck className="w-6 h-6 text-[#6B8E23] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wide text-[#6B8E23] mb-1"
+                        style={{ fontFamily: "var(--font-poppins)" }}>
+                        Equipamento
+                      </p>
+                      <p className="text-[#1f2923] text-sm leading-relaxed"
+                        style={{ fontFamily: "var(--font-poppins)" }}>
+                        {t.equipamento}
+                      </p>
+                    </div>
+                  </div>
 
                   <span className="px-3 py-1 rounded-full bg-[#D4AF37]/10 text-[#5a4b1a] border border-[#D4AF37]/30">
                     {t.referencia}
