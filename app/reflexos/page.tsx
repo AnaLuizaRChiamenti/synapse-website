@@ -1,74 +1,119 @@
 "use client"
 
+import { useState } from "react"
 import { NavigationController } from "@/components/NavigationController"
-import { Brain, Target, Zap, Activity, ChevronRight, ClipboardCheck, BookOpen } from 'lucide-react'
+import {
+  Brain,
+  Target,
+  Zap,
+  Activity,
+  ChevronRight,
+  ClipboardCheck,
+  BookOpen,
+  Play,
+} from "lucide-react"
+
+function getYoutubeId(url: string) {
+  const regExp =
+    /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/
+  const match = url.match(regExp)
+  return match ? match[1] : null
+}
 
 export default function ReflexosPage() {
+  // controla qual card de vídeo está aberto
+  const [openVideoKey, setOpenVideoKey] = useState<string | null>(null)
+
   const reflexosProfundos = [
     {
       nome: "Aquileu",
-      descricao: "É a resposta do pé quando o tendão de Aquiles (tendão calcâneo) é percutido, geralmente com o pé em flexão plantar.",
+      descricao:
+        "É a resposta do pé quando o tendão de Aquiles (tendão calcâneo) é percutido, geralmente com o pé em flexão plantar.",
       respostaEsperada: "O pé se move bruscamente para cima (dorsiflexão).",
       avalia: "A saúde das raízes nervosas S1 e S2, e do nervo isquiático.",
-      comoEFeito: "Com o paciente sentado e os pés pendentes, o examinador apoia o pé em posição relaxada, colocando uma das mãos sob a planta do pé do paciente e realizando uma leve dorsiflexão e percuti o tendão de Aquiles logo acima do calcâneo",
-      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
+      comoEFeito:
+        "Com o paciente sentado e os pés pendentes, o examinador apoia o pé em posição relaxada, colocando uma das mãos sob a planta do pé do paciente e realizando uma leve dorsiflexão e percuti o tendão de Aquiles logo acima do calcâneo",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
+      video: "https://www.youtube.com/watch?v=WHfIkbKqO2w", // <- troque pelo link certo
     },
     {
       nome: "Bicipital",
-      descricao: "O examinador posiciona o antebraço do paciente levemente fletido e, com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital.",
+      descricao:
+        "O examinador posiciona o antebraço do paciente levemente fletido e, com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital.",
       respostaEsperada: "A flexão do antebraço e/ou a contração do músculo bíceps.",
       avalia: "Raízes nervosas C5 e C6, e o nervo musculocutâneo.",
-      comoEFeito: "O examinador posiciona o antebraço do paciente levemente fletido e, o polegar do examinador deve estar firmemente posicionado sobre o tendão do bíceps e com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital, acima do deo do examinador..",
-      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
+      comoEFeito:
+        "O examinador posiciona o antebraço do paciente levemente fletido e, o polegar do examinador deve estar firmemente posicionado sobre o tendão do bíceps e com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital, acima do deo do examinador..",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
+      video: "https://www.youtube.com/watch?v=sy3HRMeZiNw", // <- troque pelo link certo
     },
     {
       nome: "Patelar",
-      descricao: "É a extensão do joelho ao se bater no tendão patelar (localizado logo abaixo da patela), que estira o músculo quadríceps.",
+      descricao:
+        "É a extensão do joelho ao se bater no tendão patelar (localizado logo abaixo da patela), que estira o músculo quadríceps.",
       respostaEsperada: "A perna se estende rapidamente.",
-      avalia: "A integridade do nervo femoral e das raízes nervosas de L2, L3 e L4 da medula espinhal.",
-      comoEFeito: "Paciente sentado com pernas livres; percutir o tendão patelar com martelo de reflexo",
-      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
+      avalia:
+        "A integridade do nervo femoral e das raízes nervosas de L2, L3 e L4 da medula espinhal.",
+      comoEFeito:
+        "Paciente sentado com pernas livres; percutir o tendão patelar com martelo de reflexo",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
+      video: "https://www.youtube.com/watch?v=SEU_LINK_AQUI", // <- troque pelo link certo
     },
     {
       nome: "Tricipital",
-      descricao: "O examinador segura o braço do paciente com o cotovelo a 90 graus, deixando-o pendular. Em seguida, percute o tendão do tríceps, que fica na parte posterior do braço, logo acima do cotovelo.",
+      descricao:
+        "O examinador segura o braço do paciente com o cotovelo a 90 graus, deixando-o pendular. Em seguida, percute o tendão do tríceps, que fica na parte posterior do braço, logo acima do cotovelo.",
       respostaEsperada: "A extensão do antebraço sobre o braço.",
       avalia: "Raízes nervosas C6, C7 e C8.",
-      comoEFeito: "O examinador segura o braço do paciente com o cotovelo a 90 graus, deixando-o pendular,  o polegar do examinador deve estar firmemente posicionado sobre o tendão do tríceps. Em seguida,  percute o dedo do examinador que está acima do tendão do tríceps, que fica na parte posterior do braço, logo acima do cotovelo.",
-      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
-    }
+      comoEFeito:
+        "O examinador segura o braço do paciente com o cotovelo a 90 graus, deixando-o pendular,  o polegar do examinador deve estar firmemente posicionado sobre o tendão do tríceps. Em seguida,  percute o dedo do examinador que está acima do tendão do tríceps, que fica na parte posterior do braço, logo acima do cotovelo.",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
+      video: "https://www.youtube.com/watch?v=DOf1FBOzQsk", // <- troque pelo link certo
+    },
   ]
 
   const reflexosSuperficiais = [
     {
       nome: "Babinski (Sinal de Babinski)",
       descricao: "A resposta patológica do teste do reflexo cutâneo plantar.",
-      comoOcorre: "O dedão do pé se estende para cima, enquanto os outros dedos se abrem em leque.",
-      indica: "Lesão no trato piramidal, responsável pelo controle motor voluntário.",
-      observacao: "Em bebês com menos de 2 anos, é normal devido à imaturidade do sistema nervoso e desaparece com o desenvolvimento.",
-      comoEFeito: "Estimulação com objeto (p. ex., haste do martelo) na borda lateral da planta do pé em direção à base do hálux.",
-      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
+      comoOcorre:
+        "O dedão do pé se estende para cima, enquanto os outros dedos se abrem em leque.",
+      indica:
+        "Lesão no trato piramidal, responsável pelo controle motor voluntário.",
+      observacao:
+        "Em bebês com menos de 2 anos, é normal devido à imaturidade do sistema nervoso e desaparece com o desenvolvimento.",
+      comoEFeito:
+        "Estimulação com objeto (p. ex., haste do martelo) na borda lateral da planta do pé em direção à base do hálux.",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
+      video: "https://www.youtube.com/watch?v=YpKJwcdZUoA", // <- troque pelo link certo
     },
     {
       nome: "Cutâneo-abdominal",
-      descricao: "O examinador estimula levemente a pele do abdômen com um objeto pontiagudo, mas não afiado, como o martelo de reflexos.",
-      estimulo: "O estímulo é feito deslizando a pele em direção à linha média, em diferentes níveis:",
+      descricao:
+        "O examinador estimula levemente a pele do abdômen com um objeto pontiagudo, mas não afiado, como o martelo de reflexos.",
+      estimulo:
+        "O estímulo é feito deslizando a pele em direção à linha média, em diferentes níveis:",
       niveis: [
         "Epigástrico: acima do umbigo (correspondendo aproximadamente aos níveis de T6-T8).",
         "Umbilical: ao redor do umbigo (T8-T10).",
-        "Hipogástrico: abaixo do umbigo (T10-T12)."
+        "Hipogástrico: abaixo do umbigo (T10-T12).",
       ],
-      respostaNormal: "A contração dos músculos abdominais do mesmo lado, causando um leve desvio do umbigo em direção ao estímulo.",
-      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
+      respostaNormal:
+        "A contração dos músculos abdominais do mesmo lado, causando um leve desvio do umbigo em direção ao estímulo.",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
+      video: "https://www.youtube.com/watch?v=U0vBWbuwSVU", // <- troque pelo link certo
     },
     {
       nome: "Cutâneo-plantar em flexão",
       descricao: "Um teste para avaliar o reflexo plantar.",
       respostaNormal: "Flexão dos dedos do pé (para baixo).",
-      respostaPatologica: "A extensão do dedão do pé e a abertura dos outros dedos em leque, conhecida como sinal de Babinski.",
-      comoEFeito: "Estimulação com objeto (p. ex., haste do martelo) na borda lateral da planta do pé em direção à base do hálux.",
-      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)"
-    }
+      respostaPatologica:
+        "A extensão do dedão do pé e a abertura dos outros dedos em leque, conhecida como sinal de Babinski.",
+      comoEFeito:
+        "Estimulação com objeto (p. ex., haste do martelo) na borda lateral da planta do pé em direção à base do hálux.",
+      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
+      video: "https://www.youtube.com/watch?v=SEU_LINK_AQUI", // <- troque pelo link certo
+    },
   ]
 
   return (
@@ -80,12 +125,14 @@ export default function ReflexosPage() {
         <div className="max-w-5xl mx-auto md:mt-14 lg:mt-32">
           <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
             <Activity className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-poppins)" }}>
+            <span
+              className="text-sm font-medium tracking-wide uppercase"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
               Avaliação Neurofuncional
             </span>
           </div>
 
-          {/* ADIÇÃO: Semiologia Neurológica */}
           <div className="mb-3">
             <span
               className="text-sm sm:text-base font-semibold text-[#445345] uppercase tracking-wide"
@@ -110,7 +157,6 @@ export default function ReflexosPage() {
           </p>
         </div>
 
-        {/* Decorative Element */}
         <div className="absolute top-20 right-10 opacity-10">
           <Brain className="w-64 h-64 text-[#6B8E23]" strokeWidth={0.5} />
         </div>
@@ -142,7 +188,11 @@ export default function ReflexosPage() {
               em componentes segmentar e suprassegmentar. O componente segmentar é formado por um centro reflexo local
               na medula espinal ou no tronco encefálico e suas conexões aferentes e eferentes. O componente
               suprassegmentar é constituído de vias centrais descendentes, que controlam, modulam e regulam a atividade
-              segmentar. <span className="text-[#6B8E23] font-medium">(CAMPBELL, 2013, p.860)</span>.
+              segmentar.{" "}
+              <span className="text-[#6B8E23] font-medium">
+                (CAMPBELL, 2013, p.860)
+              </span>
+              .
             </p>
           </div>
         </div>
@@ -168,16 +218,22 @@ export default function ReflexosPage() {
               className="text-[#445345] text-base sm:text-lg leading-relaxed whitespace-pre-line"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-              O reflexo começa quando um receptor sensorial na pele, músculo ou tendão detecta um estímulo. Esse sinal segue pela via aferente até o SNC, onde ocorre uma sinapse que ativa o neurônio eferente.
+              O reflexo começa quando um receptor sensorial na pele, músculo ou tendão detecta um estímulo. Esse sinal
+              segue pela via aferente até o SNC, onde ocorre uma sinapse que ativa o neurônio eferente.
 
-              O impulso parte do fuso muscular, que percebe o estiramento. As fibras aferentes Ia levam essa informação à medula, ativando diretamente o motoneurônio alfa, que faz as fibras musculares extrafusais contraírem. O neurotransmissor dessa sinapse é o glutamato. Quando o músculo contrai, o fuso reduz sua descarga e o reflexo se encerra.
+              O impulso parte do fuso muscular, que percebe o estiramento. As fibras aferentes Ia levam essa informação
+              à medula, ativando diretamente o motoneurônio alfa, que faz as fibras musculares extrafusais contraírem. O
+              neurotransmissor dessa sinapse é o glutamato. Quando o músculo contrai, o fuso reduz sua descarga e o
+              reflexo se encerra.
 
-              Enquanto o músculo agonista contrai, o antagonista é inibido por interneurônios Ia. No reflexo patelar, por exemplo, o quadríceps contrai e os isquiotibiais relaxam. O neurônio gama ajusta a sensibilidade do fuso por meio da acetilcolina.
+              Enquanto o músculo agonista contrai, o antagonista é inibido por interneurônios Ia. No reflexo patelar,
+              por exemplo, o quadríceps contrai e os isquiotibiais relaxam. O neurônio gama ajusta a sensibilidade do
+              fuso por meio da acetilcolina.
 
-              A resposta final chega ao efetor (músculo ou tendão). Qualquer alteração em uma das partes do arco reflexo pode diminuir ou abolir o reflexo.
+              A resposta final chega ao efetor (músculo ou tendão). Qualquer alteração em uma das partes do arco reflexo
+              pode diminuir ou abolir o reflexo.
             </p>
 
-            {/* ADIÇÃO: referência do "Como funciona?" */}
             <p
               className="text-[#6B8E23] text-sm font-medium"
               style={{ fontFamily: "var(--font-poppins)" }}
@@ -188,7 +244,7 @@ export default function ReflexosPage() {
         </div>
       </section>
 
-      {/* Quais são os reflexos? (Overview) */}
+      {/* Quais são os reflexos? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
@@ -217,7 +273,10 @@ export default function ReflexosPage() {
                 {reflexosProfundos.map((reflexo, index) => (
                   <li key={index} className="flex items-center gap-3 group">
                     <div className="w-2 h-2 rounded-full bg-[#6B8E23] group-hover:scale-125 transition-transform" />
-                    <span className="text-[#445345] text-lg font-medium" style={{ fontFamily: "var(--font-poppins)" }}>
+                    <span
+                      className="text-[#445345] text-lg font-medium"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
                       {reflexo.nome}
                     </span>
                   </li>
@@ -238,7 +297,10 @@ export default function ReflexosPage() {
                 {reflexosSuperficiais.map((reflexo, index) => (
                   <li key={index} className="flex items-center gap-3 group">
                     <div className="w-2 h-2 rounded-full bg-[#D4AF37] group-hover:scale-125 transition-transform" />
-                    <span className="text-[#445345] text-lg font-medium" style={{ fontFamily: "var(--font-poppins)" }}>
+                    <span
+                      className="text-[#445345] text-lg font-medium"
+                      style={{ fontFamily: "var(--font-poppins)" }}
+                    >
                       {reflexo.nome}
                     </span>
                   </li>
@@ -293,7 +355,6 @@ export default function ReflexosPage() {
                     </p>
                   </div>
 
-                  {/* ADIÇÃO: Como é feito */}
                   {reflexo.comoEFeito && (
                     <div>
                       <h4
@@ -341,7 +402,6 @@ export default function ReflexosPage() {
                     </p>
                   </div>
 
-                  {/* ADIÇÃO: referência */}
                   {reflexo.referencia && (
                     <p
                       className="text-[#6B8E23] text-sm font-medium"
@@ -349,6 +409,44 @@ export default function ReflexosPage() {
                     >
                       {reflexo.referencia}
                     </p>
+                  )}
+
+                  {/* Vídeo */}
+                  {reflexo.video && (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setOpenVideoKey(
+                            openVideoKey === `profundo-${index}`
+                              ? null
+                              : `profundo-${index}`
+                          )
+                        }
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8E23] text-white hover:brightness-110 transition-all mt-2"
+                      >
+                        <Play className="w-4 h-4" />
+                        {openVideoKey === `profundo-${index}`
+                          ? "Fechar vídeo"
+                          : "Como avaliar (vídeo)"}
+                      </button>
+
+                      {openVideoKey === `profundo-${index}` && (
+                        <div className="mt-4">
+                          <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#6B8E23]/20">
+                            <iframe
+                              className="absolute inset-0 w-full h-full"
+                              src={`https://www.youtube.com/embed/${getYoutubeId(
+                                reflexo.video
+                              )}`}
+                              title={`Vídeo - ${reflexo.nome}`}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               </div>
@@ -401,7 +499,6 @@ export default function ReflexosPage() {
                     </p>
                   </div>
 
-                  {/* ADIÇÃO: Como é feito (quando houver) */}
                   {reflexo.comoEFeito && (
                     <div>
                       <h4
@@ -419,7 +516,7 @@ export default function ReflexosPage() {
                     </div>
                   )}
 
-                  {reflexo.comoOcorre && (
+                  {"comoOcorre" in reflexo && reflexo.comoOcorre && (
                     <div>
                       <h4
                         className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
@@ -436,7 +533,7 @@ export default function ReflexosPage() {
                     </div>
                   )}
 
-                  {reflexo.estimulo && (
+                  {"estimulo" in reflexo && reflexo.estimulo && (
                     <div>
                       <h4
                         className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
@@ -450,9 +547,10 @@ export default function ReflexosPage() {
                       >
                         {reflexo.estimulo}
                       </p>
-                      {reflexo.niveis && (
+
+                      {"niveis" in reflexo && reflexo.niveis && (
                         <ul className="space-y-2 ml-4">
-                          {reflexo.niveis.map((nivel, idx) => (
+                          {reflexo.niveis.map((nivel: string, idx: number) => (
                             <li key={idx} className="flex items-start gap-2">
                               <ChevronRight className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                               <span
@@ -468,7 +566,7 @@ export default function ReflexosPage() {
                     </div>
                   )}
 
-                  {reflexo.indica && (
+                  {"indica" in reflexo && reflexo.indica && (
                     <div className="bg-[#D4AF37]/5 p-4 rounded-lg border border-[#D4AF37]/10">
                       <h4
                         className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wide mb-2"
@@ -485,7 +583,7 @@ export default function ReflexosPage() {
                     </div>
                   )}
 
-                  {reflexo.respostaNormal && (
+                  {"respostaNormal" in reflexo && reflexo.respostaNormal && (
                     <div>
                       <h4
                         className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
@@ -502,24 +600,25 @@ export default function ReflexosPage() {
                     </div>
                   )}
 
-                  {reflexo.respostaPatologica && (
-                    <div>
-                      <h4
-                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
-                        style={{ fontFamily: "var(--font-poppins)" }}
-                      >
-                        Resposta patológica (adultos):
-                      </h4>
-                      <p
-                        className="text-[#445345] text-base leading-relaxed"
-                        style={{ fontFamily: "var(--font-poppins)" }}
-                      >
-                        {reflexo.respostaPatologica}
-                      </p>
-                    </div>
-                  )}
+                  {"respostaPatologica" in reflexo &&
+                    reflexo.respostaPatologica && (
+                      <div>
+                        <h4
+                          className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
+                          style={{ fontFamily: "var(--font-poppins)" }}
+                        >
+                          Resposta patológica (adultos):
+                        </h4>
+                        <p
+                          className="text-[#445345] text-base leading-relaxed"
+                          style={{ fontFamily: "var(--font-poppins)" }}
+                        >
+                          {reflexo.respostaPatologica}
+                        </p>
+                      </div>
+                    )}
 
-                  {reflexo.observacao && (
+                  {"observacao" in reflexo && reflexo.observacao && (
                     <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                       <h4
                         className="text-sm font-semibold text-blue-900 uppercase tracking-wide mb-2"
@@ -536,7 +635,6 @@ export default function ReflexosPage() {
                     </div>
                   )}
 
-                  {/* ADIÇÃO: referência */}
                   {reflexo.referencia && (
                     <p
                       className="text-[#D4AF37] text-sm font-medium"
@@ -544,6 +642,44 @@ export default function ReflexosPage() {
                     >
                       {reflexo.referencia}
                     </p>
+                  )}
+
+                  {/* Vídeo */}
+                  {reflexo.video && (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setOpenVideoKey(
+                            openVideoKey === `superficial-${index}`
+                              ? null
+                              : `superficial-${index}`
+                          )
+                        }
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#D4AF37] text-white hover:brightness-110 transition-all mt-2"
+                      >
+                        <Play className="w-4 h-4" />
+                        {openVideoKey === `superficial-${index}`
+                          ? "Fechar vídeo"
+                          : "Como avaliar (vídeo)"}
+                      </button>
+
+                      {openVideoKey === `superficial-${index}` && (
+                        <div className="mt-4">
+                          <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#D4AF37]/20">
+                            <iframe
+                              className="absolute inset-0 w-full h-full"
+                              src={`https://www.youtube.com/embed/${getYoutubeId(
+                                reflexo.video
+                              )}`}
+                              title={`Vídeo - ${reflexo.nome}`}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               </div>
@@ -583,7 +719,6 @@ export default function ReflexosPage() {
                     (Babinski, Taylor, McGill, Buck), com borracha macia, para não causar dor à percussão.
                   </p>
 
-                  {/* Galeria de imagens */}
                   <div className="flex flex-wrap gap-4 justify-evenly">
                     <img
                       src="/martelinho_1.jpg"
@@ -645,7 +780,6 @@ export default function ReflexosPage() {
                 </p>
               </div>
 
-              {/* ADIÇÃO: referência da semiotécnica */}
               <p
                 className="text-white/90 text-sm font-medium pt-2"
                 style={{ fontFamily: "var(--font-poppins)" }}
@@ -673,7 +807,6 @@ export default function ReflexosPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Normorreflexia */}
             <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
               <span className="inline-flex px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold uppercase tracking-wide mb-3">
                 Normorreflexia
@@ -682,10 +815,8 @@ export default function ReflexosPage() {
                 className="text-[#445345] text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                O sistema nervoso está respondendo aos estímulos de forma adequada e padrão. 
+                O sistema nervoso está respondendo aos estímulos de forma adequada e padrão.
               </p>
-
-              {/* ADIÇÃO: referência */}
               <p
                 className="text-[#6B8E23] text-sm font-medium mt-2"
                 style={{ fontFamily: "var(--font-poppins)" }}
@@ -694,7 +825,6 @@ export default function ReflexosPage() {
               </p>
             </div>
 
-            {/* Hiporreflexia */}
             <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
               <span className="inline-flex px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-xs font-semibold uppercase tracking-wide mb-3">
                 Hiporreflexia
@@ -703,10 +833,10 @@ export default function ReflexosPage() {
                 className="text-[#445345] text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                A hiporreflexia é a ausência ou diminuição da resposta ao toque. Geralmente indica uma doença que afeta um ou mais componentes do próprio arco reflexo de dois neurônios. A diminuição do reflexo tendinoso profundo geralmente sugere uma lesão do neurônio motor inferior.
+                A hiporreflexia é a ausência ou diminuição da resposta ao toque. Geralmente indica uma doença que afeta
+                um ou mais componentes do próprio arco reflexo de dois neurônios. A diminuição do reflexo tendinoso
+                profundo geralmente sugere uma lesão do neurônio motor inferior.
               </p>
-
-              {/* ADIÇÃO: referência */}
               <p
                 className="text-[#6B8E23] text-sm font-medium mt-2"
                 style={{ fontFamily: "var(--font-poppins)" }}
@@ -715,7 +845,6 @@ export default function ReflexosPage() {
               </p>
             </div>
 
-            {/* Hiperreflexia */}
             <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
               <span className="inline-flex px-3 py-1 rounded-full bg-red-50 text-red-800 text-xs font-semibold uppercase tracking-wide mb-3">
                 Hiperreflexia
@@ -724,10 +853,11 @@ export default function ReflexosPage() {
                 className="text-[#445345] text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                A hiperreflexia refere-se a reflexos hiperativos ou repetitivos (clônicos). Geralmente, indicam uma interrupção das vias corticoespinhais e outras vias descendentes que influenciam o arco reflexo, devido a uma lesão suprassegmentar, ou seja, uma lesão acima do nível das vias reflexas espinais.O aumento do reflexo tendinoso profundo também sugere uma lesão do neurônio motor superior.
+                A hiperreflexia refere-se a reflexos hiperativos ou repetitivos (clônicos). Geralmente, indicam uma
+                interrupção das vias corticoespinhais e outras vias descendentes que influenciam o arco reflexo, devido a
+                uma lesão suprassegmentar, ou seja, uma lesão acima do nível das vias reflexas espinais. O aumento do
+                reflexo tendinoso profundo também sugere uma lesão do neurônio motor superior.
               </p>
-
-              {/* ADIÇÃO: referência */}
               <p
                 className="text-[#6B8E23] text-sm font-medium mt-2"
                 style={{ fontFamily: "var(--font-poppins)" }}
@@ -736,7 +866,6 @@ export default function ReflexosPage() {
               </p>
             </div>
 
-            {/* Arreflexia */}
             <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-gray-100">
               <span className="inline-flex px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold uppercase tracking-wide mb-3">
                 Arreflexia
@@ -746,16 +875,24 @@ export default function ReflexosPage() {
                   className="text-[#445345] text-base leading-relaxed"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
-                  A ausência de reflexos tendinosos profundos (RTP) indica uma lesão dentro do arco reflexo. A ausência dos reflexos tendinosos profundos (RTP) indica um comprometimento em alguma parte do arco reflexo. Quando há ausência de reflexo associada à perda sensorial no território correspondente, sugere-se lesão do componente aferente do arco reflexo, como o nervo sensitivo ou o corno dorsal da medula. Já a ausência de reflexo acompanhada de paralisia, fasciculações e atrofia muscular aponta para lesão do componente eferente, envolvendo as células do corno anterior ou do nervo motor.
+                  A ausência de reflexos tendinosos profundos (RTP) indica uma lesão dentro do arco reflexo. A ausência
+                  dos reflexos tendinosos profundos (RTP) indica um comprometimento em alguma parte do arco reflexo.
+                  Quando há ausência de reflexo associada à perda sensorial no território correspondente, sugere-se
+                  lesão do componente aferente do arco reflexo, como o nervo sensitivo ou o corno dorsal da medula. Já a
+                  ausência de reflexo acompanhada de paralisia, fasciculações e atrofia muscular aponta para lesão do
+                  componente eferente, envolvendo as células do corno anterior ou do nervo motor.
                 </p>
                 <p
                   className="text-[#445345] text-base leading-relaxed"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
-                  A causa mais frequente de arreflexia é a neuropatia periférica, frequentemente relacionada a condições como diabetes, alcoolismo, uremia, deficiências vitamínicas, amiloidose ou exposição a toxinas. Embora a ausência bilateral do reflexo aquileu seja geralmente sugestiva de neuropatia periférica, também pode ocorrer em casos de síndrome da cauda equina. Além disso, lesões de nervos periféricos específicos podem reduzir ou abolir determinados reflexos, como o bíceps (nervo musculocutâneo), tríceps e braquiorradial (nervo radial), patelar (nervo femoral) e aquileu (nervo tibial).
+                  A causa mais frequente de arreflexia é a neuropatia periférica, frequentemente relacionada a condições
+                  como diabetes, alcoolismo, uremia, deficiências vitamínicas, amiloidose ou exposição a toxinas. Embora
+                  a ausência bilateral do reflexo aquileu seja geralmente sugestiva de neuropatia periférica, também
+                  pode ocorrer em casos de síndrome da cauda equina. Além disso, lesões de nervos periféricos
+                  específicos podem reduzir ou abolir determinados reflexos, como o bíceps (nervo musculocutâneo),
+                  tríceps e braquiorradial (nervo radial), patelar (nervo femoral) e aquileu (nervo tibial).
                 </p>
-
-                {/* ADIÇÃO: referência */}
                 <p
                   className="text-[#6B8E23] text-sm font-medium mt-1"
                   style={{ fontFamily: "var(--font-poppins)" }}

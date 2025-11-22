@@ -30,7 +30,7 @@ export default function EquilibrioPage() {
         "O teste de Romberg deve ser explicado antes da aplicação. O avaliado fica de pé, descalço, em superfície plana, com os pés juntos e os braços cruzados ou ao lado do corpo. Primeiro, mantém os olhos abertos por cerca de 30 segundos e depois os fecha por 30 segundos a 1 minuto, enquanto o avaliador observa possíveis desequilíbrios, permanecendo próximo para garantir segurança. O teste é considerado positivo quando há perda de equilíbrio ao fechar os olhos, com oscilação, movimentação dos pés ou queda, indicando alteração na propriocepção ou no sistema vestibular. Já o negativo ocorre quando o avaliado mantém o equilíbrio, com pouca ou nenhuma oscilação, sugerindo ausência de ataxia e bom funcionamento dos sistemas visual e proprioceptivo.",
       referencia: "SILVEIRA et al., 2024",
       equipamento: "Superfície plana segura; cronômetro opcional; apoio do examinador.",
-      video: "https://www.youtube.com/watch?v=U588R8lmbIU",
+      video: "https://www.youtube.com/watch?v=5xUUVr8pwH4",
     },
     {
       titulo: "Teste de Fukuda",
@@ -38,7 +38,7 @@ export default function EquilibrioPage() {
         "O teste de Fukuda avalia alterações no equilíbrio e no sistema vestibular. O paciente deve ficar com os olhos fechados e os braços estendidos à frente, marchando no mesmo lugar enquanto o examinador conta até 50. O teste é considerado positivo quando o paciente gira o corpo mais de 45° para um dos lados ou se desloca mais de 1 metro para frente. Caso ele gire a cabeça em direção ao lado afetado, pode apresentar tendência a cair para frente.",
       referencia: "MARTINS et al., 2017",
       equipamento: "Espaço livre e silencioso; marcação no chão opcional; cronômetro.",
-      video: "https://www.youtube.com/watch?v=BNZN9uLAZG0",
+      video: "https://www.youtube.com/watch?v=KvvoyNwQvck",
     },
     {
       titulo: "Teste de Marcha Tandem",
@@ -46,7 +46,7 @@ export default function EquilibrioPage() {
         "Como funciona? O teste de Tandem avalia o equilíbrio e a marcha do idoso: Na marcha tandem o idoso anda em linha reta por 10 m colocando um pé à frente do outro; o tempo é cronometrado, o teste é repetido três vezes e usa-se o melhor tempo (dispositivos de auxílio e tipo de calçado devem ser anotados).",
       referencia: "SILVEIRA et al., 2024",
       equipamento: "É necessário um cronômetro para registrar o tempo que o indivíduo vai necessitar tanto para o teste estático como para a caminhada tandem dentro de espaço com distância delimitada em metros.",
-      video: "https://www.youtube.com/watch?v=BjVzLW-ByOA",
+      video: "https://www.youtube.com/watch?v=WygoCl874Js",
     },
     {
       titulo: "Teste TUG (Timed Up and Go)",
@@ -54,7 +54,7 @@ export default function EquilibrioPage() {
         "Como funciona? O teste TUG (Timed Up and Go) é usado para avaliar a mobilidade, equilíbrio e risco de quedas. Ele é realizado com o idoso sentado em uma cadeira com apoio de braços, em um local plano. Ao comando do avaliador, o idoso deve levantar-se sem usar os apoios, caminhar 3 metros, virar-se a 180°, retornar até a cadeira e sentar-se novamente. O tempo total gasto nessa sequência é cronometrado e, geralmente, varia entre 20 e 30 segundos. O desempenho permite observar a coordenação, a estabilidade e a segurança do idoso durante o movimento.",
       referencia: "SILVEIRA et al., 2024",
       equipamento: "Cadeira com braços, de pés fixos ao chão (sem rodinhas), cronômetro; fita adesiva; trena ou barbante ou trena, ou fita com 3m (para demarcação da distância de 3m).",
-      video: "https://www.youtube.com/watch?v=19rK1Es6xjY",
+      video: "https://www.youtube.com/watch?v=-i_-0biUi9w",
     },
   ]
 
@@ -93,28 +93,86 @@ export default function EquilibrioPage() {
         </div>
       </section>
 
-      {/* CONCEITO */}
+      {/* CONCEITO / IMPORTÂNCIA CLÍNICA */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Zap className="w-6 h-6 text-[#6B8E23]" />
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
-              CONCEITO
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              A Importância Clínica da Avaliação do Equilíbrio
             </h2>
           </div>
 
-          <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-              vou ter que fazer de novo!
+          <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+            <p
+              className="text-[#445345] text-base sm:text-lg leading-relaxed"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              A avaliação do equilíbrio é um dos métodos clínicos mais sensíveis para detectar precocemente
+              disfunções neurológicas. Isso acontece porque o equilíbrio depende da integração simultânea de
+              três sistemas essenciais, além do controle motor central.
+              <span className="text-[#6B8E23] font-medium"> (EDWARDS et al., 2023)</span>
             </p>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="bg-white p-5 rounded-xl border border-[#6B8E23]/20 shadow-sm">
+                <h4
+                  className="text-sm font-semibold uppercase tracking-wide text-[#6B8E23] mb-2"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Sistemas envolvidos
+                </h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
+                    <span className="text-[#6B8E23] mt-1">•</span>
+                    <span>
+                      <strong>Vestibular:</strong> detecta movimento e posição da cabeça.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
+                    <span className="text-[#6B8E23] mt-1">•</span>
+                    <span>
+                      <strong>Somatossensorial / proprioceptivo:</strong> recebe informações do solo, articulações e músculos.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
+                    <span className="text-[#6B8E23] mt-1">•</span>
+                    <span>
+                      <strong>Visual e Controle motor central:</strong> fornece referência espacial do ambiente e cerebelo e córtices motores coordenam a resposta postural.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-[#6B8E23]/5 p-5 rounded-xl border border-[#6B8E23]/15">
+                <h4
+                  className="text-sm font-semibold uppercase tracking-wide text-[#1f2923] mb-2"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Por que é tão importante?
+                </h4>
+                <p
+                  className="text-[#445345] text-sm sm:text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Quando há lesão em estruturas como cerebelo, vias somatossensoriais, núcleos vestibulares
+                  ou córtex, o cérebro perde parte dessa integração. O resultado é oscilação corporal,
+                  desalinhamento e dificuldade em estabilizar o centro de massa — por isso, pequenas alterações
+                  neurológicas já aparecem em testes simples.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* O que é? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+      {/* <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -131,7 +189,7 @@ export default function EquilibrioPage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Estabilidade */}
 {/*       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
@@ -256,18 +314,41 @@ export default function EquilibrioPage() {
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Activity className="w-6 h-6 text-[#6B8E23]" />
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
               Reação de Equilíbrio
             </h2>
           </div>
 
           <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <h3 className="text-xl sm:text-2xl font-semibold text-[#6B8E23] mb-4" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h3
+              className="text-xl sm:text-2xl font-semibold text-[#6B8E23] mb-4"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
               Quais são os testes?
             </h3>
-            <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
+
+            <p
+              className="text-[#445345] text-base sm:text-lg leading-relaxed mb-6"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
               sentado na maca, não sei o nome ksks
             </p>
+
+            {/* Vídeo junto ao conteúdo */}
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#6B8E23]/20">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={`https://www.youtube.com/embed/${getYoutubeId(
+                  "https://www.youtube.com/watch?v=wpbe8dsgKeA"
+                )}`}
+                title="Reação de Equilíbrio"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
