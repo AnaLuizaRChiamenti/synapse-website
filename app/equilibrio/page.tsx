@@ -122,10 +122,7 @@ export default function EquilibrioPage() {
               className="text-[#445345] text-base sm:text-lg leading-relaxed"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-              A avaliação do equilíbrio é um dos métodos clínicos mais sensíveis para detectar precocemente
-              disfunções neurológicas. Isso acontece porque o equilíbrio depende da integração simultânea de
-              três sistemas essenciais, além do controle motor central.
-              <span className="text-[#6B8E23] font-medium"> (EDWARDS et al., 2023)</span>
+              A avaliação do equilíbrio é um dos métodos clínicos mais sensíveis para detectar precocemente disfunções neurológicas, especialmente porque o equilíbrio depende da integração simultânea de três sistemas essenciais:
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4">
@@ -139,21 +136,19 @@ export default function EquilibrioPage() {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
                     <span className="text-[#6B8E23] mt-1">•</span>
-                    <span>
-                      <strong>Vestibular:</strong> detecta movimento e posição da cabeça.
-                    </span>
+                    <span>Sistema vestibular (detecção de movimento e posição da cabeça)</span>
                   </li>
                   <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
                     <span className="text-[#6B8E23] mt-1">•</span>
-                    <span>
-                      <strong>Somatossensorial / proprioceptivo:</strong> recebe informações do solo, articulações e músculos.
-                    </span>
+                    <span>Sistema somatossensorial/proprioceptivo (informações do solo, articulações e músculos)</span>
                   </li>
                   <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
                     <span className="text-[#6B8E23] mt-1">•</span>
-                    <span>
-                      <strong>Visual / Controle motor central:</strong> incluindo cerebelo e córtices motores.
-                    </span>
+                    <span>Sistema visual eControle motor central, (incluindo cerebelo e córtices motores)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
+                    <span className="text-[#6B8E23] mt-1"></span>
+                    <span>(EDWARDS et al., 2023)</span>
                   </li>
                 </ul>
               </div>
@@ -169,10 +164,13 @@ export default function EquilibrioPage() {
                   className="text-[#445345] text-sm sm:text-base leading-relaxed"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
-                  Quando há lesão em estruturas como cerebelo, vias somatossensoriais, núcleos vestibulares
-                  ou córtex, o cérebro perde parte dessa integração. O resultado é oscilação corporal,
-                  desalinhamento e dificuldade em estabilizar o centro de massa — por isso, pequenas alterações
-                  neurológicas já aparecem em testes simples.
+                  Quando ocorre uma lesão em estruturas como cerebelo, vias somatossensoriais, núcleos vestibulares ou córtex, o cérebro perde parte dessa capacidade de integração — e o corpo oscila, perde alinhamento ou não consegue estabilizar o centro de massa.
+                </p>
+                <p
+                  className="text-[#445345] text-sm sm:text-base leading-relaxed mt-3"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Por isso, pequenas alterações neurológicas já aparecem em testes simples.
                 </p>
               </div>
             </div>

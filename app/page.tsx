@@ -225,11 +225,8 @@ export default function HomePage() {
               Além disso, produzimos vídeos demonstrativos dos principais testes utilizados na avaliação neurofuncional, buscando tornar o aprendizado mais dinâmico e visual. Contamos também com o apoio de um profissional, responsável pelo desenvolvimento técnico e pela estruturação do site.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/review#fluxograma" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8E23] text-white">
+              <a href="/escalas_extras" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8E23] text-white">
                 <Play className="w-4 h-4" /> Ver fluxogramas
-              </a>
-              <a href="/review#berg" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-[#6B8E23]/30 text-[#1f2923]">
-                Escalas e materiais
               </a>
             </div>
           </div>
