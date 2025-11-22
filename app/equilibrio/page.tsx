@@ -102,81 +102,86 @@ export default function EquilibrioPage() {
         </div>
       </section>
 
-      {/* CONCEITO / IMPORTÂNCIA CLÍNICA */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
-              <Zap className="w-6 h-6 text-[#6B8E23]" />
-            </div>
-            <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              A Importância Clínica da Avaliação do Equilíbrio
-            </h2>
+    {/* CONCEITO / IMPORTÂNCIA CLÍNICA */}
+    <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
+      <div className="max-w-5xl mx-auto">
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
+            <Zap className="w-6 h-6 text-[#6B8E23]" />
           </div>
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            A Importância Clínica da Avaliação do Equilíbrio
+          </h2>
+        </div>
 
-          <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-6">
-            <p
-              className="text-[#445345] text-base sm:text-lg leading-relaxed"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              A avaliação do equilíbrio é um dos métodos clínicos mais sensíveis para detectar precocemente disfunções neurológicas, especialmente porque o equilíbrio depende da integração simultânea de três sistemas essenciais:
-            </p>
+        <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-8">
+          <p
+            className="text-[#445345] text-base sm:text-lg leading-relaxed"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            A avaliação do equilíbrio é um dos métodos clínicos mais sensíveis para detectar precocemente disfunções neurológicas, especialmente porque o equilíbrio depende da integração simultânea de três sistemas essenciais:
+          </p>
 
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-white p-5 rounded-xl border border-[#6B8E23]/20 shadow-sm">
-                <h4
-                  className="text-sm font-semibold uppercase tracking-wide text-[#6B8E23] mb-2"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  Sistemas envolvidos
-                </h4>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
-                    <span className="text-[#6B8E23] mt-1">•</span>
-                    <span>Sistema vestibular (detecção de movimento e posição da cabeça)</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
-                    <span className="text-[#6B8E23] mt-1">•</span>
-                    <span>Sistema somatossensorial/proprioceptivo (informações do solo, articulações e músculos)</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
-                    <span className="text-[#6B8E23] mt-1">•</span>
-                    <span>Sistema visual eControle motor central, (incluindo cerebelo e córtices motores)</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
-                    <span className="text-[#6B8E23] mt-1"></span>
-                    <span>(EDWARDS et al., 2023)</span>
-                  </li>
-                </ul>
+          <div className="grid md:grid-cols-2 gap-5">
+            {/* Card 1 */}
+            <div className="bg-white p-6 sm:p-7 rounded-2xl border border-[#6B8E23]/20 shadow-sm">
+              <h4
+                className="text-sm font-semibold uppercase tracking-wide text-[#6B8E23] mb-3"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Sistemas envolvidos
+              </h4>
+
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-[#445345] text-sm sm:text-base">
+                  <span className="text-[#6B8E23] mt-1.5">•</span>
+                  <span>Sistema vestibular (detecção de movimento e posição da cabeça)</span>
+                </li>
+                <li className="flex items-start gap-3 text-[#445345] text-sm sm:text-base">
+                  <span className="text-[#6B8E23] mt-1.5">•</span>
+                  <span>Sistema somatossensorial/proprioceptivo (informações do solo, articulações e músculos)</span>
+                </li>
+                <li className="flex items-start gap-3 text-[#445345] text-sm sm:text-base">
+                  <span className="text-[#6B8E23] mt-1.5">•</span>
+                  <span>Sistema visual e Controle motor central, (incluindo cerebelo e córtices motores)</span>
+                </li>
+              </ul>
+
+              <div className="mt-4 inline-flex px-3 py-1 rounded-full bg-[#D4AF37]/10 text-[#5a4b1a] border border-[#D4AF37]/30 text-xs sm:text-sm font-medium">
+                (EDWARDS et al., 2023)
               </div>
+            </div>
 
-              <div className="bg-[#6B8E23]/5 p-5 rounded-xl border border-[#6B8E23]/15">
-                <h4
-                  className="text-sm font-semibold uppercase tracking-wide text-[#1f2923] mb-2"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  Por que é tão importante?
-                </h4>
-                <p
-                  className="text-[#445345] text-sm sm:text-base leading-relaxed"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  Quando ocorre uma lesão em estruturas como cerebelo, vias somatossensoriais, núcleos vestibulares ou córtex, o cérebro perde parte dessa capacidade de integração — e o corpo oscila, perde alinhamento ou não consegue estabilizar o centro de massa.
-                </p>
-                <p
-                  className="text-[#445345] text-sm sm:text-base leading-relaxed mt-3"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  Por isso, pequenas alterações neurológicas já aparecem em testes simples.
-                </p>
-              </div>
+            {/* Card 2 */}
+            <div className="bg-[#6B8E23]/5 p-6 sm:p-7 rounded-2xl border border-[#6B8E23]/15">
+              <h4
+                className="text-sm font-semibold uppercase tracking-wide text-[#1f2923] mb-3"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Por que é tão importante?
+              </h4>
+
+              <p
+                className="text-[#445345] text-sm sm:text-base leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Quando ocorre uma lesão em estruturas como cerebelo, vias somatossensoriais, núcleos vestibulares ou córtex, o cérebro perde parte dessa capacidade de integração — e o corpo oscila, perde alinhamento ou não consegue estabilizar o centro de massa.
+              </p>
+
+              <p
+                className="text-[#445345] text-sm sm:text-base leading-relaxed mt-4"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Por isso, pequenas alterações neurológicas já aparecem em testes simples.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* Testes de Equilíbrio */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
