@@ -291,16 +291,6 @@ export default function MarchaFuncionalPage() {
                   </td>
                   <td className="px-6 py-5 text-[#445345]">
                     Marcha lenta, passos curtos, arrastados, redução do balanço dos braços, congelando
-                    <div className="mt-2 text-sm text-blue-700 break-all">
-                      <a
-                        href="https://www.mdpi.com/1424-8220/25/2/338"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:opacity-80"
-                      >
-                        https://www.mdpi.com/1424-8220/25/2/338
-                      </a>
-                    </div>
                   </td>
                 </tr>
 
@@ -310,16 +300,6 @@ export default function MarchaFuncionalPage() {
                   </td>
                   <td className="px-6 py-5 text-[#445345]">
                     Assimetria, diminuição da flexão do joelho/tornozelo no lado afetado, apoio prolongado no lado sadio
-                    <div className="mt-2 text-sm text-blue-700 break-all">
-                      <a
-                        href="https://linkinghub.elsevier.com/retrieve/pii/S0003999319307427"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:opacity-80"
-                      >
-                        https://linkinghub.elsevier.com/retrieve/pii/S0003999319307427
-                      </a>
-                    </div>
                   </td>
                 </tr>
 
@@ -329,16 +309,6 @@ export default function MarchaFuncionalPage() {
                   </td>
                   <td className="px-6 py-5 text-[#445345]">
                     Marchar
-                    <div className="mt-2 text-sm text-blue-700 break-all">
-                      <a
-                        href="https://pn.bmj.com/content/24/1/11"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:opacity-80"
-                      >
-                        https://pn.bmj.com/content/24/1/11
-                      </a>
-                    </div>
                   </td>
                 </tr>
 
@@ -347,17 +317,7 @@ export default function MarchaFuncionalPage() {
                     Doença de Huntington
                   </td>
                   <td className="px-6 py-5 text-[#445345]">
-                    Movimentos involuntários, passos ir
-                    <div className="mt-2 text-sm text-blue-700 break-all">
-                      <a
-                        href="https://ieeexplore.ieee.org/document/9376702"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:opacity-80"
-                      >
-                        https://ieeexplore.ieee.org/document/9376702
-                      </a>
-                    </div>
+                    Movimentos involuntários, passos irregulares
                   </td>
                 </tr>
 
@@ -367,16 +327,6 @@ export default function MarchaFuncionalPage() {
                   </td>
                   <td className="px-6 py-5 text-[#445345]">
                     Redução da velocidade, aumento do tempo de duplo apoio, assimetria, variabilidade
-                    <div className="mt-2 text-sm text-blue-700 break-all">
-                      <a
-                        href="https://linkinghub.elsevier.com/retrieve/pii/S2211034817300123"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:opacity-80"
-                      >
-                        https://linkinghub.elsevier.com/retrieve/pii/S2211034817300123
-                      </a>
-                    </div>
                   </td>
                 </tr>
               </tbody>

@@ -15,7 +15,6 @@ type TesteEquilibrio = {
   titulo: string
   descricao: string
   referencia: string
-  equipamento: string
   video: string
 }
 
@@ -63,7 +62,6 @@ export default function EquilibrioPage() {
       descricao:
         "Como é realizado: O avaliado permanece em pé, descalço, com os pés juntos e os braços cruzados ou ao lado do corpo, sobre superfície plana. Mantém os olhos abertos por cerca de 30 segundos e depois fechados por 30 segundos a 1 minuto, enquanto o avaliador observa oscilações e garante segurança. Objetivo: Avaliar a integridade da propriocepção, do sistema vestibular e do controle postural em condições estáticas. Quando o teste é positivo: Perda de equilíbrio ao fechar os olhos: oscilação acentuada, abertura dos pés, passos compensatórios ou queda indicando alteração na propriocepção ou no sistema vestibular. Quando o teste é negativo:  O indivíduo mantém o equilíbrio com mínima oscilação, mesmo após fechar os olhos.",
       referencia: "SILVEIRA et al., 2024",
-      equipamento: "Superfície plana segura; cronômetro opcional; apoio do examinador.",
       video: "https://www.youtube.com/watch?v=5xUUVr8pwH4",
     },
     {
@@ -71,7 +69,6 @@ export default function EquilibrioPage() {
       descricao:
         "Como é realizado: O teste de Fukuda avalia alterações no equilíbrio e no sistema vestibular. O paciente deve ficar com os olhos fechados e os braços estendidos à frente, marchando no mesmo lugar enquanto o examinador conta até 50. Objetivo: Avaliar assimetrias vestibulares e alterações no controle postural dinâmico. Quando o teste é positivo: Rotação do corpo maior que 45° para um lado ou deslocamento maior que 1 metro à frente.Caso ele gire a cabeça em direção ao lado afetado, pode apresentar tendência a cair para frente. Quando o teste é negativo:  Marcha praticamente no mesmo ponto, com pequena rotação e sem deslocamento significativo.",
       referencia: "MARTINS et al., 2017",
-      equipamento: "Espaço livre e silencioso; marcação no chão opcional; cronômetro.",
       video: "https://www.youtube.com/watch?v=KvvoyNwQvck",
     },
     {
@@ -79,8 +76,6 @@ export default function EquilibrioPage() {
       descricao:
         "Como é realizado: O indivíduo deve caminhar em linha reta por 10 metros, colocando um pé diretamente à frente do outro (calcanhar encostando nos dedos). O teste é repetido três vezes e registra-se o melhor tempo. Objetivo: Avaliar equilíbrio dinâmico, coordenação e estabilidade na marcha em linha reduzida. Quando o teste é positivo: Dificuldade para manter a linha, passos laterais, desequilíbrios, necessidade de apoio ou incapacidade de completar o trajeto. Quando o teste é negativo: Marcha contínua e alinhada, sem perda de equilíbrio ou desvios relevantes.",
       referencia: "SILVEIRA et al., 2024",
-      equipamento:
-        "É necessário um cronômetro para registrar o tempo que o indivíduo vai necessitar tanto para o teste estático como para a caminhada tandem dentro de espaço com distância delimitada em metros.",
       video: "https://www.youtube.com/watch?v=WygoCl874Js",
     },
     {
@@ -88,8 +83,6 @@ export default function EquilibrioPage() {
       descricao:
         "Como é realizado: O paciente inicia sentado em uma cadeira com braços. Ao comando, deve levantar-se sem usar os apoios, caminhar 3 metros, virar 180°, retornar e sentar novamente. O tempo total é cronometrado. geralmente, varia entre 20 e 30 segundos. Objetivo: Avaliar mobilidade funcional, equilíbrio, velocidade da marcha e risco de quedas. Quando o teste é positivo: Tempo aumentado (geralmente > 12–13s), dificuldade para levantar, marcha instável, passos curtos ou inseguros, uso de compensações. Quando o teste é negativo: Realiza o trajeto de forma fluida, estável e dentro do tempo esperado, sem desequilíbrios.",
       referencia: "SILVEIRA et al., 2024",
-      equipamento:
-        "Cadeira com braços, de pés fixos ao chão (sem rodinhas), cronômetro; fita adesiva; trena ou barbante ou trena, ou fita com 3m (para demarcação da distância de 3m).",
       video: "https://www.youtube.com/watch?v=-i_-0biUi9w",
     },
   ]
@@ -266,23 +259,6 @@ export default function EquilibrioPage() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3 text-sm mb-6">
-                  <div className="flex items-start gap-3 bg-white p-4 rounded-xl border border-[#6B8E23]/30 shadow-sm">
-                    <ClipboardCheck className="w-6 h-6 text-[#6B8E23] flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p
-                        className="text-xs font-semibold uppercase tracking-wide text-[#6B8E23] mb-1"
-                        style={{ fontFamily: "var(--font-poppins)" }}
-                      >
-                        Equipamento
-                      </p>
-                      <p
-                        className="text-[#1f2923] text-sm leading-relaxed"
-                        style={{ fontFamily: "var(--font-poppins)" }}
-                      >
-                        {t.equipamento}
-                      </p>
-                    </div>
-                  </div>
 
                   <span className="px-3 py-1 rounded-full bg-[#D4AF37]/10 text-[#5a4b1a] border border-[#D4AF37]/30">
                     {t.referencia}
