@@ -143,7 +143,7 @@ export default function EquilibrioPage() {
                   <li className="flex items-start gap-2 text-[#445345] text-sm sm:text-base">
                     <span className="text-[#6B8E23] mt-1">•</span>
                     <span>
-                      <strong>Visual e Controle motor central:</strong> fornece referência espacial do ambiente e cerebelo e córtices motores coordenam a resposta postural.
+                      <strong>Visual / Controle motor central:</strong> incluindo cerebelo e córtices motores.
                     </span>
                   </li>
                 </ul>
