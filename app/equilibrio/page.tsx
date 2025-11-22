@@ -395,25 +395,6 @@ export default function EquilibrioPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-[#1f2923] mb-6">
-            Precisa de uma avaliação de equilíbrio?
-          </h3>
-          <p className="text-lg text-[#445345] mb-8 max-w-1xl mx-auto">
-            Nossa equipe está preparada para realizar uma avaliação completa com protocolos padronizados e seguros.
-          </p>
-          <a
-            href="/#contato"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#6B8E23] text-white rounded-lg font-semibold hover:brightness-110 transition-all duration-300 shadow-lg"
-          >
-            Agendar Avaliação
-            <ChevronRight className="w-5 h-5" />
-          </a>
-        </div>
-      </section>
     </div>
   )
 }
