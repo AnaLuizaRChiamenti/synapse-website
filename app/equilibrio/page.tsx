@@ -296,14 +296,42 @@ export default function EquilibrioPage() {
             </h2>
           </div>
 
-          <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+          <div className="bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100 space-y-8">
 
-            <p
-              className="text-[#445345] text-base sm:text-lg leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              O teste de reação de equilíbrio em sedestação funciona como uma forma de avaliar como o corpo responde automaticamente quando sofre pequenos desequilíbrios. O paciente senta-se na maca, sem se encostar, com os pés sem apoio fixo. As mãos podem permanecer sobre as coxas, enquanto o fisioterapeuta gera instabilidade por meio de empurrões suaves e controlados no tronco, em diferentes direções. O teste avalia as reações de proteção do paciente (apoio dos braços), reações de endireitamento (ajuste do tronco e da cabeça), controle postural e a integração vestibular/somatossensorial.
-            </p>
+            {/* Texto dividido + barra lateral */}
+            <div className="relative bg-white rounded-2xl p-6 sm:p-7 border border-[#6B8E23]/15 shadow-sm">
+              <div className="absolute left-0 top-0 h-full w-1.5 bg-[#6B8E23]/70 rounded-l-2xl" />
+
+              <div
+                className="space-y-4 text-[#445345] text-base sm:text-lg leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                <p>
+                  O teste de reação de equilíbrio em sedestação funciona como uma forma de avaliar como o corpo responde automaticamente quando sofre pequenos desequilíbrios. O paciente senta-se na maca, sem se encostar, com os pés sem apoio fixo.
+                </p>
+
+                <p>
+                  As mãos podem permanecer sobre as coxas, enquanto o fisioterapeuta gera instabilidade por meio de empurrões suaves e controlados no tronco, em diferentes direções.
+                </p>
+              </div>
+            </div>
+
+            {/* Box de destaque com a frase final (mesmas palavras) */}
+            <div className="bg-[#6B8E23]/5 border border-[#6B8E23]/20 rounded-2xl p-6 sm:p-7">
+              <h4
+                className="text-sm font-semibold uppercase tracking-wide text-[#6B8E23] mb-3"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                O que o teste avalia
+              </h4>
+
+              <p
+                className="text-[#445345] text-base sm:text-lg leading-relaxed"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                O teste avalia as reações de proteção do paciente (apoio dos braços), reações de endireitamento (ajuste do tronco e da cabeça), controle postural e a integração vestibular/somatossensorial.
+              </p>
+            </div>
 
             {/* VÍDEO SEMPRE ABERTO */}
             <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#6B8E23]/20">
