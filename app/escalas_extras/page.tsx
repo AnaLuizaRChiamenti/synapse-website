@@ -34,7 +34,7 @@ const scaleData: ScaleItem[] = [
     bgIcon: "bg-red-100",
     iconColor: "text-red-500",
     description:
-      "Avalia a dor percebida pelo paciente em uma escala de 0 (sem dor) a 10 (pior dor imaginável).",
+      "A Escala Visual Analógica (EVA) é considerada uma medida prática e válida para avaliar a intensidade da dor em diferentes contextos clínicos (HAWKER et al., 2011).",
     content: (
       <div className="flex flex-col space-y-2 mt-4 text-sm">
         <div className="p-2 rounded-lg bg-green-100 border-l-4 border-green-500">
