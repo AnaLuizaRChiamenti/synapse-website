@@ -156,7 +156,7 @@ const GaitPhaseCard = ({
 
 export default function MarchaFuncionalPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-justify leading-relaxed">
       <NavigationController />
 
       {/* Hero Section */}
@@ -246,7 +246,28 @@ export default function MarchaFuncionalPage() {
               />
             ))}
           </div>
+
+          {/* Vídeo explicativo */}
+          <div className="mt-12">
+            <h3
+              className="text-xl sm:text-2xl font-bold text-[#1f2923] mb-4"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Vídeo demonstrativo do ciclo da marcha
+            </h3>
+
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow border border-[#6B8E23]/20">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/2_LGbKl6uVI"
+                title="Vídeo demonstrativo do ciclo da marcha"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </div>
+        
       </section>
 
       {/* ADIÇÃO: literatura */}
@@ -290,7 +311,7 @@ export default function MarchaFuncionalPage() {
                     Parkinson
                   </td>
                   <td className="px-6 py-5 text-[#445345]">
-                    Marcha lenta, passos curtos, arrastados, redução do balanço dos braços, congelando
+                    Marcha lenta, passos curtos, arrastados, redução do balanço dos braços
                   </td>
                 </tr>
 
@@ -308,7 +329,7 @@ export default function MarchaFuncionalPage() {
                     Ataxia cerebelar
                   </td>
                   <td className="px-6 py-5 text-[#445345]">
-                    Marchar
+                    Marcha instável, base alargada, passos irregulares, oscilação lateral
                   </td>
                 </tr>
 
@@ -317,7 +338,7 @@ export default function MarchaFuncionalPage() {
                     Doença de Huntington
                   </td>
                   <td className="px-6 py-5 text-[#445345]">
-                    Movimentos involuntários, passos irregulares
+                    Movimentos involuntários, passos irregulares, base alargada, marcha “dançante”
                   </td>
                 </tr>
 

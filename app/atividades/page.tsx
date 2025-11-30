@@ -603,7 +603,7 @@ export default function AtividadesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-justify leading-relaxed">
       <NavigationController />
 
       {/* Hero Section */}

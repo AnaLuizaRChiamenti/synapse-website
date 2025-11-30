@@ -99,7 +99,7 @@ const coordinationTestsData: TestItem[] = [
       "Dificuldade para alternar os movimentos",
       "Amplitude reduzida",
     ],
-    // sem vídeo por enquanto
+    video: "https://www.youtube.com/watch?v=frUOC84eeac",
   },
   {
     number: 5,
@@ -136,7 +136,7 @@ const coordinationTestsData: TestItem[] = [
       "Lentidão ou dificuldade em iniciar o movimento",
       "Compensações (uso de toda a mão em vez da pinça)",
     ],
-    // sem vídeo por enquanto
+    video: "https://www.youtube.com/watch?v=F_68Z85S_FU",
   },
   {
     number: 7,
@@ -155,7 +155,7 @@ const coordinationTestsData: TestItem[] = [
       "Déficit de controle ao pegar e soltar",
       "Presença de dor, tremor ou fadiga",
     ],
-    // sem vídeo por enquanto
+    video: "https://www.youtube.com/watch?v=yxTMf1TM5XM", 
   },
 ]
 
@@ -260,7 +260,7 @@ export default function CoordenacaoMotoraPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-justify leading-relaxed">
       <NavigationController />
 
       {/* Hero Section */}

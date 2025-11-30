@@ -57,7 +57,7 @@ export default function ReflexosPage() {
       comoEFeito:
         "Paciente sentado com pernas livres; percutir o tendão patelar com martelo de reflexo",
       referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
-      video: "https://www.youtube.com/watch?v=SEU_LINK_AQUI", // <- troque pelo link certo
+      video: "https://www.youtube.com/watch?v=2KIlDSI0-iQ", // <- troque pelo link certo
     },
     {
       nome: "Tricipital",
@@ -73,24 +73,29 @@ export default function ReflexosPage() {
   ]
 
   const reflexosSuperficiais = [
-    {
-      nome: "Babinski (Sinal de Babinski)",
-      descricao: "A resposta patológica do teste do reflexo cutâneo plantar.",
-      comoOcorre:
-        "O dedão do pé se estende para cima, enquanto os outros dedos se abrem em leque.",
-      indica:
-        "Lesão no trato piramidal, responsável pelo controle motor voluntário.",
-      observacao:
-        "Em bebês com menos de 2 anos, é normal devido à imaturidade do sistema nervoso e desaparece com o desenvolvimento.",
+     {
+      nome: "Cutâneo-plantar em extensão:",
+      descricao:
+        "Um teste para avaliar o reflexo cutâneo plantar.",
       comoEFeito:
         "Estimulação com objeto (p. ex., haste do martelo) na borda lateral da planta do pé em direção à base do hálux.",
+      respostaNormal:
+        "Flexão dos dedos do pé( para baixo).",
+      respostaPatologica:
+        "A extensão do dedão do pé e a abertura dos outros dedos em leque, conhecida como sinal de Babinski.",
+      avalia:
+        "O que avalia: Lesão no trato piramidal, responsável pelo controle motor voluntário.",
+      obs:
+        "Em bebês com menos de 2 anos, é normal devido à imaturidade do sistema nervoso e desaparece com o desenvolvimento.",
       referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
-      video: "https://www.youtube.com/watch?v=YpKJwcdZUoA", // <- troque pelo link certo
+      video: "https://www.youtube.com/watch?v=SEU_LINK_AQUI",
     },
     {
-      nome: "Cutâneo-abdominal",
+      nome: "Cutâneo-abdominal:",
       descricao:
-        "O examinador estimula levemente a pele do abdômen com um objeto pontiagudo, mas não afiado, como o martelo de reflexos.",
+        "Reflexo superficial avalia integridade dos arcos nervosos toracoabdominais.",
+      comoEFeito:
+        "feito: O examinador estimula levemente a pele do abdômen com um objeto pontiagudo, mas não afiado, como o martelo de reflexos.",
       estimulo:
         "O estímulo é feito deslizando a pele em direção à linha média, em diferentes níveis:",
       niveis: [
@@ -99,20 +104,9 @@ export default function ReflexosPage() {
         "Hipogástrico: abaixo do umbigo (T10-T12).",
       ],
       respostaNormal:
-        "A contração dos músculos abdominais do mesmo lado, causando um leve desvio do umbigo em direção ao estímulo.",
+        "Resposta esperada: contração dos músculos abdominais do mesmo lado, causando um leve desvio do umbigo em direção ao estímulo.",
       referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
-      video: "https://www.youtube.com/watch?v=U0vBWbuwSVU", // <- troque pelo link certo
-    },
-    {
-      nome: "Cutâneo-plantar em flexão",
-      descricao: "Um teste para avaliar o reflexo plantar.",
-      respostaNormal: "Flexão dos dedos do pé (para baixo).",
-      respostaPatologica:
-        "A extensão do dedão do pé e a abertura dos outros dedos em leque, conhecida como sinal de Babinski.",
-      comoEFeito:
-        "Estimulação com objeto (p. ex., haste do martelo) na borda lateral da planta do pé em direção à base do hálux.",
-      referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
-      video: "https://www.youtube.com/watch?v=SEU_LINK_AQUI", // <- troque pelo link certo
+      video: "https://www.youtube.com/watch?v=U0vBWbuwSVU",
     },
   ]
 
@@ -163,7 +157,7 @@ export default function ReflexosPage() {
       </section>
 
       {/* O que é? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -173,7 +167,7 @@ export default function ReflexosPage() {
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              O que é?
+              Conceito
             </h2>
           </div>
 
@@ -182,13 +176,7 @@ export default function ReflexosPage() {
               className="text-[#445345] text-base sm:text-lg leading-relaxed"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-              O reflexo é uma resposta involuntária a um estímulo sensorial. Quando um receptor sensorial é estimulado,
-              ele envia impulsos nervosos aferentes ao sistema nervoso central (SNC), que processa a informação e envia
-              impulsos eferentes para um órgão efetor, como um músculo ou uma glândula, gerando uma resposta. É dividido
-              em componentes segmentar e suprassegmentar. O componente segmentar é formado por um centro reflexo local
-              na medula espinal ou no tronco encefálico e suas conexões aferentes e eferentes. O componente
-              suprassegmentar é constituído de vias centrais descendentes, que controlam, modulam e regulam a atividade
-              segmentar.{" "}
+              O reflexo é uma resposta involuntária a um estímulo sensorial. Quando um receptor sensorial é estimulado, ele envia impulsos nervosos aferentes ao sistema nervoso central (SNC), que processa a informação e envia impulsos eferentes para um órgão efetor, como um músculo ou tendão, gerando uma resposta.{" "}
               <span className="text-[#6B8E23] font-medium">
                 (CAMPBELL, 2013, p.860)
               </span>
@@ -199,7 +187,7 @@ export default function ReflexosPage() {
       </section>
 
       {/* Como funciona? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA] text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -218,20 +206,7 @@ export default function ReflexosPage() {
               className="text-[#445345] text-base sm:text-lg leading-relaxed whitespace-pre-line"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-              O reflexo começa quando um receptor sensorial na pele, músculo ou tendão detecta um estímulo. Esse sinal
-              segue pela via aferente até o SNC, onde ocorre uma sinapse que ativa o neurônio eferente.
-
-              O impulso parte do fuso muscular, que percebe o estiramento. As fibras aferentes Ia levam essa informação
-              à medula, ativando diretamente o motoneurônio alfa, que faz as fibras musculares extrafusais contraírem. O
-              neurotransmissor dessa sinapse é o glutamato. Quando o músculo contrai, o fuso reduz sua descarga e o
-              reflexo se encerra.
-
-              Enquanto o músculo agonista contrai, o antagonista é inibido por interneurônios Ia. No reflexo patelar,
-              por exemplo, o quadríceps contrai e os isquiotibiais relaxam. O neurônio gama ajusta a sensibilidade do
-              fuso por meio da acetilcolina.
-
-              A resposta final chega ao efetor (músculo ou tendão). Qualquer alteração em uma das partes do arco reflexo
-              pode diminuir ou abolir o reflexo.
+              O receptor sensorial detecta o estímulo e envia o impulso pela via aferente até o SNC, onde ocorre sinapse com a via eferente. O impulso parte do fuso muscular que percebe o estiramento e ativa o motoneurônio alfa, gerando a contração das fibras musculares. Com a contração, a atividade do fuso diminui e o reflexo se encerra. O neurônio gama ajusta a sensibilidade do fuso. A resposta final chega ao músculo, e qualquer falha em partes do arco reflexo pode reduzir ou abolir o reflexo.
             </p>
 
             <p
@@ -245,7 +220,7 @@ export default function ReflexosPage() {
       </section>
 
       {/* Quais são os reflexos? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -312,7 +287,7 @@ export default function ReflexosPage() {
       </section>
 
       {/* Reflexos Profundos - Detalhamento */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23]/5 to-white">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23]/5 to-white text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -456,7 +431,7 @@ export default function ReflexosPage() {
       </section>
 
       {/* Reflexos Superficiais - Detalhamento */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#D4AF37]/5 to-white">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#D4AF37]/5 to-white text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center">
@@ -516,23 +491,6 @@ export default function ReflexosPage() {
                     </div>
                   )}
 
-                  {"comoOcorre" in reflexo && reflexo.comoOcorre && (
-                    <div>
-                      <h4
-                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
-                        style={{ fontFamily: "var(--font-poppins)" }}
-                      >
-                        Como ocorre:
-                      </h4>
-                      <p
-                        className="text-[#445345] text-base leading-relaxed"
-                        style={{ fontFamily: "var(--font-poppins)" }}
-                      >
-                        {reflexo.comoOcorre}
-                      </p>
-                    </div>
-                  )}
-
                   {"estimulo" in reflexo && reflexo.estimulo && (
                     <div>
                       <h4
@@ -563,23 +521,6 @@ export default function ReflexosPage() {
                           ))}
                         </ul>
                       )}
-                    </div>
-                  )}
-
-                  {"indica" in reflexo && reflexo.indica && (
-                    <div className="bg-[#D4AF37]/5 p-4 rounded-lg border border-[#D4AF37]/10">
-                      <h4
-                        className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wide mb-2"
-                        style={{ fontFamily: "var(--font-poppins)" }}
-                      >
-                        O que indica:
-                      </h4>
-                      <p
-                        className="text-[#445345] text-base leading-relaxed"
-                        style={{ fontFamily: "var(--font-poppins)" }}
-                      >
-                        {reflexo.indica}
-                      </p>
                     </div>
                   )}
 
@@ -617,20 +558,20 @@ export default function ReflexosPage() {
                         </p>
                       </div>
                     )}
-
-                  {"observacao" in reflexo && reflexo.observacao && (
-                    <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                  
+                  {"obs" in reflexo && reflexo.obs && (
+                    <div>
                       <h4
-                        className="text-sm font-semibold text-blue-900 uppercase tracking-wide mb-2"
+                        className="text-sm font-semibold text-[#1f2923] uppercase tracking-wide mb-2"
                         style={{ fontFamily: "var(--font-poppins)" }}
                       >
-                        ℹ️ Observação importante:
+                        OBS:
                       </h4>
                       <p
-                        className="text-blue-800 text-base leading-relaxed"
+                        className="text-[#445345] text-base leading-relaxed"
                         style={{ fontFamily: "var(--font-poppins)" }}
                       >
-                        {reflexo.observacao}
+                        {reflexo.obs}
                       </p>
                     </div>
                   )}
@@ -643,6 +584,8 @@ export default function ReflexosPage() {
                       {reflexo.referencia}
                     </p>
                   )}
+
+                  
 
                   {/* Vídeo */}
                   {reflexo.video && (
@@ -689,7 +632,7 @@ export default function ReflexosPage() {
       </section>
 
       {/* Como avaliar? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F]">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-br from-[#6B8E23] to-[#556B2F] text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
@@ -792,7 +735,7 @@ export default function ReflexosPage() {
       </section>
 
       {/* Como diagnosticar? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA] text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -875,23 +818,7 @@ export default function ReflexosPage() {
                   className="text-[#445345] text-base leading-relaxed"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
-                  A ausência de reflexos tendinosos profundos (RTP) indica uma lesão dentro do arco reflexo. A ausência
-                  dos reflexos tendinosos profundos (RTP) indica um comprometimento em alguma parte do arco reflexo.
-                  Quando há ausência de reflexo associada à perda sensorial no território correspondente, sugere-se
-                  lesão do componente aferente do arco reflexo, como o nervo sensitivo ou o corno dorsal da medula. Já a
-                  ausência de reflexo acompanhada de paralisia, fasciculações e atrofia muscular aponta para lesão do
-                  componente eferente, envolvendo as células do corno anterior ou do nervo motor.
-                </p>
-                <p
-                  className="text-[#445345] text-base leading-relaxed"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  A causa mais frequente de arreflexia é a neuropatia periférica, frequentemente relacionada a condições
-                  como diabetes, alcoolismo, uremia, deficiências vitamínicas, amiloidose ou exposição a toxinas. Embora
-                  a ausência bilateral do reflexo aquileu seja geralmente sugestiva de neuropatia periférica, também
-                  pode ocorrer em casos de síndrome da cauda equina. Além disso, lesões de nervos periféricos
-                  específicos podem reduzir ou abolir determinados reflexos, como o bíceps (nervo musculocutâneo),
-                  tríceps e braquiorradial (nervo radial), patelar (nervo femoral) e aquileu (nervo tibial).
+                  A arreflexia é a ausência dos reflexos tendinosos profundos e indica alteração no arco reflexo. Com perda sensorial, sugere lesão aferente; com paralisia, fasciculações e atrofia, indica lesão eferente. A causa mais comum é neuropatia periférica. A ausência bilateral do reflexo aquileu costuma indicar neuropatia, mas também pode ocorrer na síndrome da cauda equina. Lesões de nervos periféricos podem abolir reflexos específicos.
                 </p>
                 <p
                   className="text-[#6B8E23] text-sm font-medium mt-1"
@@ -906,7 +833,7 @@ export default function ReflexosPage() {
       </section>
 
       {/* Como o corpo reage? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">

@@ -52,61 +52,69 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <NavigationController />
 
-      {/* HERO */}
-           <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden">
-        <div className="max-w-4xl mx-4 sm:mx-6 md:mx-8 lg:mx-32 relative mt-5 z-10 sm:mt-8 md:mt-12 lg:mt-60">
-          <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
-            <Sparkles className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-wide uppercase" style={{ fontFamily: "var(--font-poppins)" }}>
-              Fisioterapia Neurofuncional
-            </span>
-          </div>
+    {/* HERO */}
+    <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden">
+      <div className="max-w-4xl mx-4 sm:mx-6 md:mx-8 lg:mx-32 relative mt-5 z-10 sm:mt-8 md:mt-12 lg:mt-60">
 
-          <h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#1f2923] mb-6 leading-tight"
-            style={{ fontFamily: "var(--font-playfair)" }}
+        <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
+          <Sparkles className="w-5 h-5" />
+          <span
+            className="text-sm font-medium tracking-wide uppercase"
+            style={{ fontFamily: "var(--font-poppins)" }}
           >
-            Avaliação simplificada<br />
-            <span className="block">e eficaz</span>
-          </h1>
-
-          <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            <a
-              href="/#contato"
-              className="px-8 py-4 bg-[#6B8E23] text-white rounded-lg font-semibold hover:brightness-110 transition-all duration-300 shadow-lg inline-flex items-center gap-2"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              Agendar Avaliação <ChevronRight className="w-5 h-5" />
-            </a>
-            <a
-              href="/#sobre"
-              className="px-8 py-4 border border-[#6B8E23] text-[#6B8E23] rounded-lg font-semibold hover:bg-[#6B8E23]/10 transition-all duration-300 inline-flex items-center gap-2"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              Conhecer a equipe <Brain className="w-5 h-5" />
-            </a>
-          </div>
+            Fisioterapia Neurofuncional
+          </span>
         </div>
 
-        {/* Decorative Background */}
-        <div
-          className="
-            absolute inset-0 
-            bg-[url('/688b3849-9449-4c97-8be2-0a28c28ef3f0.png')] 
-            bg-center 
-            bg-no-repeat 
-            opacity-10 
-            mix-blend-multiply 
-            pointer-events-none
+        <h1
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1f2923] leading-tight"
+          style={{ fontFamily: "var(--font-playfair)" }}
+        >
+          Neurofuncional
+        </h1>
 
-            bg-cover              /* mobile: cobre tudo */
-            lg:bg-[length:100%]
-          "
-          style={{
-            filter: "brightness(0.8) contrast(1.1)",
-          }}
-        />
-      </section>
+        <h2
+          className="text-lg sm:text-xl md:text-2xl text-[#1f2923]/80 mt-2"
+          style={{ fontFamily: "var(--font-playfair)" }}
+        >
+          Avaliação simplificada e eficaz
+        </h2>
+
+        <div className="flex flex-col sm:flex-row gap-4 mt-8">
+{/*           <a
+            href="/#contato"
+            className="px-8 py-4 bg-[#6B8E23] text-white rounded-lg font-semibold hover:brightness-110 transition-all duration-300 shadow-lg inline-flex items-center gap-2"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            Agendar Avaliação <ChevronRight className="w-5 h-5" />
+          </a> */}
+
+          <a
+            href="/#sobre"
+            className="px-8 py-4 border border-[#6B8E23] text-[#6B8E23] rounded-lg font-semibold hover:bg-[#6B8E23]/10 transition-all duration-300 inline-flex items-center gap-2"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            Conhecer a equipe <Brain className="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      {/* Decorative Background */}
+      <div
+        className="
+          absolute inset-0 
+          bg-[url('/688b3849-9449-4c97-8be2-0a28c28ef3f0.png')] 
+          bg-center 
+          bg-no-repeat 
+          opacity-10 
+          mix-blend-multiply 
+          pointer-events-none
+          bg-cover
+          lg:bg-[length:100%]
+        "
+        style={{ filter: "brightness(0.8) contrast(1.1)" }}
+      />
+    </section>
 
       {/* DESTAQUES / NAVEGAÇÃO PRINCIPAL */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
@@ -147,7 +155,7 @@ export default function HomePage() {
       </section>
 
       {/* SOBRE / EQUIPE */}
-      <section id="sobre" className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA]">
+      <section id="sobre" className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F8F9FA] text-justify leading-relaxed">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
@@ -170,8 +178,11 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold text-[#212529]" style={{ fontFamily: "var(--font-playfair)" }}>Ana Karla Barros</h3>
               <p className="text-[#D4AF37] font-semibold mb-4" style={{ fontFamily: "var(--font-poppins)" }}>22 anos | Neurofuncional</p>
-              <p className="text-[#6C757D] text-center" style={{ fontFamily: "var(--font-poppins)" }}>
-                Foco em fisioterapia pediátrica e reabilitação infantil.
+              <p
+                className="text-[#6C757D] text-center mt-3 text-sm sm:text-base leading-relaxed max-w-[28ch]"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Foco na fisioterapia pediátrica, voltada ao desenvolvimento motor e à reabilitação infantil.
               </p>
             </div>
             {/* Brenda */}
@@ -181,8 +192,11 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold text-[#212529]" style={{ fontFamily: "var(--font-playfair)" }}>Brenda Muniky</h3>
               <p className="text-[#D4AF37] font-semibold mb-4" style={{ fontFamily: "var(--font-poppins)" }}>25 anos | Ortopedia</p>
-              <p className="text-[#6C757D] text-center" style={{ fontFamily: "var(--font-poppins)" }}>
-                Prevenção e recuperação musculoesquelética.
+              <p
+                className="text-[#6C757D] text-center mt-3 text-sm sm:text-base leading-relaxed max-w-[30ch]"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Tem afinidade com a Ortopedia, buscando aprimorar suas práticas em prevenção e recuperação de disfunções musculoesqueléticas
               </p>
             </div>
             {/* Caroline */}
@@ -192,8 +206,11 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold text-[#212529]" style={{ fontFamily: "var(--font-playfair)" }}>Caroline Pessoa</h3>
               <p className="text-[#D4AF37] font-semibold mb-4" style={{ fontFamily: "var(--font-poppins)" }}>23 anos | Cardiorrespiratória</p>
-              <p className="text-[#6C757D] text-center" style={{ fontFamily: "var(--font-poppins)" }}>
-                Saúde do idoso e qualidade de vida.
+              <p
+                className="text-[#6C757D] text-center mt-3 text-sm sm:text-base leading-relaxed max-w-[32ch]"
+                style={{ fontFamily: "var(--font-poppins)" }}
+              >
+                Apaixonada pela área Cardiorrespiratória, com ênfase na saúde do idoso, priorizando a qualidade de vida e a funcionalidade na terceira idade.
               </p>
             </div>
           </div>
@@ -201,7 +218,7 @@ export default function HomePage() {
       </section>
 
       {/* IDEIA & DESENVOLVIMENTO */}
-      <section className="relative bg-gradient-to-b from-[#F6FBF5] to-[#E8F4E7] px-4 sm:px-6 md:px-8 lg:px-12 py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-b from-[#F6FBF5] to-[#E8F4E7] px-4 sm:px-6 md:px-8 lg:px-12 py-24 overflow-hidden text-justify leading-relaxed">
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#6B8E23]/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl" />
 

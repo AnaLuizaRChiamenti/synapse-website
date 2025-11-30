@@ -28,44 +28,15 @@ type ScaleItem = {
 // Conteúdo estruturado das escalas para garantir a padronização e o detalhamento
 const scaleData: ScaleItem[] = [
   {
-    title: "Escala Visual Analógica (EVA)",
-    subtitle: "Intensidade da Dor",
-    icon: Smile,
-    bgIcon: "bg-red-100",
-    iconColor: "text-red-500",
-    description:
-      "A Escala Visual Analógica (EVA) é considerada uma medida prática e válida para avaliar a intensidade da dor em diferentes contextos clínicos (HAWKER et al., 2011).",
-    content: (
-      <div className="flex flex-col space-y-2 mt-4 text-sm">
-        <div className="p-2 rounded-lg bg-green-100 border-l-4 border-green-500">
-          <span className="font-bold">0 - 3 (Leve):</span> Dor discreta, geralmente não limitante. O
-          paciente pode ignorá-la.
-        </div>
-        <div className="p-2 rounded-lg bg-yellow-100 border-l-4 border-yellow-500">
-          <span className="font-bold">4 - 7 (Moderada):</span> Dor que interfere em atividades
-          cotidianas, requerendo medicação.
-        </div>
-        <div className="p-2 rounded-lg bg-red-100 border-l-4 border-red-500">
-          <span className="font-bold">8 - 10 (Intensa/Máxima):</span> Dor incapacitante que impede a
-          realização de atividades. Necessidade de intervenção imediata.
-        </div>
-      </div>
-    ),
-  },
-  {
     title: "Escala de Borg (RPE - CR10)",
     subtitle: "Esforço Percebido",
     icon: Heart,
     bgIcon: "bg-blue-100",
     iconColor: "text-blue-600",
     description:
-      "Mede o nível de esforço e exaustão durante a atividade física, utilizando a versão simplificada de 1 a 10 (CR10).",
+          "A Escala de Borg é um instrumento que mede a percepção subjetiva de esforço durante a atividade física. Ela transforma sensações como cansaço, respiração e esforço muscular em um valor numérico que indica a intensidade do exercício. Seu objetivo é ajudar a monitorar e ajustar a carga de treino de forma simples, prática e segura, servindo como guia tanto para profissionais quanto para praticantes de exercícios. (Rosales et al, 2016)",
     content: (
       <div className="flex flex-col space-y-2 mt-4 text-sm">
-        <p className="text-gray-700 leading-relaxed">
-          A Escala de Borg é um instrumento que mede a percepção subjetiva de esforço durante a atividade física. Ela transforma sensações como cansaço, respiração e esforço muscular em um valor numérico que indica a intensidade do exercício. Seu objetivo é ajudar a monitorar e ajustar a carga de treino de forma simples, prática e segura, servindo como guia tanto para profissionais quanto para praticantes de exercícios. (Rosales et al, 2016)
-        </p>
-
         <p className="font-bold text-lg text-gray-800 mb-1">Graus de Esforço (CR10):</p>
 
         <div className="p-2 rounded-lg bg-red-100 border-l-4 border-red-600">
@@ -108,7 +79,7 @@ const scaleData: ScaleItem[] = [
     bgIcon: "bg-teal-100",
     iconColor: "text-teal-600",
     description:
-      "Avalia o desempenho do equilíbrio e o risco de queda através de 14 tarefas funcionais, pontuadas de 0 a 4.",
+      "Este  teste  é  constituído  por uma  escala  de  14  tarefas  comuns  que  envolvem  o equilíbrio  estático  e  dinâmico,  tais  como  alcançar, girar,  transferir-se,  permanecer  em  pé  e  levantar-se. A  realização  das  tarefas  é  avaliada  por  meio  de  observação e a pontuação varia de 0 – 4 totalizando um máximo de 56 pontos. Estes pontos devem ser subtraídos caso o tempo ou a distância não sejam atingidos, se o sujeito necessite de supervisão para a execução da tarefa, ou se o sujeito apóia-se num suporte externo ou recebe ajuda do examinador.(Nayara Corrêa Farias, et al 2011)",
     content: (
       <div className="flex flex-col space-y-3 mt-4 text-sm">
         <p className="font-bold text-lg text-teal-700">Pontuação Total: 0 a 56</p>
@@ -166,13 +137,9 @@ const scaleData: ScaleItem[] = [
     bgIcon: "bg-indigo-100",
     iconColor: "text-indigo-600",
     description:
-      "Avalia a força muscular de 6 grupos musculares em uma escala ordinal de 0 a 5. Uma pontuação total de 60 indica força normal.",
+          "O Medical Research Council (MRC)-sumscore avalia a força muscular global. A força manual de seis grupos musculares (abdução do ombro, flexão do cotovelo, extensão do punho, flexão do quadril, extensão do joelho e dorsiflexão do tornozelo) é avaliada em ambos os lados usando a escala MRC. A soma das pontuações fornece o MRC-sumscore, variando de 0 a 60.(Turan et al., 2020)",
     content: (
       <div className="flex flex-col space-y-3 mt-4 text-sm">
-        <p className="text-gray-700 leading-relaxed">
-          O Medical Research Council (MRC)-sumscore avalia a força muscular global. A força manual de seis grupos musculares (abdução do ombro, flexão do cotovelo, extensão do punho, flexão do quadril, extensão do joelho e dorsiflexão do tornozelo) é avaliada em ambos os lados usando a escala MRC. A soma das pontuações fornece o MRC-sumscore, variando de 0 a 60.(Turan et al., 2020)
-        </p>
-
         <div className="p-3 rounded-lg bg-indigo-50 border-l-4 border-indigo-600">
           <p className="font-bold text-indigo-700 mb-2">
             Grupos Musculares Avaliados (6 Movimentos):
@@ -221,6 +188,31 @@ const scaleData: ScaleItem[] = [
       </div>
     ),
   },
+    {
+    title: "Escala Visual Analógica (EVA)",
+    subtitle: "Intensidade da Dor",
+    icon: Smile,
+    bgIcon: "bg-red-100",
+    iconColor: "text-red-500",
+    description:
+      "A Escala Visual Analógica (EVA) é considerada uma medida prática e válida para avaliar a intensidade da dor em diferentes contextos clínicos (HAWKER et al., 2011).",
+    content: (
+      <div className="flex flex-col space-y-2 mt-4 text-sm">
+        <div className="p-2 rounded-lg bg-green-100 border-l-4 border-green-500">
+          <span className="font-bold">0 - 3 (Leve):</span> Dor discreta, geralmente não limitante. O
+          paciente pode ignorá-la.
+        </div>
+        <div className="p-2 rounded-lg bg-yellow-100 border-l-4 border-yellow-500">
+          <span className="font-bold">4 - 7 (Moderada):</span> Dor que interfere em atividades
+          cotidianas, requerendo medicação.
+        </div>
+        <div className="p-2 rounded-lg bg-red-100 border-l-4 border-red-500">
+          <span className="font-bold">8 - 10 (Intensa/Máxima):</span> Dor incapacitante que impede a
+          realização de atividades. Necessidade de intervenção imediata.
+        </div>
+      </div>
+    ),
+  },
 ]
 
 // Componente Card genérico para padronização
@@ -243,7 +235,7 @@ const ScaleCard = ({
   description,
   content,
 }: ScaleCardProps) => (
-  <div className="flex flex-col bg-white rounded-xl shadow-lg border border-gray-100 p-6 transition duration-300 hover:shadow-xl">
+  <div className="flex flex-col bg-white rounded-xl shadow-lg border border-gray-100 p-6 transition duration-300 hover:shadow-xl h-auto self-start">
     {/* Header */}
     <div className="flex items-center justify-between gap-3 mb-4">
       <div className={`p-2 rounded-full ${bgIcon}`}>
@@ -260,8 +252,8 @@ const ScaleCard = ({
       </div>
     </div>
 
-    {/* Body */}
-    <div className="flex-1 flex flex-col justify-between h-full">
+    {/* Body (sem height forçada) */}
+    <div className="flex flex-col">
       <p className="text-gray-600 mb-4 text-sm sm:text-base">{description}</p>
       {content}
     </div>
@@ -270,7 +262,7 @@ const ScaleCard = ({
 
 export default function EscalasExtrasPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-justify leading-relaxed">
       <NavigationController />
 
       {/* Hero Section */}
@@ -328,143 +320,6 @@ export default function EscalasExtrasPage() {
               alt="Diagnóstico fisioterapêutico - fluxograma"
               className="w-full h-auto rounded-xl"
             />
-          </div>
-
-          {/* Cards passo a passo */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            {/* Card 1 */}
-            <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-[#6B8E23]/10 flex items-center justify-center font-bold text-[#6B8E23]">
-                  1
-                </div>
-                <h3 className="text-lg font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Estrutura e Função
-                </h3>
-              </div>
-
-              <p className="text-[#445345] text-sm leading-relaxed mb-4" style={{ fontFamily: "var(--font-poppins)" }}>
-                Identifica a disfunção ou supressão (medicamentosa) responsável pelo quadro.
-              </p>
-
-              <div className="space-y-2 text-sm text-[#445345]" style={{ fontFamily: "var(--font-poppins)" }}>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#6B8E23]" />
-                  Musculoesquelética
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#6B8E23]" />
-                  no SNC
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#6B8E23]" />
-                  no SNP
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#6B8E23]" />
-                  Cardíaca
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#6B8E23]" />
-                  Pulmonar
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#6B8E23]" />
-                  Metabólica
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-[#D4AF37]/10 flex items-center justify-center font-bold text-[#D4AF37]">
-                  2
-                </div>
-                <h3 className="text-lg font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Atividade e Participação
-                </h3>
-              </div>
-
-              <p className="text-[#445345] text-sm leading-relaxed mb-4" style={{ fontFamily: "var(--font-poppins)" }}>
-                Define o impacto funcional: limitação e/ou dependência.
-              </p>
-
-              <div className="grid grid-cols-2 gap-3 text-sm" style={{ fontFamily: "var(--font-poppins)" }}>
-                <div className="bg-[#D4AF37]/5 p-3 rounded-xl border border-[#D4AF37]/20">
-                  <p className="font-semibold text-[#1f2923] mb-1">Limitação</p>
-                  <p className="text-[#445345]">Leve</p>
-                  <p className="text-[#445345]">Moderada</p>
-                  <p className="text-[#445345]">Grave</p>
-                </div>
-
-                <div className="bg-[#6B8E23]/5 p-3 rounded-xl border border-[#6B8E23]/20">
-                  <p className="font-semibold text-[#1f2923] mb-1">Dependência</p>
-                  <p className="text-[#445345]">Parcial</p>
-                  <p className="text-[#445345]">Total</p>
-                </div>
-              </div>
-
-              <div className="mt-4 space-y-2 text-sm text-[#445345]" style={{ fontFamily: "var(--font-poppins)" }}>
-                <p className="font-semibold text-[#1f2923]">Onde isso aparece:</p>
-                <div className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#D4AF37] mt-0.5" />
-                  <span>na mobilidade</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#D4AF37] mt-0.5" />
-                  <span>cognição</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-[#D4AF37] mt-0.5" />
-                  <span>nos auto cuidados</span>
-                </div>
-              </div>
-
-              <p className="mt-3 text-[#445345] text-sm leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-                Classificar se necessita de auxílio parcial ou total.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-600">
-                  3
-                </div>
-                <h3 className="text-lg font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
-                  Fatores Ambientais
-                </h3>
-              </div>
-
-              <p className="text-[#445345] text-sm leading-relaxed mb-4" style={{ fontFamily: "var(--font-poppins)" }}>
-                Identifica suportes externos que influenciam a funcionalidade e autonomia.
-              </p>
-
-              <div className="space-y-2 text-sm text-[#445345]" style={{ fontFamily: "var(--font-poppins)" }}>
-                <div className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5" />
-                  <span>de VM</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5" />
-                  <span>de VNI</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5" />
-                  <span>das pessoas</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <ChevronRight className="w-4 h-4 text-blue-500 mt-0.5" />
-                  <span>Necessitando de auxiliar na marcha</span>
-                </div>
-              </div>
-
-              <p className="mt-3 text-[#445345] text-sm leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-                Considerar esses fatores no plano terapêutico.
-              </p>
-            </div>
           </div>
         </div>
       </section>
