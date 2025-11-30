@@ -29,8 +29,8 @@ export default function ReflexosPage() {
       nome: "Aquileu",
       descricao:
         "É a resposta do pé quando o tendão de Aquiles (tendão calcâneo) é percutido, geralmente com o pé em flexão plantar.",
-      respostaEsperada: "O pé se move bruscamente para cima (dorsiflexão).",
-      avalia: "A saúde das raízes nervosas S1 e S2, e do nervo isquiático.",
+      respostaEsperada: "O pé se move levemente para cima (plantiflexão).",
+      avalia: "Raízes nervosas S1 e S2, e do nervo isquiático.",
       comoEFeito:
         "Com o paciente sentado e os pés pendentes, o examinador apoia o pé em posição relaxada, colocando uma das mãos sob a planta do pé do paciente e realizando uma leve dorsiflexão e percuti o tendão de Aquiles logo acima do calcâneo",
       referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
@@ -39,21 +39,21 @@ export default function ReflexosPage() {
     {
       nome: "Bicipital",
       descricao:
-        "O examinador posiciona o antebraço do paciente levemente fletido e, com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital.",
+        "Reflexo profundo que avalia a integridade do arco reflexo do bíceps braquial.",
       respostaEsperada: "A flexão do antebraço e/ou a contração do músculo bíceps.",
       avalia: "Raízes nervosas C5 e C6, e o nervo musculocutâneo.",
       comoEFeito:
-        "O examinador posiciona o antebraço do paciente levemente fletido e, o polegar do examinador deve estar firmemente posicionado sobre o tendão do bíceps e com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital, acima do deo do examinador..",
+        "O examinador posiciona o antebraço do paciente levemente fletido e, o polegar do examinador deve estar firmemente posicionado sobre o tendão do bíceps e com um martelo de reflexos, percute o tendão do bíceps na fossa antecubital, acima do deo do examinador.",
       referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
       video: "https://www.youtube.com/watch?v=sy3HRMeZiNw", // <- troque pelo link certo
     },
     {
       nome: "Patelar",
       descricao:
-        "É a extensão do joelho ao se bater no tendão patelar (localizado logo abaixo da patela), que estira o músculo quadríceps.",
+        "É a extensão do joelho ao se bater no tendão patelar (localizado logo abaixo da patela), que estira o músculo quadríceps. ",
       respostaEsperada: "A perna se estende rapidamente.",
       avalia:
-        "A integridade do nervo femoral e das raízes nervosas de L2, L3 e L4 da medula espinhal.",
+        "A integridade do nervo femoral e das raízes nervosas de L2, L3 e L4 da medula espinhal. ",
       comoEFeito:
         "Paciente sentado com pernas livres; percutir o tendão patelar com martelo de reflexo",
       referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
@@ -62,7 +62,7 @@ export default function ReflexosPage() {
     {
       nome: "Tricipital",
       descricao:
-        "O examinador segura o braço do paciente com o cotovelo a 90 graus, deixando-o pendular. Em seguida, percute o tendão do tríceps, que fica na parte posterior do braço, logo acima do cotovelo.",
+        "Reflexo profundo que avalia a integridade do arco reflexo do tríceps braquial.",
       respostaEsperada: "A extensão do antebraço sobre o braço.",
       avalia: "Raízes nervosas C6, C7 e C8.",
       comoEFeito:
@@ -88,7 +88,7 @@ export default function ReflexosPage() {
       obs:
         "Em bebês com menos de 2 anos, é normal devido à imaturidade do sistema nervoso e desaparece com o desenvolvimento.",
       referencia: "(RODRÍGUEZ-BEATO; DE JESUS, 2023)",
-      video: "https://www.youtube.com/watch?v=SEU_LINK_AQUI",
+      video: "https://www.youtube.com/watch?v=YpKJwcdZUoA",
     },
     {
       nome: "Cutâneo-abdominal:",
@@ -176,8 +176,7 @@ export default function ReflexosPage() {
               className="text-[#445345] text-base sm:text-lg leading-relaxed"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-              O reflexo é uma resposta involuntária a um estímulo sensorial. Quando um receptor sensorial é estimulado, ele envia impulsos nervosos aferentes ao sistema nervoso central (SNC), que processa a informação e envia impulsos eferentes para um órgão efetor, como um músculo ou tendão, gerando uma resposta.{" "}
-              <span className="text-[#6B8E23] font-medium">
+                O reflexo é uma resposta involuntária a um estímulo sensorial. Quando um receptor sensorial é estimulado, ele envia impulsos nervosos aferentes ao sistema nervoso central (SNC), que processa a informação e envia impulsos eferentes para um órgão efetor, como um músculo ou tendão, gerando uma resposta.              <span className="text-[#6B8E23] font-medium">
                 (CAMPBELL, 2013, p.860)
               </span>
               .
@@ -206,9 +205,7 @@ export default function ReflexosPage() {
               className="text-[#445345] text-base sm:text-lg leading-relaxed whitespace-pre-line"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-              O receptor sensorial detecta o estímulo e envia o impulso pela via aferente até o SNC, onde ocorre sinapse com a via eferente. O impulso parte do fuso muscular que percebe o estiramento e ativa o motoneurônio alfa, gerando a contração das fibras musculares. Com a contração, a atividade do fuso diminui e o reflexo se encerra. O neurônio gama ajusta a sensibilidade do fuso. A resposta final chega ao músculo, e qualquer falha em partes do arco reflexo pode reduzir ou abolir o reflexo.
-            </p>
-
+            O receptor sensorial detecta o estímulo e envia o impulso pela via aferente até o SNC, onde ocorre sinapse com a via eferente. O impulso parte do fuso muscular que percebe o estiramento e ativa o motoneurônio alfa, gerando a contração das fibras musculares. Com a contração, a atividade do fuso diminui e o reflexo se encerra. O neurônio gama ajusta a sensibilidade do fuso. A resposta final chega ao músculo, e qualquer falha em partes do arco reflexo pode reduzir ou abolir o reflexo.            </p>
             <p
               className="text-[#6B8E23] text-sm font-medium"
               style={{ fontFamily: "var(--font-poppins)" }}
@@ -648,6 +645,24 @@ export default function ReflexosPage() {
 
           <div className="bg-white/10 backdrop-blur-sm p-8 sm:p-10 md:p-12 rounded-2xl border border-white/20">
             <div className="space-y-6">
+
+              {/* SEMIOTÉCNICA */}
+              <div className="bg-white/10 p-6 rounded-xl border border-white/10">
+                <h3
+                  className="text-xl sm:text-2xl font-bold text-white mb-3"
+                  style={{ fontFamily: "var(--font-playfair)" }}
+                >
+                  SEMIOTÉCNICA
+                </h3>
+
+                <p
+                  className="text-white text-base leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Os pressupostos obrigatórios na avaliação dos reflexos clínicos estão listados adiante e devem ser obedecidos para cada reflexo pesquisado:
+                </p>
+              </div>
+
               {/* Item A */}
               <div className="flex flex-col sm:flex-row items-start gap-6 bg-white/10 p-6 rounded-xl">
                 <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center font-bold text-white">
@@ -705,7 +720,7 @@ export default function ReflexosPage() {
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
                   Observação da melhor posição de pesquisa para cada reflexo. Uma regra geral deve ser lembrada: a de
-                  manter o efetor do reflexo em leve estado de tensão, favorecedor da resposta reflexa.
+                  manter o efetor do R em leve estado de tensão, favorecedor da resposta reflexa. Exemplo: ligeira dorsiflexão passiva do pé facilita a resposta do R do tríceps sural ou aquileu.
                 </p>
               </div>
 
@@ -718,8 +733,7 @@ export default function ReflexosPage() {
                   className="text-white text-base leading-relaxed"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
-                  Relaxamento adequado do paciente, pois a contratura excessiva bloqueia o reflexo. Converse, distraia
-                  ou use situações que ajudem a relaxar.
+                  Relaxamento adequado do paciente, pois a contratura excessiva bloqueia o reflexo. Para isso, conversar com o paciente durante o exame, pedir a ele que faça cálculos, desviar sua atenção, enfim, usar de circunstâncias que ajudem a relaxar.
                 </p>
               </div>
 
@@ -776,9 +790,7 @@ export default function ReflexosPage() {
                 className="text-[#445345] text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                A hiporreflexia é a ausência ou diminuição da resposta ao toque. Geralmente indica uma doença que afeta
-                um ou mais componentes do próprio arco reflexo de dois neurônios. A diminuição do reflexo tendinoso
-                profundo geralmente sugere uma lesão do neurônio motor inferior.
+                A hiporreflexia é a ausência ou diminuição da resposta ao estímulo. Geralmente indica uma doença que afeta um ou mais componentes do próprio arco reflexo de dois neurônios. A diminuição do reflexo tendinoso profundo geralmente sugere uma lesão do neurônio motor inferior.
               </p>
               <p
                 className="text-[#6B8E23] text-sm font-medium mt-2"
@@ -796,10 +808,7 @@ export default function ReflexosPage() {
                 className="text-[#445345] text-base leading-relaxed"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                A hiperreflexia refere-se a reflexos hiperativos ou repetitivos (clônicos). Geralmente, indicam uma
-                interrupção das vias corticoespinhais e outras vias descendentes que influenciam o arco reflexo, devido a
-                uma lesão suprassegmentar, ou seja, uma lesão acima do nível das vias reflexas espinais. O aumento do
-                reflexo tendinoso profundo também sugere uma lesão do neurônio motor superior.
+                A hiperreflexia refere-se a reflexos hiperativos ou repetitivos (clônicos). Geralmente, indicam uma interrupção das vias corticoespinhais e outras vias descendentes que influenciam o arco reflexo, devido a uma lesão acima do nível das vias reflexas espinais.O aumento do reflexo tendinoso profundo também sugere uma lesão do neurônio motor superior.
               </p>
               <p
                 className="text-[#6B8E23] text-sm font-medium mt-2"
@@ -818,8 +827,7 @@ export default function ReflexosPage() {
                   className="text-[#445345] text-base leading-relaxed"
                   style={{ fontFamily: "var(--font-poppins)" }}
                 >
-                  A arreflexia é a ausência dos reflexos tendinosos profundos e indica alteração no arco reflexo. Com perda sensorial, sugere lesão aferente; com paralisia, fasciculações e atrofia, indica lesão eferente. A causa mais comum é neuropatia periférica. A ausência bilateral do reflexo aquileu costuma indicar neuropatia, mas também pode ocorrer na síndrome da cauda equina. Lesões de nervos periféricos podem abolir reflexos específicos.
-                </p>
+                A arreflexia é a ausência dos reflexos tendinosos profundos e indica alteração no arco reflexo. Com perda sensorial, sugere lesão aferente; com paralisia, fasciculações e atrofia, indica lesão eferente. A causa mais comum é neuropatia periférica. A ausência bilateral do reflexo aquileu costuma indicar neuropatia, mas também pode ocorrer na síndrome da cauda equina. Lesões de nervos periféricos podem abolir reflexos específicos                </p>
                 <p
                   className="text-[#6B8E23] text-sm font-medium mt-1"
                   style={{ fontFamily: "var(--font-poppins)" }}
