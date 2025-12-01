@@ -241,11 +241,6 @@ export default function HomePage() {
               Para o desenvolvimento deste site, realizamos uma seleção criteriosa de artigos científicos e livros voltados à semiologia neurológica, com o intuito de fundamentar a parte teórica de forma atualizada e confiável.
               Além disso, produzimos vídeos demonstrativos dos principais testes utilizados na avaliação neurofuncional, buscando tornar o aprendizado mais dinâmico e visual. Contamos também com o apoio de um profissional, responsável pelo desenvolvimento técnico e pela estruturação do site.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/escalas_extras" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8E23] text-white">
-                <Play className="w-4 h-4" /> Ver fluxogramas
-              </a>
-            </div>
           </div>
         </div>
       </section>
