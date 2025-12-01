@@ -179,11 +179,11 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-[#212529]" style={{ fontFamily: "var(--font-playfair)" }}>Ana Karla Barros</h3>
               <p className="text-[#D4AF37] font-semibold mb-4" style={{ fontFamily: "var(--font-poppins)" }}>22 anos | Neurofuncional</p>
               <p
-                className="text-[#6C757D] text-center mt-3 text-sm sm:text-base leading-relaxed max-w-[28ch]"
+                className="text-[#6C757D] mt-3 text-sm sm:text-base leading-relaxed 
+                          max-w-[32ch] text-left break-words hyphens-auto"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Foco na fisioterapia pediátrica, voltada ao desenvolvimento motor e à reabilitação infantil.
-              </p>
+              Possui afinidade pela área neurofuncional, especialmente pelos processos de desenvolvimento motor e pelas estratégias de reabilitação infantil, mantendo interesse em aprofundar conhecimentos.              </p>
             </div>
             {/* Brenda */}
             <div className="flex flex-col items-center bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -193,11 +193,11 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-[#212529]" style={{ fontFamily: "var(--font-playfair)" }}>Brenda Muniky</h3>
               <p className="text-[#D4AF37] font-semibold mb-4" style={{ fontFamily: "var(--font-poppins)" }}>25 anos | Ortopedia</p>
               <p
-                className="text-[#6C757D] text-center mt-3 text-sm sm:text-base leading-relaxed max-w-[30ch]"
+                className="text-[#6C757D] mt-3 text-sm sm:text-base leading-relaxed 
+                          max-w-[32ch] text-left break-words hyphens-auto"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Tem afinidade com a Ortopedia, buscando aprimorar suas práticas em prevenção e recuperação de disfunções musculoesqueléticas
-              </p>
+              Interesse pela área ortopédica, buscando aprimorar práticas relacionadas à prevenção, avaliação e reabilitação de disfunções musculoesqueléticas em diferentes níveis de complexidade.              </p>
             </div>
             {/* Caroline */}
             <div className="flex flex-col items-center bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
@@ -207,11 +207,11 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-[#212529]" style={{ fontFamily: "var(--font-playfair)" }}>Caroline Pessoa</h3>
               <p className="text-[#D4AF37] font-semibold mb-4" style={{ fontFamily: "var(--font-poppins)" }}>23 anos | Cardiorrespiratória</p>
               <p
-                className="text-[#6C757D] text-center mt-3 text-sm sm:text-base leading-relaxed max-w-[32ch]"
+                className="text-[#6C757D] mt-3 text-sm sm:text-base leading-relaxed 
+                          max-w-[32ch] text-left break-words hyphens-auto"
                 style={{ fontFamily: "var(--font-poppins)" }}
               >
-                Apaixonada pela área Cardiorrespiratória, com ênfase na saúde do idoso, priorizando a qualidade de vida e a funcionalidade na terceira idade.
-              </p>
+              Apreço pela fisioterapia cardiorrespiratória, com foco na saúde do idoso, promovendo qualidade de vida, funcionalidade e melhor desempenho nas atividades do dia a dia.              </p>
             </div>
           </div>
         </div>
