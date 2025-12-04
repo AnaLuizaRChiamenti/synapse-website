@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { NavigationController } from "@/components/NavigationController"
 import {
   Brain,
@@ -47,7 +46,7 @@ const coordinationTestsData: TestItem[] = [
       "Tremor ao se aproximar do dedo",
       "Movimentos descoordenados",
     ],
-    video: "https://www.youtube.com/watch?v=XdFlr8xLS3E", // ÍNDEX-ÍNDEX
+    video: "https://www.youtube.com/watch?v=XdFlr8xLS3E",
   },
   {
     number: 2,
@@ -65,7 +64,7 @@ const coordinationTestsData: TestItem[] = [
       "Decomposição do movimento",
       "Tremor",
     ],
-    video: "https://www.youtube.com/watch?v=Vn1SqpcFQAY", // ÍNDEX-TERAPEUTA/EXAMINADOR
+    video: "https://www.youtube.com/watch?v=Vn1SqpcFQAY",
   },
   {
     number: 3,
@@ -81,7 +80,7 @@ const coordinationTestsData: TestItem[] = [
       "Tremores ao se aproximar do alvo",
       "Lentidão ou falta de ritmo",
     ],
-    video: "https://www.youtube.com/watch?v=DGm816sHODs", // ÍNDEX-NARIZ
+    video: "https://www.youtube.com/watch?v=DGm816sHODs",
   },
   {
     number: 4,
@@ -117,7 +116,7 @@ const coordinationTestsData: TestItem[] = [
       "Movimentos trêmulos",
       "Perda do controle durante a descida",
     ],
-    video: "https://www.youtube.com/watch?v=ucZdLklYlTE", // CALCANHAR-JOELHO
+    video: "https://www.youtube.com/watch?v=ucZdLklYlTE",
   },
   {
     number: 6,
@@ -155,15 +154,9 @@ const coordinationTestsData: TestItem[] = [
       "Déficit de controle ao pegar e soltar",
       "Presença de dor, tremor ou fadiga",
     ],
-    video: "https://www.youtube.com/watch?v=yxTMf1TM5XM", 
+    video: "https://www.youtube.com/watch?v=yxTMf1TM5XM",
   },
 ]
-
-type TestCardProps = TestItem & {
-  openKey: string | null
-  onToggleVideo: (key: string) => void
-  videoKey: string
-}
 
 const TestCard = ({
   number,
@@ -175,10 +168,7 @@ const TestCard = ({
   objective,
   alterations,
   video,
-  openKey,
-  onToggleVideo,
-  videoKey,
-}: TestCardProps) => (
+}: TestItem) => (
   <div className="flex flex-col bg-white rounded-xl shadow-lg border border-gray-100 p-6 transition duration-300 hover:shadow-xl">
     <div className="flex items-center gap-3 mb-4">
       <div className={`p-3 rounded-full ${bgIcon}`}>
@@ -221,31 +211,23 @@ const TestCard = ({
         </ul>
       </div>
 
-      {/* vídeo (se existir) */}
+      {/* vídeo sempre aberto */}
       {video && (
-        <div className="pt-1">
-          <button
-            type="button"
-            onClick={() => onToggleVideo(videoKey)}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#6B8E23] text-white hover:brightness-110 transition-all"
-          >
+        <div className="pt-2">
+          <div className="flex items-center gap-2 mb-2 text-[#6B8E23] font-semibold text-sm">
             <Play className="w-4 h-4" />
-            {openKey === videoKey ? "Fechar vídeo" : "Como avaliar (vídeo)"}
-          </button>
+            <span>Como avaliar (vídeo)</span>
+          </div>
 
-          {openKey === videoKey && (
-            <div className="mt-4">
-              <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#6B8E23]/20">
-                <iframe
-                  className="absolute inset-0 w-full h-full"
-                  src={`https://www.youtube.com/embed/${getYoutubeId(video)}`}
-                  title={`Vídeo - ${title}`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-          )}
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow border border-[#6B8E23]/20">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${getYoutubeId(video)}`}
+              title={`Vídeo - ${title}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </div>
       )}
     </div>
@@ -253,12 +235,6 @@ const TestCard = ({
 )
 
 export default function CoordenacaoMotoraPage() {
-  const [openVideoKey, setOpenVideoKey] = useState<string | null>(null)
-
-  function handleToggleVideo(key: string) {
-    setOpenVideoKey((prev) => (prev === key ? null : key))
-  }
-
   return (
     <div className="min-h-screen bg-white text-justify leading-relaxed">
       <NavigationController />
@@ -286,6 +262,7 @@ export default function CoordenacaoMotoraPage() {
       {/* O que é? */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
+          {/* Cabeçalho */}
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Zap className="w-6 h-6 text-[#6B8E23]" />
@@ -298,32 +275,48 @@ export default function CoordenacaoMotoraPage() {
             </h2>
           </div>
 
-          <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <p
-              className="text-[#445345] text-base sm:text-lg leading-relaxed"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              Coordenação motora é a capacidade do corpo de realizar movimentos com precisão e harmonia, através da
-              integração entre o cérebro, músculos e articulações. Ela é dividida em dois tipos principais: a grossa,
-              que envolve movimentos amplos com músculos maiores (como correr e pular), e a fina, que utiliza músculos
-              menores para tarefas delicadas (como escrever e abotoar).
-              <br />
-              <br />
-              A avaliação da coordenação motora na fisioterapia envolve observar a capacidade do paciente de realizar
-              movimentos precisos, controlados, rítmicos e organizados, analisando a integração entre os sistemas
-              neurológico, sensorial e motor. Durante o exame, o fisioterapeuta verifica a qualidade dos movimentos, a
-              presença de tremores e de movimentos involuntários, além de possíveis sinergias anormais. Também são
-              avaliadas a velocidade, a fluidez e a habilidade do paciente para iniciar ou interromper um movimento de
-              forma adequada.
-              <br />
-              <br />
-              O profissional observa ainda sinais de alterações específicas, como dismetria (erro na precisão do
-              movimento), disdiadococinesia (dificuldade em alternar movimentos rápidos), tremor intencional, ataxia,
-              atraso na execução das ações e decomposição do movimento em etapas menores, indicativos de prejuízo na
-              coordenação.
-              <br />
-              <br />
-            </p>
+          {/* Card principal */}
+          <div className="relative rounded-2xl border border-gray-100 bg-gradient-to-br from-[#F8F9FA] via-white to-white shadow-sm overflow-hidden">
+            {/* decoração suave */}
+            <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#6B8E23]/10 blur-3xl" />
+            <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-[#6B8E23]/5 blur-3xl" />
+
+            <div className="relative p-8 sm:p-10 md:p-12">
+              {/* linha decorativa lateral */}
+              <div className="flex gap-6 items-start">
+                <div className="hidden sm:flex flex-col items-center pt-1">
+                  <div className="w-3 h-3 rounded-full bg-[#6B8E23]" />
+                  <div className="w-px h-full bg-[#6B8E23]/20 mt-2" />
+                </div>
+
+                {/* TEXTO ORIGINAL (sem alterar nenhuma palavra) */}
+                <p
+                  className="text-[#445345] text-base sm:text-lg leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Coordenação motora é a capacidade do corpo de realizar movimentos com precisão e harmonia, através da
+                  integração entre o cérebro, músculos e articulações. Ela é dividida em dois tipos principais: a grossa,
+                  que envolve movimentos amplos com músculos maiores (como correr e pular), e a fina, que utiliza músculos
+                  menores para tarefas delicadas (como escrever e abotoar).
+                  <br />
+                  <br />
+                  A avaliação da coordenação motora na fisioterapia envolve observar a capacidade do paciente de realizar
+                  movimentos precisos, controlados, rítmicos e organizados, analisando a integração entre os sistemas
+                  neurológico, sensorial e motor. Durante o exame, o fisioterapeuta verifica a qualidade dos movimentos, a
+                  presença de tremores e de movimentos involuntários, além de possíveis sinergias anormais. Também são
+                  avaliadas a velocidade, a fluidez e a habilidade do paciente para iniciar ou interromper um movimento de
+                  forma adequada.
+                  <br />
+                  <br />
+                  O profissional observa ainda sinais de alterações específicas, como dismetria (erro na precisão do
+                  movimento), disdiadococinesia (dificuldade em alternar movimentos rápidos), tremor intencional, ataxia,
+                  atraso na execução das ações e decomposição do movimento em etapas menores, indicativos de prejuízo na
+                  coordenação.
+                  <br />
+                  <br />
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -342,13 +335,7 @@ export default function CoordenacaoMotoraPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {coordinationTestsData.map((test) => (
-              <TestCard
-                key={test.number}
-                {...test}
-                openKey={openVideoKey}
-                onToggleVideo={handleToggleVideo}
-                videoKey={`test-${test.number}`}
-              />
+              <TestCard key={test.number} {...test} />
             ))}
           </div>
         </div>
