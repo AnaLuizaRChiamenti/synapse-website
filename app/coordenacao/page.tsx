@@ -10,6 +10,8 @@ import {
   Eye,
   RefreshCw,
   Play,
+  ClipboardCheck,
+  CheckCircle2,
 } from "lucide-react"
 
 type TestItem = {
@@ -239,87 +241,177 @@ export default function CoordenacaoMotoraPage() {
     <div className="min-h-screen bg-white text-justify leading-relaxed">
       <NavigationController />
 
-      {/* Hero Section */}
+      {/* Hero Section — Coordenação motora */}
       <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12">
         <div className="max-w-5xl mx-auto md:mt-14 lg:mt-32">
           <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
-            <Brain className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-wide uppercase">
+            <Activity className="w-5 h-5" />
+            <span
+              className="text-sm font-medium tracking-wide uppercase"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
               Avaliação Neurofuncional
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1f2923] mb-6 leading-tight">
-            Coordenação Motora
+          <h1
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1f2923] mb-6 leading-tight"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            Coordenação motora
           </h1>
+
+          <p
+            className="text-lg sm:text-xl text-[#445345] max-w-3xl leading-relaxed"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            Entenda o conceito, sua importância e como avaliá-lo na prática fisioterapêutica
+          </p>
         </div>
 
         <div className="absolute top-20 right-10 opacity-10">
-          <Brain className="w-64 h-64 text-[#6B8E23]" strokeWidth={0.5} />
+          <Hand className="w-64 h-64 text-[#6B8E23]" strokeWidth={0.5} />
         </div>
       </section>
 
-      {/* O que é? */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
-        <div className="max-w-5xl mx-auto">
-          {/* Cabeçalho */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
-              <Zap className="w-6 h-6 text-[#6B8E23]" />
-            </div>
-            <h2
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+{/* Seção: O que é? (no seu estilo) */}
+<section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
+  <div className="max-w-6xl mx-auto">
+    {/* Cabeçalho da seção */}
+    <div className="flex items-center gap-3 mb-12">
+      <div className="w-14 h-14 rounded-xl bg-[#6B8E23]/10 flex items-center justify-center shadow-sm">
+        <Zap className="w-7 h-7 text-[#6B8E23]" />
+      </div>
+      <h2
+        className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+        style={{ fontFamily: "var(--font-playfair)" }}
+      >
+        O que é?
+      </h2>
+    </div>
+
+    {/* Grid principal */}
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
+      {/* Card 1: Definição */}
+      <div className="bg-gradient-to-br from-[#6B8E23]/5 to-white rounded-2xl p-7 sm:p-8 md:p-9 border border-[#6B8E23]/20 shadow-sm">
+        <div className="flex items-start gap-3 mb-5">
+          <div className="w-12 h-12 rounded-xl bg-[#6B8E23]/15 flex items-center justify-center shrink-0 mt-0.5">
+            <Brain className="w-6 h-6 text-[#6B8E23]" />
+          </div>
+
+          <div>
+            <h3
+              className="text-lg sm:text-xl font-bold text-[#1f2923] mb-1"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              O que é?
-            </h2>
+              Definição
+            </h3>
+            <p
+              className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-[#6B8E23]"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              Conceito básico
+            </p>
           </div>
+        </div>
 
-          {/* Card principal */}
-          <div className="relative rounded-2xl border border-gray-100 bg-gradient-to-br from-[#F8F9FA] via-white to-white shadow-sm overflow-hidden">
-            {/* decoração suave */}
-            <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#6B8E23]/10 blur-3xl" />
-            <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-[#6B8E23]/5 blur-3xl" />
+        <div
+          className="space-y-4 text-[#445345] text-base sm:text-lg leading-relaxed"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
+          <p>
+            É a capacidade do corpo de realizar movimentos com precisão e harmonia, através da integração entre o cérebro, músculos e articulações.
+          </p>
 
-            <div className="relative p-8 sm:p-10 md:p-12">
-              {/* linha decorativa lateral */}
-              <div className="flex gap-6 items-start">
-                <div className="hidden sm:flex flex-col items-center pt-1">
-                  <div className="w-3 h-3 rounded-full bg-[#6B8E23]" />
-                  <div className="w-px h-full bg-[#6B8E23]/20 mt-2" />
-                </div>
+          <div className="h-px bg-[#6B8E23]/20" />
 
-                {/* TEXTO ORIGINAL (sem alterar nenhuma palavra) */}
-                <p
-                  className="text-[#445345] text-base sm:text-lg leading-relaxed"
-                  style={{ fontFamily: "var(--font-poppins)" }}
-                >
-                  Coordenação motora é a capacidade do corpo de realizar movimentos com precisão e harmonia, através da
-                  integração entre o cérebro, músculos e articulações. Ela é dividida em dois tipos principais: a grossa,
-                  que envolve movimentos amplos com músculos maiores (como correr e pular), e a fina, que utiliza músculos
-                  menores para tarefas delicadas (como escrever e abotoar).
-                  <br />
-                  <br />
-                  A avaliação da coordenação motora na fisioterapia envolve observar a capacidade do paciente de realizar
-                  movimentos precisos, controlados, rítmicos e organizados, analisando a integração entre os sistemas
-                  neurológico, sensorial e motor. Durante o exame, o fisioterapeuta verifica a qualidade dos movimentos, a
-                  presença de tremores e de movimentos involuntários, além de possíveis sinergias anormais. Também são
-                  avaliadas a velocidade, a fluidez e a habilidade do paciente para iniciar ou interromper um movimento de
-                  forma adequada.
-                  <br />
-                  <br />
-                  O profissional observa ainda sinais de alterações específicas, como dismetria (erro na precisão do
-                  movimento), disdiadococinesia (dificuldade em alternar movimentos rápidos), tremor intencional, ataxia,
-                  atraso na execução das ações e decomposição do movimento em etapas menores, indicativos de prejuízo na
-                  coordenação.
-                  <br />
-                  <br />
-                </p>
-              </div>
+          <p className="text-sm sm:text-base font-semibold text-[#6B8E23]">
+            Ela é dividida em dois tipos principais:
+          </p>
+
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="w-5 h-5 text-[#6B8E23] shrink-0 mt-0.5" />
+              <p>
+                <strong className="text-[#1f2923]">Grossa:</strong> envolvendo grandes grupos musculares
+              </p>
+            </div>
+
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="w-5 h-5 text-[#6B8E23] shrink-0 mt-0.5" />
+              <p>
+                <strong className="text-[#1f2923]">Fina:</strong> que utiliza músculos menores para tarefas que exigem muita precisão.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Card 2: Como avaliar */}
+      <div className="bg-gradient-to-br from-[#D4AF37]/5 to-white rounded-2xl p-7 sm:p-8 md:p-9 border border-[#D4AF37]/25 shadow-sm">
+        <div className="flex items-start gap-3 mb-5">
+          <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center shrink-0 mt-0.5">
+            <ClipboardCheck className="w-6 h-6 text-[#5a4b1a]" />
+          </div>
+
+          <div>
+            <h3
+              className="text-lg sm:text-xl font-bold text-[#1f2923] mb-1"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Como avaliar?
+            </h3>
+            <p
+              className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-[#5a4b1a]"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              Metodologia
+            </p>
+          </div>
+        </div>
+
+        <div
+          className="space-y-4 text-[#445345] text-base sm:text-lg leading-relaxed"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
+          <p>
+            A avaliação da coordenação motora na fisioterapia envolve observar a capacidade do paciente de realizar movimentos precisos, controlados, rítmicos e organizados, analisando a integração entre os sistemas neurológico, sensorial e motor.
+          </p>
+
+          <div className="h-px bg-[#D4AF37]/25" />
+
+          <p className="text-sm sm:text-base font-semibold text-[#5a4b1a]">
+            Durante o exame, o fisioterapeuta verifica:
+          </p>
+
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shrink-0 mt-2.5" />
+              <p>
+                A qualidade dos movimentos, a presença de tremores e de movimentos involuntários, além de possíveis sinergias anormais.
+              </p>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] shrink-0 mt-2.5" />
+              <p>
+                A velocidade, a fluidez e a habilidade do paciente para iniciar ou interromper um movimento de forma adequada.
+              </p>
+            </li>
+          </ul>
+
+          <div className="pt-2 border-t border-[#D4AF37]/25">
+            <p>
+              Para isso, selecionamos alguns testes para auxiliar na avaliação dela.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Testes de Avaliação */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">

@@ -1,7 +1,7 @@
 "use client"
 
 import { NavigationController } from "@/components/NavigationController"
-import { Brain, Activity, Scale, Target, Footprints, Lightbulb, Sparkles, ChevronRight, Play } from "lucide-react"
+import { Brain, Activity, Scale, Target, Footprints, Lightbulb, Sparkles, ChevronRight, Play, Zap, Hand } from "lucide-react"
 import { useState } from "react"
 import type React from "react"
 
@@ -27,24 +27,38 @@ export default function HomePage() {
   const features = [
     {
       title: "Reflexos",
-      href: "/reflexo",
-      icon: Activity,
-      desc: "Entenda classificação, fisiologia e semiotécnica.",
-      accent: "#6B8E23",
+      href: "/reflexos",
+      icon: Zap,
+      desc: "Classificação, fisiologia e como avaliar os reflexos na prática clínica.",
+      accent: "#6B8E23", // oliva principal
     },
     {
       title: "Equilíbrio",
       href: "/equilibrio",
       icon: Scale,
-      desc: "Mecanismos de estabilidade e testes clínicos.",
-      accent: "#4F6C19",
+      desc: "Conceito, importância clínica e principais testes de equilíbrio.",
+      accent: "#2F7A6D", // verde-azulado
+    },
+    {
+      title: "Coordenação",
+      href: "/coordenacao",
+      icon: Hand,
+      desc: "Conceito, importância e testes para avaliação da coordenação motora.",
+      accent: "#5B4B8A", // roxo/índigo suave
+    },
+    {
+      title: "Marcha",
+      href: "/marcha",
+      icon: Footprints,
+      desc: "Marcha funcional, importância da avaliação e fases do ciclo da marcha.",
+      accent: "#C47A1B", // âmbar/laranja suave
     },
     {
       title: "Review",
       href: "/escalas_extras",
       icon: Target,
       desc: "Quiz, fluxos diagnósticos e escalas (EVA, Berg, Borg, MRC).",
-      accent: "#D4AF37",
+      accent: "#D4AF37", // dourado destaque
     },
   ]
 

@@ -2,7 +2,7 @@
 
 import { ReactNode } from "react"
 import { NavigationController } from "@/components/NavigationController"
-import { Brain, Activity, Footprints, ChevronRight, GitBranch, Target, Zap } from 'lucide-react'
+import { Brain, Activity, Footprints, ChevronRight, GitBranch, Target, Zap, ClipboardCheck } from 'lucide-react'
 
 type GaitPhaseItem = {
   number: number
@@ -159,46 +159,109 @@ export default function MarchaFuncionalPage() {
     <div className="min-h-screen bg-white text-justify leading-relaxed">
       <NavigationController />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="max-w-5xl mx-auto md:mt-14 lg:mt-32">
-          <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
-            <Footprints className="w-5 h-5" />
-            <span className="text-sm font-medium tracking-wide uppercase">
-              Avaliação Neurofuncional
-            </span>
-          </div>
-
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1f2923] mb-6 leading-tight">
-            Marcha Funcional
-          </h1>
+    {/* Hero Section — Marcha Funcional */}
+    <section className="relative bg-gradient-to-br from-[#E3F0E2] via-[#F0F5EF] to-white pt-32 pb-20 px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="max-w-5xl mx-auto md:mt-14 lg:mt-32">
+        <div className="flex items-center gap-2 text-[#6B8E23] mb-4">
+          <Activity className="w-5 h-5" />
+          <span
+            className="text-sm font-medium tracking-wide uppercase"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            Avaliação Neurofuncional
+          </span>
         </div>
 
-        <div className="absolute top-20 right-10 opacity-10">
-          <Brain className="w-64 h-64 text-[#6B8E23]" strokeWidth={0.5} />
-        </div>
-      </section>
+        <h1
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#1f2923] mb-6 leading-tight"
+          style={{ fontFamily: "var(--font-playfair)" }}
+        >
+          Marcha Funcional
+        </h1>
 
-       {/* O que é? */}
+        <p
+          className="text-lg sm:text-xl text-[#445345] max-w-3xl leading-relaxed"
+          style={{ fontFamily: "var(--font-poppins)" }}
+        >
+          Entenda o conceito, sua importância e como avaliá-lo na prática fisioterapêutica
+        </p>
+      </div>
+
+      <div className="absolute top-20 right-10 opacity-10">
+        <Footprints className="w-64 h-64 text-[#6B8E23]" strokeWidth={0.5} />
+      </div>
+    </section>
+
+       {/* Conceito / Importância da avaliação */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
+          {/* Cabeçalho */}
           <div className="flex items-center gap-3 mb-8">
             <div className="w-12 h-12 rounded-full bg-[#6B8E23]/10 flex items-center justify-center">
               <Zap className="w-6 h-6 text-[#6B8E23]" />
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]" style={{ fontFamily: "var(--font-playfair)" }}>
-              O que é?
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1f2923]"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Conceito e Importância Clínica
             </h2>
           </div>
 
-          <div className="bg-gradient-to-br from-[#F8F9FA] to-white p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <p className="text-[#445345] text-base sm:text-lg leading-relaxed" style={{ fontFamily: "var(--font-poppins)" }}>
-              Marcha Funcional é o padrão de locomoção humana realizado ao caminhar. Ela envolve uma sequência coordenada de movimentos dos membros inferiores, tronco e pelve, permitindo que a pessoa se desloque de um ponto ao outro de forma eficiente, segura e funcional.
-              <br /><br />
-              Os objetivos da avaliação instrumental da marcha são: identificar alterações, compensações e limitações que influenciam na funcionalidade, compreender os mecanismos subjacentes e a etiologia dos distúrbios, obter parâmetros quantitativos e qualitativos da marcha, para assim, definir métodos terapêuticos adequados e acompanhar a evolução da doença.             
-              <br /><br />
-              Para facilitar a avaliação, a marcha foi fragmentada em fases, o que revela como o paciente caminha e quais estruturas estão contribuindo ou prejudicando esse padrão.
-            </p>
+          {/* Container principal */}
+          <div className="relative bg-gradient-to-br from-white to-[#F8F9FA] p-8 sm:p-10 md:p-12 rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            {/* blobs decorativos suaves */}
+            <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#6B8E23]/10 blur-3xl" />
+            <div className="absolute -bottom-28 -left-28 w-80 h-80 rounded-full bg-[#6B8E23]/5 blur-3xl" />
+
+            {/* Grid de tópicos */}
+            <div className="relative grid md:grid-cols-2 gap-6 lg:gap-8">
+
+              {/* Card 01 — Conceito */}
+              <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#6B8E23]/15 shadow-sm relative overflow-hidden">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#6B8E23]/10 flex items-center justify-center">
+                    <Activity className="w-5 h-5 text-[#6B8E23]" />
+                  </div>
+                  <h4
+                    className="text-sm font-semibold uppercase tracking-wide text-[#6B8E23]"
+                    style={{ fontFamily: "var(--font-poppins)" }}
+                  >
+                    Conceito
+                  </h4>
+                </div>
+
+                <p
+                  className="text-[#445345] text-base sm:text-lg leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Marcha Funcional é o padrão de locomoção humana realizado ao caminhar. Ela envolve uma sequência coordenada de movimentos dos membros inferiores, tronco e pelve, permitindo que a pessoa se desloque de um ponto ao outro de forma eficiente, segura e funcional.
+                </p>
+              </div>
+
+              {/* Card 02 — Importância da avaliação */}
+              <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#6B8E23]/15 shadow-sm relative">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center">
+                    <Target className="w-5 h-5 text-[#6B8E23]" />
+                  </div>
+                  <h4
+                    className="text-sm font-semibold uppercase tracking-wide text-[#6B8E23]"
+                    style={{ fontFamily: "var(--font-poppins)" }}
+                  >
+                    Importância da avaliação
+                  </h4>
+                </div>
+
+                <p
+                  className="text-[#445345] text-base sm:text-lg leading-relaxed"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  Identificar alterações, compensações e limitações que influenciam na funcionalidade, compreender os mecanismos subjacentes e a etiologia dos distúrbios, obter parâmetros quantitativos e qualitativos da marcha, para assim, definir métodos terapêuticos adequados e acompanhar a evolução da doença.
+                </p>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
