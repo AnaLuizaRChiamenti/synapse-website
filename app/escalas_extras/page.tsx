@@ -79,7 +79,7 @@ const scaleData: ScaleItem[] = [
     bgIcon: "bg-teal-100",
     iconColor: "text-teal-600",
     description:
-      "Este  teste  é  constituído  por uma  escala  de  14  tarefas  comuns  que  envolvem  o equilíbrio  estático  e  dinâmico,  tais  como  alcançar, girar,  transferir-se,  permanecer  em  pé  e  levantar-se. A  realização  das  tarefas  é  avaliada  por  meio  de  observação e a pontuação varia de 0 – 4 totalizando um máximo de 56 pontos. Estes pontos devem ser subtraídos caso o tempo ou a distância não sejam atingidos, se o sujeito necessite de supervisão para a execução da tarefa, ou se o sujeito apóia-se num suporte externo ou recebe ajuda do examinador.(Nayara Corrêa Farias, et al 2011)",
+      "Este  teste  é  constituído  por uma  escala  de  14  tarefas  comuns  que  envolvem  o equilíbrio  estático  e  dinâmico,  tais  como  alcançar, girar,  transferir-se,  permanecer  em  pé  e  levantar-se. A  realização  das  tarefas  é  avaliada  por  meio  de  observação e a pontuação varia de 0 – 4 totalizando um máximo de 56 pontos. Estes pontos devem ser subtraídos caso o tempo ou a distância não sejam atingidos, se o sujeito necessite de supervisão para a execução da tarefa, ou se o sujeito apóia-se num suporte externo ou recebe ajuda do examinador.(FARIAS et al., 2011)",
     content: (
       <div className="flex flex-col space-y-3 mt-4 text-sm">
         <p className="font-bold text-lg text-teal-700">Pontuação Total: 0 a 56</p>
